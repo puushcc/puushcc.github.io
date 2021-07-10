@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Linux命令 | Puushcc</title>
+  <meta name="keywords" content=" Linux , Linux命令 ">
+  <meta name="description" content="Linux命令 | Puushcc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Puushcc">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Puushcc">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Puushcc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Puushcc</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://puushcc.github.io/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(1)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="运维">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        运维
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="运维<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="1">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://puushcc.github.io/">puushcc</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux命令</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 运维 Linux "
+           href="/2021/07/10/Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="Linux,Linux命令"
+           data-author="" >
+            <span class="post-title" title="Linux命令">Linux命令</span>
+            <span class="post-date" title="2021-07-10 15:13:47">2021/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Linux命令" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Linux命令</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="运维">运维</a> > 
+            
+            <a  data-rel="运维&lt;---&gt;Linux">Linux</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">Linux</a>
+            
+            <a class="color3">Linux命令</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-07-10 23:25:08'>2021-07-10 15:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-text">一、基本命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%85%B3%E6%9C%BA%E5%92%8C%E9%87%8D%E5%90%AF"><span class="toc-text">1.1 关机和重启</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA"><span class="toc-text">关机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%90%AF"><span class="toc-text">重启</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="toc-text">1.2 帮助命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%93help%E5%91%BD%E4%BB%A4"><span class="toc-text">–help命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#man%E5%91%BD%E4%BB%A4%EF%BC%88%E5%91%BD%E4%BB%A4%E8%AF%B4%E6%98%8E%E4%B9%A6%EF%BC%89"><span class="toc-text">man命令（命令说明书）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-text">二、目录操作命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E7%9B%AE%E5%BD%95%E5%88%87%E6%8D%A2-cd"><span class="toc-text">2.1 目录切换 cd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E7%9B%AE%E5%BD%95%E6%9F%A5%E7%9C%8B-ls-al"><span class="toc-text">2.2 目录查看 ls [-al]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E3%80%90%E5%A2%9E%EF%BC%8C%E5%88%A0%EF%BC%8C%E6%94%B9%EF%BC%8C%E6%9F%A5%E3%80%91"><span class="toc-text">2.3 目录操作【增，删，改，查】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95%E3%80%90%E5%A2%9E%E3%80%91-mkdir"><span class="toc-text">2.3.1 创建目录【增】 mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E5%88%A0%E9%99%A4%E7%9B%AE%E5%BD%95%E6%88%96%E6%96%87%E4%BB%B6%E3%80%90%E5%88%A0%E3%80%91rm"><span class="toc-text">2.3.2 删除目录或文件【删】rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-%E7%9B%AE%E5%BD%95%E4%BF%AE%E6%94%B9%E3%80%90%E6%94%B9%E3%80%91mv-%E5%92%8C-cp"><span class="toc-text">2.3.3 目录修改【改】mv 和 cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-%E6%90%9C%E7%B4%A2%E7%9B%AE%E5%BD%95%E3%80%90%E6%9F%A5%E3%80%91find"><span class="toc-text">2.3.4 搜索目录【查】find</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-text">三、文件操作命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E3%80%90%E5%A2%9E%EF%BC%8C%E5%88%A0%EF%BC%8C%E6%94%B9%EF%BC%8C%E6%9F%A5%E3%80%91"><span class="toc-text">3.1 文件操作【增，删，改，查】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E3%80%90%E5%A2%9E%E3%80%91touch"><span class="toc-text">3.1.1 新建文件【增】touch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6-%E3%80%90%E5%88%A0%E3%80%91-rm"><span class="toc-text">3.1.2 删除文件 【删】 rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E3%80%90%E6%94%B9%E3%80%91-vi%E6%88%96vim"><span class="toc-text">3.1.3 修改文件【改】 vi或vim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-4-%E6%96%87%E4%BB%B6%E7%9A%84%E6%9F%A5%E7%9C%8B%E3%80%90%E6%9F%A5%E3%80%91"><span class="toc-text">3.1.4 文件的查看【查】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9"><span class="toc-text">3.2 权限修改</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">四、压缩文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="toc-text">4.1 打包和压缩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E8%A7%A3%E5%8E%8B"><span class="toc-text">4.2 解压</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="toc-text">五、查找命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-grep"><span class="toc-text">5.1 grep</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-find"><span class="toc-text">5.2 find</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-locate"><span class="toc-text">5.3 locate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-whereis"><span class="toc-text">5.4 whereis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-which"><span class="toc-text">5.5 which</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81su%E3%80%81sudo"><span class="toc-text">六、su、sudo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-su"><span class="toc-text">6.1 su</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-sudo"><span class="toc-text">6.2 sudo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1"><span class="toc-text">七、系统服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86"><span class="toc-text">八、网络管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-%E4%B8%BB%E6%9C%BA%E5%90%8D%E9%85%8D%E7%BD%AE"><span class="toc-text">8.1 主机名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-IP-%E5%9C%B0%E5%9D%80%E9%85%8D%E7%BD%AE"><span class="toc-text">8.2 IP 地址配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-%E5%9F%9F%E5%90%8D%E6%98%A0%E5%B0%84"><span class="toc-text">8.3 域名映射</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E6%8C%87%E4%BB%A4crontab-%E9%85%8D%E7%BD%AE"><span class="toc-text">九、定时任务指令crontab 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="toc-text">9.1 命令格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E%E3%80%81%E5%AE%9E%E4%BE%8B"><span class="toc-text">9.2 配置说明、实例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-text">十、其他命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%EF%BC%9Apwd"><span class="toc-text">10.1 查看当前目录：pwd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%EF%BC%9Aps-ef"><span class="toc-text">10.2 查看进程：ps -ef</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-3-%E7%BB%93%E6%9D%9F%E8%BF%9B%E7%A8%8B%EF%BC%9Akill"><span class="toc-text">10.3 结束进程：kill</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-4-%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-text">10.4 网络通信命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-5-%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C"><span class="toc-text">10.5 配置网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-6-%E9%87%8D%E5%90%AF%E7%BD%91%E7%BB%9C"><span class="toc-text">10.6 重启网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-7-%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-text">10.7 切换用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-8-%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-text">10.8 关闭防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-9-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="toc-text">10.9 修改文件权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-10-%E6%B8%85%E5%B1%8F"><span class="toc-text">10.10 清屏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-11-vi%E6%A8%A1%E5%BC%8F%E4%B8%8B%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">10.11 vi模式下快捷键</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、基本命令"><a href="#一、基本命令" class="headerlink" title="一、基本命令"></a>一、基本命令</h1><h2 id="1-1-关机和重启"><a href="#1-1-关机和重启" class="headerlink" title="1.1 关机和重启"></a>1.1 关机和重启</h2><h3 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h3><p>​    shutdown -h now        立刻关机<br>​    shutdown -h 5        5分钟后关机<br>​    poweroff            立刻关机</p>
+<h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><p>​    shutdown -r now        立刻重启<br>​    shutdown -r 5        5分钟后重启<br>​    reboot                立刻重启</p>
+<h2 id="1-2-帮助命令"><a href="#1-2-帮助命令" class="headerlink" title="1.2 帮助命令"></a>1.2 帮助命令</h2><h3 id="–help命令"><a href="#–help命令" class="headerlink" title="–help命令"></a>–help命令</h3><p>  shutdown –help：<br>  ifconfig  –help：查看网卡信息</p>
+<h3 id="man命令（命令说明书）"><a href="#man命令（命令说明书）" class="headerlink" title="man命令（命令说明书）"></a>man命令（命令说明书）</h3><p>  man shutdown<br>  注意：man shutdown打开命令说明书之后，使用按键q退出</p>
+<h1 id="二、目录操作命令"><a href="#二、目录操作命令" class="headerlink" title="二、目录操作命令"></a>二、目录操作命令</h1><h2 id="2-1-目录切换-cd"><a href="#2-1-目录切换-cd" class="headerlink" title="2.1 目录切换 cd"></a>2.1 目录切换 cd</h2><p>命令：cd 目录</p>
+<p>cd /     切换到根目录<br>cd /usr     切换到根目录下的usr目录<br>cd ../     切换到上一级目录 或者  cd ..<br>cd ~     切换到home目录<br>cd -     切换到上次访问的目录</p>
+<h2 id="2-2-目录查看-ls-al"><a href="#2-2-目录查看-ls-al" class="headerlink" title="2.2 目录查看 ls [-al]"></a>2.2 目录查看 ls [-al]</h2><p>命令：ls [-al]</p>
+<p>ls                查看当前目录下的所有目录和文件<br>ls -a            查看当前目录下的所有目录和文件（包括隐藏的文件）<br>ls -l 或 ll       列表查看当前目录下的所有目录和文件（列表查看，显示更多信息）<br>ls /dir            查看指定目录下的所有目录和文件   如：ls /usr</p>
+<h2 id="2-3-目录操作【增，删，改，查】"><a href="#2-3-目录操作【增，删，改，查】" class="headerlink" title="2.3 目录操作【增，删，改，查】"></a>2.3 目录操作【增，删，改，查】</h2><h3 id="2-3-1-创建目录【增】-mkdir"><a href="#2-3-1-创建目录【增】-mkdir" class="headerlink" title="2.3.1 创建目录【增】 mkdir"></a>2.3.1 创建目录【增】 mkdir</h3><p>命令：mkdir 目录</p>
+<p>mkdir   aaa       在当前目录下创建一个名为aaa的目录<br>mkdir   /usr/aaa   在指定目录下创建一个名为aaa的目录</p>
+<h3 id="2-3-2-删除目录或文件【删】rm"><a href="#2-3-2-删除目录或文件【删】rm" class="headerlink" title="2.3.2 删除目录或文件【删】rm"></a>2.3.2 删除目录或文件【删】rm</h3><p>命令：rm [-rf] 目录</p>
+<p>删除文件：<br>rm 文件        删除当前目录下的文件<br>rm -f 文件    删除当前目录的的文件（不询问）</p>
+<p>删除目录：<br>rm -r aaa    递归删除当前目录下的aaa目录<br>rm -rf aaa    递归删除当前目录下的aaa目录（不询问）</p>
+<p>全部删除：<br>rm -rf *    将当前目录下的所有目录和文件全部删除<br>rm -rf /*    【自杀命令！慎用！慎用！慎用！】将根目录下的所有文件全部删除</p>
+<p>注意：rm不仅可以删除目录，也可以删除其他文件或压缩包，为了方便大家的记忆，无论删除任何目录或文件，都直接使用 rm -rf 目录/文件/压缩包</p>
+<h3 id="2-3-3-目录修改【改】mv-和-cp"><a href="#2-3-3-目录修改【改】mv-和-cp" class="headerlink" title="2.3.3 目录修改【改】mv 和 cp"></a>2.3.3 目录修改【改】mv 和 cp</h3><p>一、重命名目录<br>    命令：mv 当前目录  新目录<br>    例如：mv aaa bbb    将目录aaa改为bbb<br>    注意：mv的语法不仅可以对目录进行重命名而且也可以对各种文件，压缩包等进行    重命名的操作</p>
+<p>二、剪切目录<br>    命令：mv 目录名称 目录的新位置<br>    示例：将/usr/tmp目录下的aaa目录剪切到 /usr目录下面     mv /usr/tmp/aaa /usr<br>    注意：mv语法不仅可以对目录进行剪切操作，对文件和压缩包等都可执行剪切操作</p>
+<p>三、拷贝目录<br>    命令：cp -r 目录名称 目录拷贝的目标位置   -r代表递归<br>    示例：将/usr/tmp目录下的aaa目录复制到 /usr目录下面     cp /usr/tmp/aaa  /usr<br>    注意：cp命令不仅可以拷贝目录还可以拷贝文件，压缩包等，拷贝文件和压缩包时不    用写-r递归</p>
+<h3 id="2-3-4-搜索目录【查】find"><a href="#2-3-4-搜索目录【查】find" class="headerlink" title="2.3.4 搜索目录【查】find"></a>2.3.4 搜索目录【查】find</h3><p>命令：find 目录 参数 文件名称<br>示例：find /usr/tmp -name ‘a*’   查找/usr/tmp目录下的所有以a开头的目录或文件</p>
+<h1 id="三、文件操作命令"><a href="#三、文件操作命令" class="headerlink" title="三、文件操作命令"></a>三、文件操作命令</h1><h2 id="3-1-文件操作【增，删，改，查】"><a href="#3-1-文件操作【增，删，改，查】" class="headerlink" title="3.1 文件操作【增，删，改，查】"></a>3.1 文件操作【增，删，改，查】</h2><h3 id="3-1-1-新建文件【增】touch"><a href="#3-1-1-新建文件【增】touch" class="headerlink" title="3.1.1 新建文件【增】touch"></a>3.1.1 新建文件【增】touch</h3><p>命令：touch 文件名<br>示例：在当前目录创建一个名为aa.txt的文件     touch  aa.txt</p>
+<h3 id="3-1-2-删除文件-【删】-rm"><a href="#3-1-2-删除文件-【删】-rm" class="headerlink" title="3.1.2 删除文件 【删】 rm"></a>3.1.2 删除文件 【删】 rm</h3><p>命令：rm -rf 文件名</p>
+<h3 id="3-1-3-修改文件【改】-vi或vim"><a href="#3-1-3-修改文件【改】-vi或vim" class="headerlink" title="3.1.3 修改文件【改】 vi或vim"></a>3.1.3 修改文件【改】 vi或vim</h3><p>【vi编辑器的3种模式】<br>    基本上vi可以分为三种状态，分别是命令模式（command mode）、插入模式（Insert mode）和底行模式（last line mode），各模式的功能区分如下：<br><strong>1) 命令行模式command mode）</strong><br>      控制屏幕光标的移动，字符、字或行的删除，查找，移动复制某区段及进入Insert mode下，或者到 last line mode。<br>      命令行模式下的常用命令：<br>      【1】控制光标移动：↑，↓，j<br>      【2】删除当前行：dd<br>      【3】查找：/字符<br>      【4】进入编辑模式：i o a<br>      【5】进入底行模式：:</p>
+<p><strong>2) 编辑模式（Insert mode）</strong><br>      只有在Insert mode下，才可以做文字输入，按「ESC」键可回到命令行模式。<br>      编辑模式下常用命令：<br>      【1】ESC 退出编辑模式到命令行模式；</p>
+<p><strong>3) 底行模式（last line mode）</strong><br>     将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……等。<br>     底行模式下常用命令：<br>     【1】退出编辑：   :q<br>     【2】强制退出：   :q!<br>     【3】保存并退出：  :wq</p>
+<p><strong>打开文件</strong></p>
+<p>命令：vi 文件名<br>示例：打开当前目录下的aa.txt文件     vi aa.txt 或者 vim aa.txt</p>
+<p>注意：使用vi编辑器打开文件后，并不能编辑，因为此时处于命令模式，点击键盘i/a/o进入编辑模式。<br><strong>编辑文件</strong></p>
+<p>使用vi编辑器打开文件后点击按键：i ，a或者o即可进入编辑模式。</p>
+<p>i:在光标所在字符前开始插入<br>a:在光标所在字符后开始插入<br>o:在光标所在行的下面另起一新行插入</p>
+<p><strong>保存文件：</strong></p>
+<p>第一步：ESC  进入命令行模式<br>第二步：:     进入底行模式<br>第三步：wq     保存并退出编辑</p>
+<p><strong>取消编辑：</strong></p>
+<p>第一步：ESC  进入命令行模式<br>第二步：:     进入底行模式<br>第三步：q!     撤销本次修改并退出编辑</p>
+<h3 id="3-1-4-文件的查看【查】"><a href="#3-1-4-文件的查看【查】" class="headerlink" title="3.1.4 文件的查看【查】"></a>3.1.4 文件的查看【查】</h3><p>文件的查看命令：cat/more/less/tail</p>
+<p><strong>cat：看最后一屏</strong></p>
+<p>示例：使用cat查看/etc/sudo.conf文件，只能显示最后一屏内容</p>
+<p>cat sudo.conf</p>
+<p><strong>more：百分比显示</strong></p>
+<p>示例：使用more查看/etc/sudo.conf文件，可以显示百分比，回车可以向下一行，空格可以向下一页，q可以退出查看<br>more sudo.conf</p>
+<p><strong>less：翻页查看</strong></p>
+<p>示例：使用less查看/etc/sudo.conf文件，可以使用键盘上的PgUp和PgDn向上   和向下翻页，q结束查看<br>less sudo.conf</p>
+<p><strong>tail：指定行数或者动态查看</strong></p>
+<p>示例：使用tail -10 查看/etc/sudo.conf文件的后10行，Ctrl+C结束<br>tail -10 sudo.conf</p>
+<h2 id="3-2-权限修改"><a href="#3-2-权限修改" class="headerlink" title="3.2 权限修改"></a>3.2 权限修改</h2><p>rwx：r代表可读，w代表可写，x代表该文件是一个可执行文件，如果rwx任意位置变为-则代表不可读或不可写或不可执行文件。</p>
+<p>示例：给aaa.txt文件权限改为可执行文件权限，aaa.txt文件的权限是-rw——-</p>
+<p>第一位：-就代表是文件，d代表是文件夹<br>第一段（3位）：代表拥有者的权限<br>第二段（3位）：代表拥有者所在的组，组员的权限<br>第三段（最后3位）：代表的是其他用户的权限</p>
+<p>   421  421  421</p>
+<ul>
+<li> rw-   —     —</li>
+</ul>
+<p>命令：chmod +x aaa.txt<br>或者采用8421法<br>命令：chmod 100 aaa.txt</p>
+<h1 id="四、压缩文件操作"><a href="#四、压缩文件操作" class="headerlink" title="四、压缩文件操作"></a>四、压缩文件操作</h1><h2 id="4-1-打包和压缩"><a href="#4-1-打包和压缩" class="headerlink" title="4.1 打包和压缩"></a>4.1 打包和压缩</h2><p>Windows的压缩文件的扩展名  .zip/.rar<br>linux中的打包文件：aa.tar<br>linux中的压缩文件：bb.gz<br>linux中打包并压缩的文件：.tar.gz</p>
+<p>Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.gz结尾的。<br>而一般情况下打包和压缩是一起进行的，打包并压缩后的文件的后缀名一般.tar.gz。</p>
+<p>命令：tar -zcvf 打包压缩后的文件名 要打包的文件<br>其中：z：调用gzip压缩命令进行压缩</p>
+<p> c：打包文件<br> v：显示运行过程<br> f：指定文件名</p>
+<p>示例：打包并压缩/usr/tmp 下的所有文件 压缩后的压缩包指定名称为xxx.tar<br>tar -zcvf ab.tar aa.txt bb.txt<br>或：tar -zcvf ab.tar  *</p>
+<h2 id="4-2-解压"><a href="#4-2-解压" class="headerlink" title="4.2 解压"></a>4.2 解压</h2><p>命令：tar [-zxvf] 压缩文件<br>其中：x：代表解压<br>示例：将/usr/tmp 下的ab.tar解压到当前目录下</p>
+<pre><code class="shell"># tar -zxvf ab.tar
+</code></pre>
+<p>示例：将/usr/tmp 下的ab.tar解压到根目录/usr下<br>tar -xvf ab.tar -C /usr——C代表指定解压的位置</p>
+<pre><code class="shell"># tar -zxvf ab.tar -C /usr
+</code></pre>
+<h1 id="五、查找命令"><a href="#五、查找命令" class="headerlink" title="五、查找命令"></a>五、查找命令</h1><h2 id="5-1-grep"><a href="#5-1-grep" class="headerlink" title="5.1 grep"></a>5.1 grep</h2><p>grep命令是一种强大的文本搜索工具</p>
+<p>使用实例：</p>
+<pre><code class="shell">ps -ef | grep sshd  查找指定ssh服务进程 
+ps -ef | grep sshd | grep -v grep 查找指定服务进程，排除gerp身 
+ps -ef | grep sshd -c 查找指定进程个数
+</code></pre>
+<h2 id="5-2-find"><a href="#5-2-find" class="headerlink" title="5.2 find"></a>5.2 find</h2><p>find命令在目录结构中搜索文件，并对搜索结果执行指定的操作。 </p>
+<p>find 默认搜索当前目录及其子目录，并且不过滤任何结果（也就是返回所有文件），将它们全都显示在屏幕上。</p>
+<p>使用实例</p>
+<pre><code class="shell">find . -name &quot;*.log&quot; -ls  在当前目录查找以.log结尾的文件，并显示详细信息。 
+find /root/ -perm 600   查找/root/目录下权限为600的文件 
+find . -type f -name &quot;*.log&quot;  查找当目录，以.log结尾的普通文件 
+find . -type d | sort   查找当前所有目录并排序 
+find . -size +100M  查找当前目录大于100M的文件
+</code></pre>
+<h2 id="5-3-locate"><a href="#5-3-locate" class="headerlink" title="5.3 locate"></a>5.3 locate</h2><p>locate 让使用者可以很快速的搜寻某个路径。默认每天自动更新一次，所以使用locate 命令查不到最新变动过的文件。为了避免这种情况，可以在使用locate之前，先使用updatedb命令，手动更新数据库。如果数据库中没有查询的数据，则会报出locate: can not stat () `/var/lib/mlocate/mlocate.db’: No such file or directory该错误！updatedb即可！</p>
+<p><strong>yum -y install mlocate 如果是精简版CentOS系统需要安装locate命令</strong></p>
+<p>使用实例：</p>
+<pre><code class="shell">updatedb
+locate /etc/sh 搜索etc目录下所有以sh开头的文件 
+locate pwd 查找和pwd相关的所有文件
+</code></pre>
+<h2 id="5-4-whereis"><a href="#5-4-whereis" class="headerlink" title="5.4 whereis"></a>5.4 whereis</h2><p>whereis命令是定位可执行文件、源代码文件、帮助文件在文件系统中的位置。这些文件的属性应属于原始代码，二进制文件，或是帮助文件。</p>
+<p>使用实例：</p>
+<pre><code class="shell">whereis ls    将和ls文件相关的文件都查找出来
+</code></pre>
+<h2 id="5-5-which"><a href="#5-5-which" class="headerlink" title="5.5 which"></a>5.5 which</h2><p>which命令的作用是在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。</p>
+<p>使用实例：</p>
+<pre><code class="shell">which pwd  查找pwd命令所在路径 
+which java  查找path中java的路径
+</code></pre>
+<h1 id="六、su、sudo"><a href="#六、su、sudo" class="headerlink" title="六、su、sudo"></a>六、su、sudo</h1><h2 id="6-1-su"><a href="#6-1-su" class="headerlink" title="6.1 su"></a>6.1 su</h2><p>su用于用户之间的切换。但是切换前的用户依然保持登录状态。如果是root 向普通或虚拟用户切换不需要密码，反之普通用户切换到其它任何用户都需要密码验证。</p>
+<pre><code class="shell">su test:切换到test用户，但是路径还是/root目录
+su - test : 切换到test用户，路径变成了/home/test
+su : 切换到root用户，但是路径还是原来的路径
+su - : 切换到root用户，并且路径是/root
+</code></pre>
+<p>su不足：如果某个用户需要使用root权限、则必须要把root密码告诉此用户。</p>
+<p>退出返回之前的用户：exit</p>
+<h2 id="6-2-sudo"><a href="#6-2-sudo" class="headerlink" title="6.2 sudo"></a>6.2 sudo</h2><p>sudo是为所有想使用root权限的普通用户设计的。可以让普通用户具有临时使用root权限的权利。只需输入自己账户的密码即可。</p>
+<p>进入sudo配置文件命令：</p>
+<pre><code class="shell">vi /etc/sudoer或者visudo
+</code></pre>
+<blockquote>
+<p>案例：<br>允许hadoop用户以root身份执行各种应用命令，需要输入hadoop用户的密码。<br>hadoop  ALL=(ALL)   ALL </p>
+<p>案例：<br>只允许hadoop用户以root身份执行ls 、cat命令，并且执行时候免输入密码。<br>配置文件中：<br>hadoop  ALL=NOPASSWD:  /bin/ls, /bin/cat</p>
+</blockquote>
+<h1 id="七、系统服务"><a href="#七、系统服务" class="headerlink" title="七、系统服务"></a>七、系统服务</h1><pre><code class="shell">service iptables status  --查看iptables服务的状态
+service iptables start  --开启iptables服务
+service iptables stop  --停止iptables服务
+service iptables restart  --重启iptables服务
+ 
+chkconfig iptables off  --关闭iptables服务的开机自启动
+chkconfig iptables on  --开启iptables服务的开机自启动
+</code></pre>
+<h1 id="八、网络管理"><a href="#八、网络管理" class="headerlink" title="八、网络管理"></a>八、网络管理</h1><h2 id="8-1-主机名配置"><a href="#8-1-主机名配置" class="headerlink" title="8.1 主机名配置"></a>8.1 主机名配置</h2><pre><code class="shell">[root@node1 ~]# vi /etc/sysconfig/network
+NETWORKING=yes
+HOSTNAME=node1
+</code></pre>
+<h2 id="8-2-IP-地址配置"><a href="#8-2-IP-地址配置" class="headerlink" title="8.2 IP 地址配置"></a>8.2 IP 地址配置</h2><pre><code class="shell">[root@node1 ~]# vi /etc/sysconfig/network-scripts/ifcfg-eth0
+</code></pre>
+<h2 id="8-3-域名映射"><a href="#8-3-域名映射" class="headerlink" title="8.3 域名映射"></a>8.3 域名映射</h2><p>/etc/hosts文件用于在通过主机名进行访问时做ip地址解析之用。所以，你想访问一个什么样的主机名，就需要把这个主机名和它对应的ip地址。</p>
+<pre><code class="shell">[root@node1 ~]# vi /etc/hosts
+#### 在最后加上
+192.168.52.201  node1
+192.168.52.202  node2
+192.168.52.203  node3
+</code></pre>
+<h1 id="九、定时任务指令crontab-配置"><a href="#九、定时任务指令crontab-配置" class="headerlink" title="九、定时任务指令crontab 配置"></a>九、定时任务指令crontab 配置</h1><p>crontab是Unix和Linux用于设置定时任务的指令。通过crontab命令，可以在固定间隔时间,执行指定的系统指令或shell脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。</p>
+<p>crontab安装：</p>
+<pre><code class="shell">yum install crontabs
+</code></pre>
+<p>服务操作说明：</p>
+<pre><code class="pascal">service crond start   ## 启动服务 
+service crond stop    ## 关闭服务 
+service crond restart ## 重启服务
+</code></pre>
+<h2 id="9-1-命令格式"><a href="#9-1-命令格式" class="headerlink" title="9.1 命令格式"></a>9.1 命令格式</h2><p>crontab [-u user] file</p>
+<p>crontab [-u user] [ -e | -l | -r ]</p>
+<p><em><strong>参数说明：</strong></em></p>
+<p><strong>-u user：</strong>用来设定某个用户的crontab服务  </p>
+<p><strong>file：</strong>file是命令文件的名字,表示将file做为crontab的任务列表文件</p>
+<p>并载入crontab。</p>
+<p><strong>-e：</strong>编辑某个用户的crontab文件内容。如果不指定用户，则表示编辑当前</p>
+<p>用户的crontab文件。</p>
+<p><strong>-l：</strong>显示某个用户的crontab文件内容。如果不指定用户，则表示显示当前</p>
+<p>用户的crontab文件内容。</p>
+<p><strong>-r：</strong>删除定时任务配置，从/var/spool/cron目录中删除某个用户的crontab</p>
+<p>文件，如果不指定用户，则默认删除当前用户的crontab文件。</p>
+<p>命令示例：</p>
+<pre><code class="shell">crontab file [-u user] ## 用指定的文件替代目前的crontab
+crontab -l [-u user]  ## 列出用户目前的crontab
+crontab -e [-u user]  ## 编辑用户目前的crontab
+</code></pre>
+<h2 id="9-2-配置说明、实例"><a href="#9-2-配置说明、实例" class="headerlink" title="9.2 配置说明、实例"></a>9.2 配置说明、实例</h2><p>命令：*  *   *  *  *  command  </p>
+<p>解释：分  时  日  月  周  命令</p>
+<p><strong>第1列表示分钟1～59 每分钟用*或者 */1表示</strong>   </p>
+<p><strong>第2列表示小时0～23（0表示0点）</strong></p>
+<p><strong>第3列表示日期1～31</strong>  </p>
+<p><strong>第4列表示月份1～12</strong>  </p>
+<p><strong>第5列标识号星期0～6（0表示星期天）</strong>  </p>
+<p><strong>第6列要运行的命令</strong></p>
+<p>配置实例：</p>
+<pre><code class="shell">先打开定时任务所在的文件：
+crontab -e
+ 
+每分钟执行一次date命令 
+*/1 * * * * date &gt;&gt; /root/date.txt
+ 
+每晚的21:30重启apache。 
+30 21 * * * service httpd restart
+ 
+每月1、10、22日的4 : 45重启apache。  
+45 4 1,10,22 * * service httpd restart
+ 
+每周六、周日的1 : 10重启apache。 
+10 1 * * 6,0 service httpd restart
+ 
+每天18 : 00至23 : 00之间每隔30分钟重启apache。
+0,30   18-23    *   *   *   service httpd restart
+晚上11点到早上7点之间，每隔一小时重启apache
+*  23-7/1    *   *   *   service httpd restart
+</code></pre>
+<h1 id="十、其他命令"><a href="#十、其他命令" class="headerlink" title="十、其他命令"></a>十、其他命令</h1><h2 id="10-1-查看当前目录：pwd"><a href="#10-1-查看当前目录：pwd" class="headerlink" title="10.1 查看当前目录：pwd"></a>10.1 查看当前目录：pwd</h2><p>命令：pwd   查看当前目录路径</p>
+<h2 id="10-2-查看进程：ps-ef"><a href="#10-2-查看进程：ps-ef" class="headerlink" title="10.2 查看进程：ps -ef"></a>10.2 查看进程：ps -ef</h2><p>命令：ps -ef   查看所有正在运行的进程</p>
+<h2 id="10-3-结束进程：kill"><a href="#10-3-结束进程：kill" class="headerlink" title="10.3 结束进程：kill"></a>10.3 结束进程：kill</h2><p>命令：kill pid 或者 kill -9 pid(强制杀死进程)      pid:进程号</p>
+<h2 id="10-4-网络通信命令："><a href="#10-4-网络通信命令：" class="headerlink" title="10.4 网络通信命令："></a>10.4 网络通信命令：</h2><p><strong>ifconfig：查看网卡信息</strong></p>
+<p>命令：ifconfig 或 ifconfig | more</p>
+<p><strong>ping：查看与某台机器的连接情况</strong></p>
+<p>命令：ping ip</p>
+<p><strong>netstat -an：查看当前系统端口</strong></p>
+<p>命令：netstat -an</p>
+<p>搜索指定端口<br>命令：netstat -an | grep 8080</p>
+<h2 id="10-5-配置网络"><a href="#10-5-配置网络" class="headerlink" title="10.5 配置网络"></a>10.5 配置网络</h2><p>命令：setup</p>
+<h2 id="10-6-重启网络"><a href="#10-6-重启网络" class="headerlink" title="10.6 重启网络"></a>10.6 重启网络</h2><p>命令：service network restart</p>
+<h2 id="10-7-切换用户"><a href="#10-7-切换用户" class="headerlink" title="10.7 切换用户"></a>10.7 切换用户</h2><p>命令：su - 用户名</p>
+<h2 id="10-8-关闭防火墙"><a href="#10-8-关闭防火墙" class="headerlink" title="10.8 关闭防火墙"></a>10.8 关闭防火墙</h2><p>命令：chkconfig iptables off</p>
+<p>或者：</p>
+<pre><code> iptables -L;
+ iptables -F;
+ service iptables stop
+</code></pre>
+<h2 id="10-9-修改文件权限"><a href="#10-9-修改文件权限" class="headerlink" title="10.9 修改文件权限"></a>10.9 修改文件权限</h2><p>命令：chmod 777</p>
+<h2 id="10-10-清屏"><a href="#10-10-清屏" class="headerlink" title="10.10 清屏"></a>10.10 清屏</h2><p>命令：ctrl + l</p>
+<h2 id="10-11-vi模式下快捷键"><a href="#10-11-vi模式下快捷键" class="headerlink" title="10.11 vi模式下快捷键"></a>10.11 vi模式下快捷键</h2><p>esc后:</p>
+<p>保存并退出快捷键：shift+z+z</p>
+<p>光标跳到最后一行快捷键：shift+g</p>
+<p>删除一行：dd</p>
+<p>复制一行内容：y+y</p>
+<p>粘贴复制的内容：p</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
