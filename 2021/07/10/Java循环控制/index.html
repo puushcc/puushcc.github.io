@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Java循环控制 | Puushcc</title>
+  <meta name="keywords" content=" 后端 , java基础 , javaSE ">
+  <meta name="description" content="Java循环控制 | Puushcc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于我">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Puushcc">
+<meta property="og:description" content="关于我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-10T14:44:00.000Z">
+<meta property="article:modified_time" content="2021-07-10T14:54:50.894Z">
+<meta property="article:author" content="Puushcc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Puushcc</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://puushcc.github.io/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(27)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(26)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->java">
+                                        
+                                        java
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->java基础">
+                                        
+                                        java基础
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->Java基础">
+                                        
+                                        Java基础
+                                        
+                                            <small>(24
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="运维">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        运维
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="运维<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="27">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://puushcc.github.io/">puushcc</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>后端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java基础</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaSE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux命令</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20instanceof%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java instanceof运算符">Java instanceof运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java基础 "
+           href="/2021/07/10/JDK%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="JDK安装和配置">JDK安装和配置</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%86%B3%E7%AD%96%E5%88%B6%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java决策制定">Java决策制定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java修饰符类型">Java修饰符类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java变量类型">Java变量类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8C%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java包">Java包</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java命令行参数">Java命令行参数</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本数据类型">Java基本数据类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本运算符">Java基本运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%9D%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java实例初始化程序块">Java实例初始化程序块</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本语法">Java基本语法</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象和类">Java对象和类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象克隆">Java对象克隆</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%B0%81%E8%A3%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java封装">Java封装</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8%E5%92%8C%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java按值调用和引用调用">Java按值调用和引用调用</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%95%B0%E7%BB%84/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java数组">Java数组</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E9%87%8D%E5%86%99/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java方法重载重写">Java方法重载重写</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%B3%A8%E9%87%8A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java注释">Java注释</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%BB%A7%E6%89%BF%E5%A4%9A%E6%80%81/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java继承多态">Java继承多态</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java静态绑定和动态绑定">Java静态绑定和动态绑定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20%E5%85%B3%E9%94%AE%E5%AD%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java 关键字">Java 关键字</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java循环控制">Java循环控制</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java抽象类和接口">Java抽象类和接口</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88OOP%EF%BC%89%E6%A6%82%E5%BF%B5/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java面向对象（OOP）概念">Java面向对象（OOP）概念</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java类">Java类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java "
+           href="/2021/07/10/Java%E5%9F%BA%E7%A1%80/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基础">Java基础</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 运维 Linux "
+           href="/2021/07/10/Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="Linux,Linux命令"
+           data-author="" >
+            <span class="post-title" title="Linux命令">Linux命令</span>
+            <span class="post-date" title="2021-07-10 15:13:47">2021/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Java循环控制" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Java循环控制</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a> > 
+            
+            <a  data-rel="后端&lt;---&gt;Java基础">Java基础</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">后端</a>
+            
+            <a class="color2">java基础</a>
+            
+            <a class="color2">javaSE</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-07-11 02:01:17'>2021-07-10 20:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6"><span class="toc-text">Java循环控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">1. 循环控制语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A2%9E%E5%BC%BAJava%E5%BE%AA%E7%8E%AF"><span class="toc-text">2. 增强Java循环</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-if-else%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java if&#x2F;else语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-if%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java if语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A4%BA%E4%BE%8B"><span class="toc-text">1. 示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-if-else%E8%AF%AD%E5%8F%A5-1"><span class="toc-text">Java if-else语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-if-else-if%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java if-else-if语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-switch%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java switch语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-switch%E8%AF%AD%E5%8F%A5%E8%90%BD%E7%A9%BA%E9%80%9A%E8%BF%87%E6%89%80%E6%9C%89case%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java switch语句落空通过所有case语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-for%E5%BE%AA%E7%8E%AF"><span class="toc-text">Java for循环</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Java%E7%AE%80%E5%8D%95For%E5%BE%AA%E7%8E%AF"><span class="toc-text">1. Java简单For循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Java-for-each%E5%BE%AA%E7%8E%AF"><span class="toc-text">2. Java for-each循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Java%E6%A0%87%E8%AE%B0For%E5%BE%AA%E7%8E%AF"><span class="toc-text">3. Java标记For循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Java%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF"><span class="toc-text">4. Java无限循环</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-while%E5%BE%AA%E7%8E%AF"><span class="toc-text">Java while循环</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%97%A0%E9%99%90while%E5%BE%AA%E7%8E%AF"><span class="toc-text">Java无限while循环</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-do-while%E5%BE%AA%E7%8E%AF"><span class="toc-text">Java do-while循环</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%97%A0%E9%99%90do-while%E5%BE%AA%E7%8E%AF"><span class="toc-text">Java无限do-while循环</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-break%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java break语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Break%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%BE%AA%E7%8E%AF"><span class="toc-text">Java Break语句和循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%86%85%E9%83%A8%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java内部循环语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-continue%E8%AF%AD%E5%8F%A5"><span class="toc-text">Java continue语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-continue%E8%AF%AD%E5%8F%A5%E7%A4%BA%E4%BE%8B"><span class="toc-text">Java continue语句示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-continue%E8%AF%AD%E5%8F%A5%E4%B8%8E%E5%86%85%E5%BE%AA%E7%8E%AF"><span class="toc-text">Java continue语句与内循环</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java循环控制"><a href="#Java循环控制" class="headerlink" title="Java循环控制"></a>Java循环控制</h1><p>在程序执行过程中，存在需要多次执行代码块的情况。 通常，语句按顺序执行：首先执行函数中的第一个语句，然后执行第二个语句，依此类推。</p>
+<p>编程语言提供各种控制结构，允许更复杂的执行路径。</p>
+<p>循环语句用于多次执行一个语句或一组语句，以下是大多数编程语言中循环语句的一般形式 - </p>
+<p><img src="https://www.yiibai.com/uploads/article/2019/03/11/220112_19179.jpg" alt="循环流程图"></p>
+<p>Java编程语言提供以下类型的循环来处理循环要求，可通过单击以下每个链接来学习。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>循环</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_while_loop.html">while循环</a></td>
+<td>在给定条件为真时重复语句或语句组，它在执行循环体之前测试条件。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_for_loop.html">for循环</a></td>
+<td>多次执行一系列语句，并缩写管理循环变量的代码。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_do_while_loop.html">do…while循环</a></td>
+<td>像<code>while</code>语句一样，但是它在末端测试循环体的条件。</td>
+</tr>
+</tbody></table>
+<h2 id="1-循环控制语句"><a href="#1-循环控制语句" class="headerlink" title="1. 循环控制语句"></a>1. 循环控制语句</h2><p>循环控制语句将执行从正常执行顺序更变。 当执行离开作用域时，将销毁在该作用域中创建的所有自动对象。</p>
+<p>Java支持以下控制语句，可通过单击以下每个链接来了解和学习。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>控制语句</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_break_statement.html">break语句</a></td>
+<td>终止循环或<code>switch</code>语句，并立即将执行转移到在循环或<code>switch</code>之后的语句。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_continue_statement.html">continue语句</a></td>
+<td>使循环跳过其主体的其余部分，并在重复之前立即重新测试其状态。</td>
+</tr>
+</tbody></table>
+<h2 id="2-增强Java循环"><a href="#2-增强Java循环" class="headerlink" title="2. 增强Java循环"></a>2. 增强Java循环</h2><p>从Java 5开始，引入了增强的<code>for</code>循环。 这主要用于遍历元素的集合，包括数组。</p>
+<p><strong>语法</strong><br>以下是增强<code>for</code>循环的语法 - </p>
+<pre><code class="java">for(declaration : expression) &#123;
+   // Statements
+&#125;
+Java
+</code></pre>
+<p>在上面语法中，</p>
+<ul>
+<li><code>declaration</code> - 新声明的块变量，是与要访问的数组元素兼容的类型。变量将在<code>for</code>块中可用，其值将与当前数组元素相同。</li>
+<li><code>expression</code> - 这是要循环的数组。表达式(<code>expression</code>)可以是返回的数组变量或方法调用。</li>
+</ul>
+<p><strong>示例</strong></p>
+<pre><code class="java">public class Test &#123;
+
+   public static void main(String args[]) &#123;
+      int [] numbers = &#123;10, 20, 30, 40, 50&#125;;
+
+      for(int x : numbers ) &#123;
+         System.out.print( x );
+         System.out.print(&quot;,&quot;);
+      &#125;
+      System.out.print(&quot;\n&quot;);
+      String [] names = &#123;&quot;James&quot;, &quot;Curry&quot;, &quot;Kobe&quot;, &quot;Jordan&quot;&#125;;
+
+      for( String name : names ) &#123;
+         System.out.print( name );
+         System.out.print(&quot;,&quot;);
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码得到以下结果 - </p>
+<pre><code class="shell">10, 20, 30, 40, 50,
+James, Curry, Kobe, Jordan,
+</code></pre>
+<h1 id="Java-if-else语句"><a href="#Java-if-else语句" class="headerlink" title="Java if/else语句"></a>Java if/else语句</h1><p>Java <strong>if语句</strong>用于测试条件。它检查布尔条件为：<code>true</code>或<code>false</code>。 java中有各种类型的<strong>if语句</strong>，它们分别如下：</p>
+<ul>
+<li>if语句</li>
+<li>if-else语句</li>
+<li>嵌套if语句</li>
+<li>if-else-if语句</li>
+</ul>
+<h2 id="Java-if语句"><a href="#Java-if语句" class="headerlink" title="Java if语句"></a>Java if语句</h2><p>Java语言中的<code>if</code>语句用于测试条件。如果条件为<code>true</code>，则执行<code>if</code>语句块。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">if(condition)&#123;  
+   // if 语句块 =&gt; code to be executed.
+&#125;
+Java
+</code></pre>
+<p>执行流程如下图所示 - </p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0203/348100309_40587.png" alt="img"></p>
+<h3 id="1-示例"><a href="#1-示例" class="headerlink" title="1. 示例"></a>1. 示例</h3><pre><code class="java">public class IfExample &#123;
+    public static void main(String[] args) &#123;
+        int age = 20;
+        if (age &gt; 18) &#123;
+            System.out.print(&quot;Age is greater than 18&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>输出结果如下 - </p>
+<pre><code class="java">Age is greater than 18
+Java
+</code></pre>
+<h2 id="Java-if-else语句-1"><a href="#Java-if-else语句-1" class="headerlink" title="Java if-else语句"></a>Java if-else语句</h2><p>Java <code>if-else</code>语句也用于测试条件。如果<code>if</code>条件为真(<code>true</code>)它执行<code>if</code>块中的代码，否则执行<code>else</code>块中的代码。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">if(condition)&#123;  
+    //code if condition is true  
+&#125;else&#123;  
+    //code if condition is false  
+&#125;
+Java
+</code></pre>
+<p>执行流程如下图所示 - </p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0203/943100317_20518.png" alt="img"></p>
+<p><strong>示例代码：</strong></p>
+<pre><code class="java">public class IfElseExample &#123;
+    public static void main(String[] args) &#123;
+        int number = 13;
+        if (number % 2 == 0) &#123;
+            System.out.println(&quot;这是一个偶数&quot;);
+        &#125; else &#123;
+            System.out.println(&quot;这是一个奇数&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>输出结果如下 - </p>
+<pre><code class="java">这是一个奇数
+Java
+</code></pre>
+<h2 id="Java-if-else-if语句"><a href="#Java-if-else-if语句" class="headerlink" title="Java if-else-if语句"></a>Java if-else-if语句</h2><p>Java编程中的<code>if-else-if</code>语句是从多个语句中执行一个条件。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">if(condition1)&#123;  
+    //code to be executed if condition1 is true  
+&#125;else if(condition2)&#123;  
+    //code to be executed if condition2 is true  
+&#125;else if(condition3)&#123;  
+    //code to be executed if condition3 is true  
+&#125;  
+...  
+else&#123;  
+    //code to be executed if all the conditions are false  
+&#125;
+Java
+</code></pre>
+<p>执行流程如下图所示 - </p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0203/890100324_52213.png" alt="img"></p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class IfElseIfExample &#123;
+    public static void main(String[] args) &#123;
+        int marks = 65;
+
+        if (marks &lt; 50) &#123;
+            System.out.println(&quot;fail&quot;);
+        &#125; else if (marks &gt;= 50 &amp;&amp; marks &lt; 60) &#123;
+            System.out.println(&quot;D grade&quot;);
+        &#125; else if (marks &gt;= 60 &amp;&amp; marks &lt; 70) &#123;
+            System.out.println(&quot;C grade&quot;);
+        &#125; else if (marks &gt;= 70 &amp;&amp; marks &lt; 80) &#123;
+            System.out.println(&quot;B grade&quot;);
+        &#125; else if (marks &gt;= 80 &amp;&amp; marks &lt; 90) &#123;
+            System.out.println(&quot;A grade&quot;);
+        &#125; else if (marks &gt;= 90 &amp;&amp; marks &lt; 100) &#123;
+            System.out.println(&quot;A+ grade&quot;);
+        &#125; else &#123;
+            System.out.println(&quot;Invalid!&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>输出结果如下 - </p>
+<pre><code class="java">C grade
+</code></pre>
+<h1 id="Java-switch语句"><a href="#Java-switch语句" class="headerlink" title="Java switch语句"></a>Java switch语句</h1><p>Java <strong>switch语句</strong>用于从多个条件执行一个语句。它就像<code>if-else-if</code>语句一样。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">switch(expression)&#123;    
+    case value1:    
+       //code to be executed;    
+       break;  //optional  
+    case value2:    
+       //code to be executed;    
+       break;  //optional  
+    ......    
+
+    default:     
+       // code to be executed if all cases are not matched;    
+&#125;
+Java
+</code></pre>
+<p><strong>switch语句</strong>执行流程图如下所示 - </p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0203/839100335_12014.png" alt="img"></p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class SwitchExample &#123;
+    public static void main(String[] args) &#123;
+        int number = 20;
+        switch (number) &#123;
+        case 10:
+            System.out.println(&quot;10&quot;);
+            break;
+        case 20:
+            System.out.println(&quot;20&quot;);
+            break;
+        case 30:
+            System.out.println(&quot;30&quot;);
+            break;
+        default:
+            System.out.println(&quot;Not in 10, 20 or 30&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行输出结果如下：</p>
+<pre><code class="java">20
+Java
+</code></pre>
+<h2 id="Java-switch语句落空通过所有case语句"><a href="#Java-switch语句落空通过所有case语句" class="headerlink" title="Java switch语句落空通过所有case语句"></a>Java switch语句落空通过所有case语句</h2><p>下面我们来看看java <code>switch</code>语句落空通过所有条件，即 <code>case</code> 子句中的所有条件都未能匹配。也就是如果不在 <code>switch case</code> 下使用<code>break</code>语句，则它在第一个匹配之后也会执行接下来的所有 <code>case</code> 中的语句。</p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class SwitchExample2 &#123;
+    public static void main(String[] args) &#123;
+        int number = 20;
+        switch (number) &#123;
+        case 10:
+            System.out.println(&quot;10&quot;);
+        case 20:
+            System.out.println(&quot;20&quot;);
+        case 30:
+            System.out.println(&quot;30&quot;);
+        default:
+            System.out.println(&quot;Not in 10, 20 or 30&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行输出结果如下：</p>
+<pre><code class="java">20
+30
+Not in 10, 20 or 30
+</code></pre>
+<h1 id="Java-for循环"><a href="#Java-for循环" class="headerlink" title="Java for循环"></a>Java for循环</h1><p>Java <strong>for循环</strong>用于多次迭代程序的一部分，或者多次执行同一个代码块。如果迭代次数是固定的，建议使用<code>for</code>循环。</p>
+<p>java中有三种类型的<code>for</code>循环。如下所示 - </p>
+<ul>
+<li>简单<code>for</code>循环</li>
+<li><code>for-each</code>或增强型<code>for</code>循环</li>
+<li>标记<code>for</code>循环</li>
+</ul>
+<h2 id="1-Java简单For循环"><a href="#1-Java简单For循环" class="headerlink" title="1. Java简单For循环"></a>1. Java简单For循环</h2><p>简单的<code>for</code>循环与<code>C/C++</code>相同。我们可以初始化变量，检查条件和增加/减少变量的值。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">for(initialization;condition;incr/decr)&#123;  
+    //code to be executed  
+&#125;
+Java
+</code></pre>
+<p>执行流程图如下所示 - </p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0203/154170317_68642.png" alt="img"></p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class ForExample &#123;  
+    public static void main(String[] args) &#123;  
+        for(int i=1;i&lt;=10;i++)&#123;  
+            System.out.println(i);  
+        &#125;  
+    &#125;  
+&#125;
+Java
+</code></pre>
+<p>执行上面的代码，输出如下 - </p>
+<pre><code class="java">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Java
+</code></pre>
+<h2 id="2-Java-for-each循环"><a href="#2-Java-for-each循环" class="headerlink" title="2. Java for-each循环"></a>2. Java for-each循环</h2><p><code>for-each</code>循环用于在java中遍历数组或集合。它比简单的<code>for</code>循环更容易使用，因为不需要递增值和使用下标符号。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">for(Type var:array)&#123;  
+   //code to be executed  
+&#125;
+Java
+</code></pre>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class ForEachExample  &#123;
+    public static void main(String[] args) &#123;
+        int arr[] = &#123; 12, 23, 44, 56, 78 &#125;;
+        for (int i : arr) &#123;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面的代码，得到如下结果 - </p>
+<pre><code class="java">12
+23
+44
+56
+78
+Java
+</code></pre>
+<h2 id="3-Java标记For循环"><a href="#3-Java标记For循环" class="headerlink" title="3. Java标记For循环"></a>3. Java标记For循环</h2><p>我们可以让每个<code>for</code>循环的名称。 为此，在<code>for</code>循环之前使用标签。它是有用的，如果在嵌套<code>for</code>循环中，可以使用<code>break/continue</code>指定循环。</p>
+<p>通常，<code>break</code>和<code>continue</code>关键字断开/继续最内循环。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">labelname:  
+for(initialization;condition;incr/decr)&#123;  
+    //code to be executed  
+&#125;
+Java
+</code></pre>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class LabeledForExample  &#123;
+    public static void main(String[] args) &#123;
+        aa: for (int i = 1; i &lt;= 3; i++) &#123;
+            bb: for (int j = 1; j &lt;= 3; j++) &#123;
+                if (i == 2 &amp;&amp; j == 2) &#123;
+                    break aa;
+                &#125;
+                System.out.println(i + &quot; &quot; + j);
+            &#125;
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面的代码，得到如下结果 - </p>
+<pre><code class="shell">1 1
+1 2
+1 3
+2 1
+Shell
+</code></pre>
+<p>如果使用<code>break bb</code>;它将打断内循环，这是任何循环的默认行为。</p>
+<pre><code class="java">public class LabeledForExample &#123;
+    public static void main(String[] args) &#123;
+        aa: for (int i = 1; i &lt;= 3; i++) &#123;
+            bb: for (int j = 1; j &lt;= 3; j++) &#123;
+                if (i == 2 &amp;&amp; j == 2) &#123;
+                    break bb;
+                &#125;
+                System.out.println(i + &quot; &quot; + j);
+            &#125;
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面的代码，得到如下结果 - </p>
+<pre><code class="shell">1 1
+1 2
+1 3
+2 1
+3 1
+3 2
+3 3
+Shell
+</code></pre>
+<h2 id="4-Java无限循环"><a href="#4-Java无限循环" class="headerlink" title="4. Java无限循环"></a>4. Java无限循环</h2><p>在<code>for</code>循环中，如果使用两个分号<code>;</code>，则它对于循环将是不定式的。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">for(;;)&#123;  
+    //code to be executed  
+&#125;
+Java
+</code></pre>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class ForExample &#123;
+    public static void main(String[] args) &#123;
+        for (;;) &#123;
+            System.out.println(&quot;infinitive loop&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面的代码，得到如下结果 - </p>
+<pre><code class="java">infinitive loop
+infinitive loop
+infinitive loop
+infinitive loop
+infinitive loop
+ctrl+c
+Java
+</code></pre>
+<blockquote>
+<p>提示： 在执行上面的程序时，您需要按<code>ctrl + c</code>退出程序。</p>
+</blockquote>
+<h1 id="Java-while循环"><a href="#Java-while循环" class="headerlink" title="Java while循环"></a>Java while循环</h1><p>Java <strong>while循环</strong>用于重复程序的一部分几次或重复执行一个代码块。 如果迭代次数不固定，建议使用<code>while</code>循环。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">while(condition)&#123;  
+    //code to be executed  
+&#125;
+Java
+</code></pre>
+<p>下面是 <code>while</code> 循环的执行流程 -</p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0203/879220350_51834.png" alt="img"></p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class WhileExample &#123;
+    public static void main(String[] args) &#123;
+        int i = 1;
+        while (i &lt;= 10) &#123;
+            System.out.println(i);
+            i++;
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面的代码，得到下面的结果 -</p>
+<pre><code class="java">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Java
+</code></pre>
+<h2 id="Java无限while循环"><a href="#Java无限while循环" class="headerlink" title="Java无限while循环"></a>Java无限while循环</h2><p>如果在<code>while</code>循环中传递<code>true</code>作为参数，它将是一个无限<code>while</code>循环。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">while(true)&#123;  
+    //code to be executed  
+&#125;
+Java
+</code></pre>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class WhileExample2 &#123;
+    public static void main(String[] args) &#123;
+        while (true) &#123;
+            System.out.println(&quot;infinitive while loop&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面的代码，得到下面的结果 -</p>
+<pre><code class="java">infinitive while loop
+infinitive while loop
+infinitive while loop
+infinitive while loop
+infinitive while loop
+ctrl+c
+Java
+</code></pre>
+<blockquote>
+<p>注意：由于无限循环程序无法退出，所以您需要按<code>ctrl + c</code>退出程序。</p>
+</blockquote>
+<h1 id="Java-do-while循环"><a href="#Java-do-while循环" class="headerlink" title="Java do-while循环"></a>Java do-while循环</h1><p>Java <code>do-while</code>循环用于多次迭代程序的一部分或重复多次执行一个代码块。 如果迭代次数不固定，必须至少执行一次循环，建议使用<code>do-while</code>循环。</p>
+<p>Java <code>do-while</code>循环至少执行一次，因为它是在循环体之后检查条件。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">do&#123;  
+    //code to be executed  
+&#125;while(condition); // 后置条件检查
+Java
+</code></pre>
+<p>Java <code>do-while</code>循环执行流程图如下所示 -<br><img src="http://www.yiibai.com/uploads/images/201703/0203/515230301_73132.png" alt="img"></p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class DoWhileExample &#123;
+    public static void main(String[] args) &#123;
+        int i = 1;
+        do &#123;
+            System.out.println(i);
+            i++;
+        &#125; while (i &lt;= 10);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行结果如下 - </p>
+<pre><code class="java">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Java
+</code></pre>
+<h2 id="Java无限do-while循环"><a href="#Java无限do-while循环" class="headerlink" title="Java无限do-while循环"></a>Java无限do-while循环</h2><p>如果在<code>do-while</code>循环中传递参数值为：<code>true</code>，它将是一个无限<code>do-while</code>循环。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">do&#123;  
+    //code to be executed  
+&#125;while(true);
+Java
+</code></pre>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class DoWhileExample2 &#123;
+    public static void main(String[] args) &#123;
+        do &#123;
+            System.out.println(&quot;infinitive do while loop&quot;);
+        &#125; while (true);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行结果如下 - </p>
+<pre><code class="java">infinitive do while loop
+infinitive do while loop
+infinitive do while loop
+ctrl+c
+Java
+</code></pre>
+<blockquote>
+<p>上面的需要按<code>ctrl + c</code>退出程序。</p>
+</blockquote>
+<h1 id="Java-break语句"><a href="#Java-break语句" class="headerlink" title="Java break语句"></a>Java break语句</h1><p>Java break用于断开循环或<code>switch</code>语句。它在指定条件下中断程序的当前流程。 在内循环的情况下，它仅中断内循环，外循环仍然可继续执行。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">jump-statement;    
+break;
+Java
+</code></pre>
+<p>break语句的执行流程图如下所示 -</p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0303/987080346_98968.png" alt="img"></p>
+<h2 id="Java-Break语句和循环"><a href="#Java-Break语句和循环" class="headerlink" title="Java Break语句和循环"></a>Java Break语句和循环</h2><p><strong>示例：</strong></p>
+<pre><code class="java">public class BreakExample &#123;
+    public static void main(String[] args) &#123;
+        for (int i = 1; i &lt;= 10; i++) &#123;
+            if (i == 5) &#123;
+                break;
+            &#125;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码得到结果 - </p>
+<pre><code class="java">1
+2
+3
+4
+Java
+</code></pre>
+<h2 id="Java内部循环语句"><a href="#Java内部循环语句" class="headerlink" title="Java内部循环语句"></a>Java内部循环语句</h2><p>它中断了内循环，只有当你在内循环中使用<code>break</code>语句。</p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class BreakExample2 &#123;
+    public static void main(String[] args) &#123;
+        for (int i = 1; i &lt;= 3; i++) &#123;
+            for (int j = 1; j &lt;= 3; j++) &#123;
+                if (i == 2 &amp;&amp; j == 2) &#123;
+                    break;
+                &#125;
+                System.out.println(i + &quot; &quot; + j);
+            &#125;
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码输出输出：</p>
+<pre><code class="java">1 1
+1 2
+1 3
+2 1
+3 1
+3 2
+3 3
+Java
+</code></pre>
+<p><strong>带有Java break语句和Switch语句</strong></p>
+<h1 id="Java-continue语句"><a href="#Java-continue语句" class="headerlink" title="Java continue语句"></a>Java continue语句</h1><p>Java <strong>continue语句</strong>用于继续循环。 它继续程序的当前流程，并在指定条件下跳过剩余的代码。在内循环的情况下，它仅继续内循环。</p>
+<p><strong>语法：</strong></p>
+<pre><code class="java">jump-statement;    
+continue;
+Java
+</code></pre>
+<h2 id="Java-continue语句示例"><a href="#Java-continue语句示例" class="headerlink" title="Java continue语句示例"></a>Java continue语句示例</h2><p><strong>示例：</strong></p>
+<pre><code class="java">public class ContinueExample &#123;
+    public static void main(String[] args) &#123;
+        for (int i = 1; i &lt;= 10; i++) &#123;
+            if (i == 5) &#123;
+                continue;
+            &#125;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到如下结果 - </p>
+<pre><code class="java">1
+2
+3
+4
+6
+7
+8
+9
+10
+Java
+</code></pre>
+<h2 id="Java-continue语句与内循环"><a href="#Java-continue语句与内循环" class="headerlink" title="Java continue语句与内循环"></a>Java continue语句与内循环</h2><p>如果在内循环中使用<code>continue</code>语句，它将继续内循环。</p>
+<p><strong>示例：</strong></p>
+<pre><code class="java">public class ContinueExample2 &#123;
+    public static void main(String[] args) &#123;
+        for (int i = 1; i &lt;= 3; i++) &#123;
+            for (int j = 1; j &lt;= 3; j++) &#123;
+                if (i == 2 &amp;&amp; j == 2) &#123;
+                    continue;
+                &#125;
+                System.out.println(i + &quot; &quot; + j);
+            &#125;
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到如下结果 - </p>
+<pre><code class="java">1 1
+1 2
+1 3
+2 1
+2 3
+3 1
+3 2
+3 3
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

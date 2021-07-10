@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Java方法重载重写 | Puushcc</title>
+  <meta name="keywords" content=" 后端 , java基础 , javaSE ">
+  <meta name="description" content="Java方法重载重写 | Puushcc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于我">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Puushcc">
+<meta property="og:description" content="关于我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-10T14:44:00.000Z">
+<meta property="article:modified_time" content="2021-07-10T14:54:50.894Z">
+<meta property="article:author" content="Puushcc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Puushcc</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://puushcc.github.io/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(27)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(26)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->java">
+                                        
+                                        java
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->java基础">
+                                        
+                                        java基础
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->Java基础">
+                                        
+                                        Java基础
+                                        
+                                            <small>(24
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="运维">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        运维
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="运维<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="27">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://puushcc.github.io/">puushcc</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>后端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java基础</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaSE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux命令</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20instanceof%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java instanceof运算符">Java instanceof运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java基础 "
+           href="/2021/07/10/JDK%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="JDK安装和配置">JDK安装和配置</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%86%B3%E7%AD%96%E5%88%B6%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java决策制定">Java决策制定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java修饰符类型">Java修饰符类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java变量类型">Java变量类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8C%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java包">Java包</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java命令行参数">Java命令行参数</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本数据类型">Java基本数据类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本运算符">Java基本运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%9D%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java实例初始化程序块">Java实例初始化程序块</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本语法">Java基本语法</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象和类">Java对象和类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象克隆">Java对象克隆</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%B0%81%E8%A3%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java封装">Java封装</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8%E5%92%8C%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java按值调用和引用调用">Java按值调用和引用调用</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%95%B0%E7%BB%84/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java数组">Java数组</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E9%87%8D%E5%86%99/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java方法重载重写">Java方法重载重写</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%B3%A8%E9%87%8A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java注释">Java注释</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%BB%A7%E6%89%BF%E5%A4%9A%E6%80%81/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java继承多态">Java继承多态</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java静态绑定和动态绑定">Java静态绑定和动态绑定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20%E5%85%B3%E9%94%AE%E5%AD%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java 关键字">Java 关键字</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java循环控制">Java循环控制</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java抽象类和接口">Java抽象类和接口</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88OOP%EF%BC%89%E6%A6%82%E5%BF%B5/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java面向对象（OOP）概念">Java面向对象（OOP）概念</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java类">Java类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java "
+           href="/2021/07/10/Java%E5%9F%BA%E7%A1%80/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基础">Java基础</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 运维 Linux "
+           href="/2021/07/10/Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="Linux,Linux命令"
+           data-author="" >
+            <span class="post-title" title="Linux命令">Linux命令</span>
+            <span class="post-date" title="2021-07-10 15:13:47">2021/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Java方法重载重写" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Java方法重载重写</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a> > 
+            
+            <a  data-rel="后端&lt;---&gt;Java基础">Java基础</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">后端</a>
+            
+            <a class="color2">java基础</a>
+            
+            <a class="color2">javaSE</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-07-11 02:10:28'>2021-07-10 20:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="toc-text">Java方法重载</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%EF%BC%9A-%E4%BF%AE%E6%94%B9%E5%8F%82%E6%95%B0%E7%9A%84%E6%95%B0%E9%87%8F"><span class="toc-text">1. 方法重载： 修改参数的数量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%EF%BC%9A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. 方法重载：更改参数的数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E5%92%8C%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87"><span class="toc-text">方法重载和类型提升</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99"><span class="toc-text">Java方法重写</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96%E7%9A%84%E7%A4%BA%E4%BE%8B"><span class="toc-text">方法覆盖的示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-text">Java方法重写的实例</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java方法重载"><a href="#Java方法重载" class="headerlink" title="Java方法重载"></a>Java方法重载</h1><p>如果一个类中有多个具有相同名称但参数不同的方法，则称为方法重载。如果只需要执行一个操作，具有相同的方法名称将增加程序的可读性。</p>
+<p>假设必须执行给定数值的添加操作(求和)，但是参数的数量不固定，如果为两个参数编写<code>add1(int，int)</code>方法，为三个参数编写<code>add2(int，int，int)</code>方法，可能对其他程序员来说很难理解这样的方法的行为，因为它的名称不同。</p>
+<p>因此，执行方法重载能比较容易理解程序含义。</p>
+<p><strong>方法重载的优点</strong></p>
+<ul>
+<li>方法重载提高了程序的可读性。</li>
+</ul>
+<p><strong>重载方法不同的方式</strong></p>
+<p>在java中重载方法有两种方式，它们分别是：</p>
+<ul>
+<li>通过改变参数的数量</li>
+<li>通过更改数据类型</li>
+</ul>
+<blockquote>
+<p>注意：在java中，只通过更改方法的返回类型来实现方法重载是不可以的。</p>
+</blockquote>
+<h2 id="1-方法重载：-修改参数的数量"><a href="#1-方法重载：-修改参数的数量" class="headerlink" title="1. 方法重载： 修改参数的数量"></a>1. 方法重载： 修改参数的数量</h2><p>在这个例子中，我们将创建了两个方法，第一个<code>add()</code>方法执行两个数值的相加操作，第二个<code>add()</code>方法执行三个数值的相加操作。</p>
+<p>在这个例子中，我们创建静态方法，所以不需要创建实例来调用方法。</p>
+<pre><code class="java">class Adder &#123;
+    static int add(int a, int b) &#123;
+        return a + b;
+    &#125;
+
+    static int add(int a, int b, int c) &#123;
+        return a + b + c;
+    &#125;
+&#125;
+
+class TestOverloading1 &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(Adder.add(11, 11));
+        System.out.println(Adder.add(11, 11, 11));
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行后，输出结果如下 -</p>
+<pre><code class="java">22
+33
+Java
+</code></pre>
+<h2 id="2-方法重载：更改参数的数据类型"><a href="#2-方法重载：更改参数的数据类型" class="headerlink" title="2. 方法重载：更改参数的数据类型"></a>2. 方法重载：更改参数的数据类型</h2><p>在这个例子中，创建了两种数据类型不同的方法。 第一个<code>add</code>方法接收两个整数参数，第二个<code>add</code>方法接收两个双精度型参数。</p>
+<pre><code class="java">class Adder &#123;
+    static int add(int a, int b) &#123;
+        return a + b;
+    &#125;
+
+    static double add(double a, double b) &#123;
+        return a + b;
+    &#125;
+&#125;
+
+class TestOverloading2 &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(Adder.add(11, 11));
+        System.out.println(Adder.add(12.3, 12.6));
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行后，输出结果如下 -</p>
+<pre><code class="java">22
+24.9
+Java
+</code></pre>
+<p><strong>问题：为什么方法重载不能通过更改方法的返回类型？</strong></p>
+<p>在java中，只通过改变方法的返回类型来实现方法重载是不可能的，因为这样具有模糊性。 让我们来看看模糊性是怎么样发生的：</p>
+<pre><code class="java">class Adder &#123;
+    static int add(int a, int b) &#123;
+        return a + b;
+    &#125;
+
+    static double add(int a, int b) &#123;
+        return a + b;
+    &#125;
+&#125;
+
+class TestOverloading3 &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(Adder.add(11, 11));// ambiguity
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行后，输出结果如下 -</p>
+<pre><code class="java">Compile Time Error: method add(int,int) is already defined in class Adder
+Java
+</code></pre>
+<p><code>System.out.println(Adder.add(11,11));</code>//这里，java如何确定应该调用哪个<code>sum()</code>方法？</p>
+<blockquote>
+<p>注意：编译时错误优于运行时错误。 所以，如果你声明相同的方法具有相同的参数，java编译器渲染编译器时间错误。</p>
+</blockquote>
+<p><strong>可以重载java main()方法吗？</strong></p>
+<p>这是完全可以的。 可以通过方法重载在类中有任意数量的<code>main</code>方法。 但是JVM调用<code>main()</code>方法，它只接收字符串数组作为参数。 让我们来看一个简单的例子：</p>
+<pre><code class="java">class TestOverloading4&#123;  
+    public static void main(String[] args)&#123;System.out.println(&quot;main with String[]&quot;);&#125;  
+    public static void main(String args)&#123;System.out.println(&quot;main with String&quot;);&#125;  
+    public static void main()&#123;System.out.println(&quot;main without args&quot;);&#125;  
+&#125;
+Java
+</code></pre>
+<p>上面代码执行后，输出结果如下 -</p>
+<pre><code class="java">main with String[]
+Java
+</code></pre>
+<h2 id="方法重载和类型提升"><a href="#方法重载和类型提升" class="headerlink" title="方法重载和类型提升"></a>方法重载和类型提升</h2><p>如果没有找到匹配的数据类型，那么会隐式地将一个类型提升到另一个类型。 让我们通过下面的图示来理解这个概念：<br><img src="http://www.yiibai.com/uploads/images/201703/0603/289110316_15512.jpg" alt="img"></p>
+<p>如上图所示，<code>byte</code>可以被提升为<code>short</code>，<code>int</code>，<code>long</code>，<code>float</code>或<code>double</code>。 <code>short</code>数据类型可以提升为<code>int</code>，<code>long</code>，<code>float</code>或<code>double</code>。 <code>char</code>数据类型可以提升为<code>int</code>，<code>long</code>，<code>float</code>或<code>double</code>等等。</p>
+<p><strong>使用类型提升方法重载的示例</strong></p>
+<pre><code class="java">class OverloadingCalculation1 &#123;
+    void sum(int a, long b) &#123;
+        System.out.println(a + b);
+    &#125;
+
+    void sum(int a, int b, int c) &#123;
+        System.out.println(a + b + c);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        OverloadingCalculation1 obj = new OverloadingCalculation1();
+        obj.sum(20, 20);// now second int literal will be promoted to long
+        obj.sum(20, 20, 20);
+
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行后，输出结果如下 -</p>
+<pre><code class="java">40
+60
+Java
+</code></pre>
+<p><strong>如果找到匹配使用类型提升方法重载示例</strong><br>如果方法中存在匹配类型参数，则不会执行类型提升方法重载。</p>
+<pre><code class="java">class OverloadingCalculation2 &#123;
+    void sum(int a, int b) &#123;
+        System.out.println(&quot;int arg method invoked&quot;);
+    &#125;
+
+    void sum(long a, long b) &#123;
+        System.out.println(&quot;long arg method invoked&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        OverloadingCalculation2 obj = new OverloadingCalculation2();
+        obj.sum(20, 20);// now int arg sum() method gets invoked
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行后，输出结果如下 -</p>
+<pre><code class="java">Output:int arg method invoked
+Java
+</code></pre>
+<p><strong>在模糊的情况下使用类型提升来实现方法重载的示例</strong></p>
+<p>如果在方法中没有匹配的类型参数，并且每个方法都会提升相同数量的参数，那么会出现歧义。如下示例代码，将会产生编译时错误。</p>
+<pre><code class="java">class OverloadingCalculation3 &#123;
+    void sum(int a, long b) &#123;
+        System.out.println(&quot;a method invoked&quot;);
+    &#125;
+
+    void sum(long a, int b) &#123;
+        System.out.println(&quot;b method invoked&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        OverloadingCalculation3 obj = new OverloadingCalculation3();
+        obj.sum(20, 20);// now ambiguity
+    &#125;
+&#125;
+Java
+</code></pre>
+<blockquote>
+<p>注意： 只有一种类型不被隐式地去提升，例如<code>double</code>不能被隐含地提升到任何类型。</p>
+</blockquote>
+<h1 id="Java方法重写"><a href="#Java方法重写" class="headerlink" title="Java方法重写"></a>Java方法重写</h1><p>如果子类中具有与父类中声明相同的方法，在java中称为方法覆盖。换句话说，如果子类提供了由其父类提供的其中一个方法的特定实现，则它被称为方法覆盖。所以方法覆盖有两个前提条件：继承和子父类中方法名称相同。</p>
+<p><strong>Java方法覆盖的用法</strong></p>
+<ul>
+<li>方法重写用于提供有别于超类提供的方法的特定实现。</li>
+<li>方法重写用于运行时多态性。</li>
+</ul>
+<p><strong>Java方法覆盖的规则</strong></p>
+<ol>
+<li>方法必须与父类中的名称相同。</li>
+<li>方法必须具有与父类中相同的参数。</li>
+<li>必须是<strong>IS-A</strong>关系(继承)。</li>
+</ol>
+<p><strong>理解没有方法覆盖的问题</strong></p>
+<p>下面让我们来了解如果在程序中不使用方法覆盖可能面临的问题。</p>
+<pre><code class="java">class Vehicle &#123;
+    void run() &#123;
+        System.out.println(&quot;Vehicle is running&quot;);
+    &#125;
+&#125;
+
+class Bike extends Vehicle &#123;
+
+    public static void main(String args[]) &#123;
+        Bike obj = new Bike();
+        obj.run();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码，输出结果如下 - </p>
+<pre><code class="java">Vehicle is running
+Java
+</code></pre>
+<p>问题是，必须在子类中提供一个<code>run()</code>方法，这就是为什么要使用方法覆盖。</p>
+<h3 id="方法覆盖的示例"><a href="#方法覆盖的示例" class="headerlink" title="方法覆盖的示例"></a>方法覆盖的示例</h3><p>在下面的这个例子中，在父类中和子类中都定义了<code>run</code>方法，但子类中有一些特定的实现。 方法的名称和参数是相同的，并且类之间有<strong>IS-A</strong>关系，因此这里<code>run</code>方法被覆盖了。</p>
+<pre><code class="java">class Vehicle &#123;
+    void run() &#123;
+        System.out.println(&quot;Vehicle is running&quot;);
+    &#125;
+&#125;
+
+class Bike2 extends Vehicle &#123;
+    void run() &#123;
+        System.out.println(&quot;Bike is running safely&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        Bike2 obj = new Bike2();
+        obj.run();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行输出结果如下 -</p>
+<pre><code class="java">Bike is running safely
+Java
+</code></pre>
+<h2 id="Java方法重写的实例"><a href="#Java方法重写的实例" class="headerlink" title="Java方法重写的实例"></a>Java方法重写的实例</h2><p>考虑下面一个真实应用的情况，<code>Bank</code>是一个提供获取利率的功能的类。 但是，利息率因银行不同而有所区别。 例如，<code>SBI</code>，<code>ICICI</code>和<code>AXIS</code>银行可以提供<code>8％</code>，<code>7％</code>和<code>9％</code>的利率。</p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0603/950140330_77161.png" alt="img"></p>
+<pre><code class="java">class Bank &#123;
+    int getRateOfInterest() &#123;
+        return 0;
+    &#125;
+&#125;
+
+class SBI extends Bank &#123;
+    int getRateOfInterest() &#123;
+        return 8;
+    &#125;
+&#125;
+
+class ICICI extends Bank &#123;
+    int getRateOfInterest() &#123;
+        return 7;
+    &#125;
+&#125;
+
+class AXIS extends Bank &#123;
+    int getRateOfInterest() &#123;
+        return 9;
+    &#125;
+&#125;
+
+class Test2 &#123;
+    public static void main(String args[]) &#123;
+        SBI s = new SBI();
+        ICICI i = new ICICI();
+        AXIS a = new AXIS();
+        System.out.println(&quot;SBI Rate of Interest: &quot; + s.getRateOfInterest());
+        System.out.println(&quot;ICICI Rate of Interest: &quot; + i.getRateOfInterest());
+        System.out.println(&quot;AXIS Rate of Interest: &quot; + a.getRateOfInterest());
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行输出结果如下 -</p>
+<pre><code class="java">SBI Rate of Interest: 8
+ICICI Rate of Interest: 7
+AXIS Rate of Interest: 9
+Java
+</code></pre>
+<p><strong>问题：可以覆盖静态方法吗？</strong></p>
+<p><strong>答：</strong> 这是不可以的，静态方法不能被覆盖。可以通过运行时多态来证明不能覆盖，在稍后章节中将学习它。</p>
+<p><strong>问题： 为什么不能覆盖静态方法？</strong><br><strong>答：</strong> 因为静态方法是绑定类，而实例方法绑定对象。 静态属于类区域，实例属于堆区域。</p>
+<p><strong>问题：可以重写java main方法吗？</strong></p>
+<p><strong>答：</strong> 这是不可以的，因为<code>main</code>是一个静态方法。</p>
+<p><strong>java方法重载和方法重写之间的区别：</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.yiibai.com/java/method-overloading-vs-method-overriding-in-java.html">方法重载和覆盖的区别</a></li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,3824 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Java类 | Puushcc</title>
+  <meta name="keywords" content=" 后端 , java基础 , javaSE ">
+  <meta name="description" content="Java类 | Puushcc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于我">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Puushcc">
+<meta property="og:description" content="关于我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-10T14:44:00.000Z">
+<meta property="article:modified_time" content="2021-07-10T14:54:50.894Z">
+<meta property="article:author" content="Puushcc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Puushcc</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://puushcc.github.io/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(27)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(26)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->java">
+                                        
+                                        java
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->java基础">
+                                        
+                                        java基础
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->Java基础">
+                                        
+                                        Java基础
+                                        
+                                            <small>(24
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="运维">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        运维
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="运维<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="27">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://puushcc.github.io/">puushcc</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>后端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java基础</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaSE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux命令</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20instanceof%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java instanceof运算符">Java instanceof运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java基础 "
+           href="/2021/07/10/JDK%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="JDK安装和配置">JDK安装和配置</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%86%B3%E7%AD%96%E5%88%B6%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java决策制定">Java决策制定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java修饰符类型">Java修饰符类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java变量类型">Java变量类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8C%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java包">Java包</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java命令行参数">Java命令行参数</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本数据类型">Java基本数据类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本运算符">Java基本运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%9D%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java实例初始化程序块">Java实例初始化程序块</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本语法">Java基本语法</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象和类">Java对象和类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象克隆">Java对象克隆</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%B0%81%E8%A3%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java封装">Java封装</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8%E5%92%8C%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java按值调用和引用调用">Java按值调用和引用调用</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%95%B0%E7%BB%84/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java数组">Java数组</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E9%87%8D%E5%86%99/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java方法重载重写">Java方法重载重写</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%B3%A8%E9%87%8A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java注释">Java注释</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%BB%A7%E6%89%BF%E5%A4%9A%E6%80%81/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java继承多态">Java继承多态</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java静态绑定和动态绑定">Java静态绑定和动态绑定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20%E5%85%B3%E9%94%AE%E5%AD%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java 关键字">Java 关键字</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java循环控制">Java循环控制</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java抽象类和接口">Java抽象类和接口</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88OOP%EF%BC%89%E6%A6%82%E5%BF%B5/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java面向对象（OOP）概念">Java面向对象（OOP）概念</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java类">Java类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java "
+           href="/2021/07/10/Java%E5%9F%BA%E7%A1%80/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基础">Java基础</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 运维 Linux "
+           href="/2021/07/10/Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="Linux,Linux命令"
+           data-author="" >
+            <span class="post-title" title="Linux命令">Linux命令</span>
+            <span class="post-date" title="2021-07-10 15:13:47">2021/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Java类" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Java类</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a> > 
+            
+            <a  data-rel="后端&lt;---&gt;Java基础">Java基础</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">后端</a>
+            
+            <a class="color2">java基础</a>
+            
+            <a class="color2">javaSE</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-07-11 02:16:21'>2021-07-10 20:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-Number%E7%B1%BB"><span class="toc-text">Java Number类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Number%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">Number类的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-Character%E7%B1%BB"><span class="toc-text">Java Character类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="toc-text">1. 转义序列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Character%E6%96%B9%E6%B3%95"><span class="toc-text">Character方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-String%E7%B1%BB"><span class="toc-text">Java String类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">1. 创建字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="toc-text">2. 字符串长度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">3. 连接字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">3. 创建格式化字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-String%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="toc-text">4. String类方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%95%B0%E7%BB%84"><span class="toc-text">Java数组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A3%B0%E6%98%8E%E6%95%B0%E7%BB%84%E5%8F%98%E9%87%8F"><span class="toc-text">1. 声明数组变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="toc-text">2. 创建数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%A4%84%E7%90%86%E6%95%B0%E7%BB%84"><span class="toc-text">3. 处理数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-foreach%E5%BE%AA%E7%8E%AF"><span class="toc-text">3.1. foreach循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E5%B0%86%E6%95%B0%E7%BB%84%E4%BC%A0%E9%80%92%E7%BB%99%E6%96%B9%E6%B3%95"><span class="toc-text">3.2. 将数组传递给方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-%E4%BB%8E%E6%96%B9%E6%B3%95%E8%BF%94%E5%9B%9E%E6%95%B0%E7%BB%84"><span class="toc-text">3.3. 从方法返回数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-Arrays%E7%B1%BB"><span class="toc-text">3.4. Arrays类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4"><span class="toc-text">Java日期时间</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4"><span class="toc-text">1. 获取当前日期和时间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8SimpleDateFormat%E8%AE%BE%E7%BD%AE%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F"><span class="toc-text">2. 使用SimpleDateFormat设置日期格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8printf%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F"><span class="toc-text">3. 使用printf格式化日期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E5%AD%97%E7%AC%A6"><span class="toc-text">4. 日期和时间转换字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E6%9E%90%E4%B8%BA%E6%97%A5%E6%9C%9F"><span class="toc-text">5. 将字符串解析为日期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E7%9D%A1%E7%9C%A0%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4"><span class="toc-text">6. 睡眠一段时间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E6%B5%8B%E9%87%8F%E7%BB%8F%E8%BF%87%E7%9A%84%E6%97%B6%E9%97%B4"><span class="toc-text">7. 测量经过的时间</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">Java正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8D%95%E8%8E%B7%E7%BB%84"><span class="toc-text">1. 捕获组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E6%B3%95"><span class="toc-text">2. 正则表达式语法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%96%B9%E6%B3%95"><span class="toc-text">Java方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-text">1. 创建方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8"><span class="toc-text">2. 方法调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-void%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">3. void关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%8C%89%E5%80%BC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="toc-text">4. 按值传递参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="toc-text">5. 方法重载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-text">6. 使用命令行参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-this-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">7. this 关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%8F%98%E9%87%8F%E5%8F%82%E6%95%B0-var-args"><span class="toc-text">8. 变量参数(var-args)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-finalize-%E6%96%B9%E6%B3%95"><span class="toc-text">9. finalize()方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%96%87%E4%BB%B6%E5%92%8C%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%EF%BC%88I-O%EF%BC%89"><span class="toc-text">Java文件和输入和输出（I&#x2F;O）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%B5%81-Streams"><span class="toc-text">1. 流(Streams)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A0%87%E5%87%86%E6%B5%81"><span class="toc-text">2. 标准流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6"><span class="toc-text">3. 读写文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%96%87%E4%BB%B6%E5%AF%BC%E8%88%AA%E5%92%8CI-O"><span class="toc-text">4. 文件导航和I&#x2F;O</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-text">4.1. 目录操作</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-text">Java异常处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BC%82%E5%B8%B8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-text">1. 异常层次结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%82%E5%B8%B8%E6%96%B9%E6%B3%95"><span class="toc-text">2. 异常方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%8D%95%E6%8D%89%E5%BC%82%E5%B8%B8"><span class="toc-text">3. 捕捉异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%A4%9A%E4%B8%AAtry%E5%9D%97"><span class="toc-text">4. 多个try块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-throws-throw%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">5. throws&#x2F;throw关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-finally%E5%9D%97"><span class="toc-text">6. finally块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-try-with-resources"><span class="toc-text">7.  try-with-resources</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="toc-text">8. 用户定义的异常</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-Object%E7%B1%BB"><span class="toc-text">Java Object类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">Object类的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-text">Java包装类</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java-Number类"><a href="#Java-Number类" class="headerlink" title="Java Number类"></a>Java Number类</h1><p>通常，当要在Java编程中使用数字时，可以使用原始数据类型，如：<code>byte</code>，<code>int</code>，<code>long</code>，<code>double</code>等。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">int i = 5000;
+float gpa = 13.65;
+double mask = 0xaf;
+Java
+</code></pre>
+<p>但是，在开发过程中，我们遇到的是需要使用对象而不是原始数据类型的情况。要实现这一点，可使用Java提供的包装类。</p>
+<p>所有包装类(如：<code>Integer</code>，<code>Long</code>，<code>Byte</code>，<code>Double</code>，<code>Float</code>，<code>Short</code>)都是抽象类<code>Number</code>的子类。</p>
+<p><img src="https://www.yiibai.com/uploads/article/2019/03/12/141530_85700.jpg" alt="Number类"></p>
+<p>包装类的对象包含或包装其各自的基本数据类型。将原始数据类型转换为对象称为<strong>装箱</strong>，编译器会对此进行处理。 因此，在使用包装器类时，只需将原始数据类型的值传递给包装类的构造函数就可以对它进行对应的操作。</p>
+<p>并且包装对象将转换回原始数据类型，并且此过程称为<strong>拆箱</strong>。 <code>Number</code>类是<code>java.lang</code>包的一部分。</p>
+<p>以下是装箱和拆箱的示例 - </p>
+<pre><code class="java">public class Test &#123;
+
+   public static void main(String args[]) &#123;
+      Integer x = 5; // 装箱：将 int 添加到 Integer 对象
+      x =  x + 1000;   // 拆箱：将Integer 对象转为 int 
+      System.out.println(x); 
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">1005
+Shell
+</code></pre>
+<p>当<code>x</code>赋予整数值时，编译器将整数装箱，因为<code>x</code>是整数对象。 之后，<code>x</code>又被拆箱，以便它们可以作为整数执行加法运算。</p>
+<h2 id="Number类的方法"><a href="#Number类的方法" class="headerlink" title="Number类的方法"></a>Number类的方法</h2><p>以下是<code>Number</code>类的所有子类实现方法的列表 - </p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_xxxvalue.html">xxxValue()方法</a></td>
+<td>将此<code>Number</code>对象的值转换为<code>xxx</code>数据类型并返回它。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_compareto.html">compareTo()方法</a></td>
+<td>将此<code>Number</code>对象与参数进行比较。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_equals.html">equals()方法</a></td>
+<td>确定此<code>Number</code>对象是否等于参数。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_valueof.html">valueOf()方法</a></td>
+<td>返回包含指定原始值的<code>Integer</code>对象。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_tostring.html">toString()方法</a></td>
+<td>返回表示指定<code>int</code>或<code>Integer</code>值的<code>String</code>对象。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_parseint.html">parseInt()方法</a></td>
+<td>返回某个<code>String</code>的原始数据类型值。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_abs.html">abs()方法</a></td>
+<td>返回参数的绝对值。</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_ceil.html">ceil()方法</a></td>
+<td>返回大于或等于参数的最小整数，结果整数为<code>double</code>类型。</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_floor.html">floor()方法</a></td>
+<td>返回小于或等于参数的最大整数，结果整数为<code>double</code>类型。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_rint.html">rint()方法</a></td>
+<td>返回与参数值最接近的整数，结果整数为<code>double</code>类型。</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_round.html">round()方法</a></td>
+<td>返回最接近<code>long</code>或<code>int</code>值，由方法返回类型指示参数的返回类型。</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_min.html">min()方法</a></td>
+<td>返回两个参数中最小的那一个。</td>
+</tr>
+<tr>
+<td>13</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_max.html">max()方法</a></td>
+<td>返回两个参数中最大的那一个。</td>
+</tr>
+<tr>
+<td>14</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_exp.html">exp()方法</a></td>
+<td>返回 e 的 x 次幂。e 代表自然对数的底数，其值近似为 <code>2.71828</code>。</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_log.html">log()方法</a></td>
+<td>返回参数的自然对数。</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_pow.html">pow()方法</a></td>
+<td>返回第一个参数的第二个参数的指数幂(乘方)值。</td>
+</tr>
+<tr>
+<td>17</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_sqrt.html">sqrt()方法</a></td>
+<td>返回参数的平方根。</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_sin.html">sin()方法</a></td>
+<td>返回指定<code>double</code>值的正弦值。</td>
+</tr>
+<tr>
+<td>19</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_cos.html">cos()方法</a></td>
+<td>返回指定<code>double</code>值的余弦值。</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_tan.html">tan()方法</a></td>
+<td>返回指定<code>double</code>值的正切值。</td>
+</tr>
+<tr>
+<td>21</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_asin.html">asin()方法</a></td>
+<td>返回指定<code>double</code>值的反正弦值。</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_acos.html">acos()方法</a></td>
+<td>返回指定<code>double</code>值的反余弦值。</td>
+</tr>
+<tr>
+<td>23</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_atan.html">atan()方法</a></td>
+<td>返回指定<code>double</code>值的反正切值。</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_atan2.html">atan2()方法</a></td>
+<td>将直角坐标(x，y)转换为极坐标(r，theta)并返回theta。</td>
+</tr>
+<tr>
+<td>25</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_todegrees.html">toDegrees()方法</a></td>
+<td>将参数转换为度数。</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_toradians.html">toRadians()方法</a></td>
+<td>将参数转换为弧度。</td>
+</tr>
+<tr>
+<td>27</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/number_random.html">random()方法</a></td>
+<td>返回一个随机数。</td>
+</tr>
+</tbody></table>
+<h1 id="Java-Character类"><a href="#Java-Character类" class="headerlink" title="Java Character类"></a>Java Character类</h1><p>通常，当处理字符时，使用原始数据类型<code>char</code>。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">char ch = &#39;a&#39;;
+
+// Unicode的大写字符
+char uniChar = &#39;\u039A&#39;; 
+
+// 字符数组
+char[] charArray =&#123; &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39; &#125;;
+Java
+</code></pre>
+<p>但是在开发过程中，经常遇到的是需要使用对象而不是原始数据类型的情况。 为了实现这一点，Java为原始数据类型<code>char</code>提供了包装类<code>Character</code>。</p>
+<p><code>Character</code>类提供了许多用于操作字符的有用类(即静态)方法。 可以使用<code>Character</code>构造函数创建<code>Character</code>对象，例如 - </p>
+<pre><code class="java">Character ch = new Character(&#39;a&#39;);
+Java
+</code></pre>
+<p>在某些情况下，Java编译器还会创建一个<code>Character</code>对象。 例如，如果将原始字符传递给需要对象的方法，则编译器会自动将<code>char</code>转换为<code>Character</code>。此功能称为自动装箱或拆箱。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">// 这里是原始的char类型值：&#39;a&#39;
+// 它被装入`Character`对象ch
+Character ch = &#39;a&#39;;
+
+// 这里原始char值&#39;x&#39;，装箱用于方法test，
+// 拆箱到char类型值：&#39;c&#39;
+char c = test(&#39;x&#39;);
+Java
+</code></pre>
+<h2 id="1-转义序列"><a href="#1-转义序列" class="headerlink" title="1. 转义序列"></a>1. 转义序列</h2><p>以反斜杠(<code>\</code>)开头的字符是转义序列，对编译器具有特殊含义。</p>
+<p>在本教程中<code>System.out.println()</code>语句中经常使用换行符(<code>\n</code>)，以便在打印字符串后前进到下一行。</p>
+<p>下表中列出了Java转义序列 - </p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>转义序列</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>\t</code></td>
+<td>表示在文本中插入一个制表符。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>\b</code></td>
+<td>表示在文本中插入退格符。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>\n</code></td>
+<td>表示在文本中插入换行符。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>\r</code></td>
+<td>表示在文本中插入回车符。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>\f</code></td>
+<td>表示在文本中插入换页符。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>\ &#39;</code></td>
+<td>表示在文本中插入单引号字符。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>\&quot;</code></td>
+<td>表示在文本中插入双引号字符。</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>\\</code></td>
+<td>表示在文本中插入反斜杠字符。</td>
+</tr>
+</tbody></table>
+<p>当在<code>print</code>语句中遇到转义序列时，编译器会相应地解释它。</p>
+<p><strong>示例</strong></p>
+<p>如果要在引号内加引号，则必须在内部引号上使用转义序列<code>\&quot;</code> - </p>
+<pre><code class="java">public class Test &#123;
+
+   public static void main(String args[]) &#123;
+      System.out.println(&quot;She said \&quot;Hello!\&quot; to me.&quot;);
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">She said &quot;Hello!&quot; to me.
+Shell
+</code></pre>
+<h2 id="Character方法"><a href="#Character方法" class="headerlink" title="Character方法"></a>Character方法</h2><p>以下是<code>Character</code>类的所有子类实现的方法列表 - </p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_isletter.html">isLetter()方法</a></td>
+<td>确定指定的<code>char</code>值是否为字母。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_isdigit.html">isDigit()方法</a></td>
+<td>确定指定的<code>char</code>值是否为数字。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_iswhitespace.html">isWhitespace()方法</a></td>
+<td>确定指定的<code>char</code>值是否为空格。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_isuppercase.html">isUpperCase()方法</a></td>
+<td>确定指定的<code>char</code>值是否为大写字母。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_islowercase.html">isLowerCase()方法</a></td>
+<td>确定指定的<code>char</code>值是否为小写字母。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_touppercase.html">toUpperCase()方法</a></td>
+<td>返回指定<code>char</code>值的大写形式。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_tolowercase.html">toLowerCase()方法</a></td>
+<td>返回指定<code>char</code>值的小写形式。</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/character_tostring.html">toString()方法</a></td>
+<td>返回表示指定字符值的<code>String</code>对象，即一个字符的字符串。</td>
+</tr>
+</tbody></table>
+<p>有关方法的完整列表，请参阅<code>java.lang.Character</code> API规范。</p>
+<h1 id="Java-String类"><a href="#Java-String类" class="headerlink" title="Java String类"></a>Java String类</h1><p>字符串在Java编程中广泛使用，字符串就是一系列字符(由一个个的字符组成)。 在Java编程语言中，字符串被视为对象。</p>
+<p>Java平台提供<code>String</code>类来创建和操作字符串。</p>
+<h2 id="1-创建字符串"><a href="#1-创建字符串" class="headerlink" title="1. 创建字符串"></a>1. 创建字符串</h2><p>创建字符串的最直接方法是 - </p>
+<pre><code class="java">String str = &quot;Hello world!&quot;;
+Java
+</code></pre>
+<p>每当它在代码中遇到字符串文字时，编译器就会创建一个<code>String</code>对象，在本例中<code>str</code>对象的值为<code>Hello world!</code>。</p>
+<p>与其他对象一样，可以使用<code>new</code>关键字和构造函数来创建<code>String</code>对象。<code>String</code>类有<code>11</code>个构造函数，方便使用不同的源(例如：字符数组)提供字符串的初始值。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">public class StringDemo &#123;
+
+   public static void main(String args[]) &#123;
+      char[] helloArray = &#123; &#39;Y&#39;, &#39;i&#39;, &#39;i&#39;, &#39;b&#39;, &#39;a&#39;, &#39;i&#39; &#125;;
+      String helloString = new String(helloArray);  
+      System.out.println( helloString );
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到下结果：</p>
+<pre><code class="shell">Yiibai
+Shell
+</code></pre>
+<blockquote>
+<p>注 -  <code>String</code>类是不可变的，因此一旦创建，就无法更改<code>String</code>对象。 如果想要对字符串进行大量修改，则应使用<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_buffer.html">StringBuffer和StringBuilder</a>。</p>
+</blockquote>
+<h2 id="2-字符串长度"><a href="#2-字符串长度" class="headerlink" title="2. 字符串长度"></a>2. 字符串长度</h2><p>用于获取对象信息的方法称为访问器方法。 可以与字符串一起使用来获取字符串长度的一个访问器方法是<code>length()</code>方法，它返回字符串对象中包含的字符数。</p>
+<p>以下程序是<code>String</code>类的<code>length()</code>方法的示例。</p>
+<pre><code class="java">public class StringDemo &#123;
+
+   public static void main(String args[]) &#123;
+      String greeting = &quot;Hi,Welcome to Yiibai.com&quot;;
+      int len = greeting.length();
+      System.out.println( greeting+&quot; 字符串的长度是: &quot; + len );
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到下结果：</p>
+<pre><code class="shell">Hi,Welcome to Yiibai.com 字符串的长度是: 24
+Shell
+</code></pre>
+<h2 id="3-连接字符串"><a href="#3-连接字符串" class="headerlink" title="3. 连接字符串"></a>3. 连接字符串</h2><p><code>String</code>类包含一个用于连接两个字符串的方法 - </p>
+<pre><code class="java">string1.concat(string2);
+Java
+</code></pre>
+<p>这将返回一个新字符串：<code>string1</code>，并且<code>string1</code>在结尾处添加了<code>string2</code>。 还可以将<code>concat()</code>方法与字符串文字一起使用，例如 - </p>
+<pre><code class="java">&quot;My name is &quot;.concat(&quot;Maxsu&quot;);
+Java
+</code></pre>
+<p>字符串通常使用<code>+</code>运算符连接，如 - </p>
+<pre><code class="java">&quot;Hello,&quot; + &quot; world&quot; + &quot;!&quot;
+Java
+</code></pre>
+<p>上面代码执行后得到的结果是：</p>
+<pre><code class="shell">&quot;Hello, world!&quot;
+Shell
+</code></pre>
+<p>下面再来看另一个例子 - </p>
+<pre><code class="java">public class StringDemo &#123;
+
+   public static void main(String args[]) &#123;
+      String string1 = &quot;Bai&quot;;
+      System.out.println(&quot;Yii&quot; + string1 + &quot;.com&quot;);
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行后得到的结果是：</p>
+<pre><code class="shell">YiiBai.com
+Shell
+</code></pre>
+<h2 id="3-创建格式化字符串"><a href="#3-创建格式化字符串" class="headerlink" title="3. 创建格式化字符串"></a>3. 创建格式化字符串</h2><p>Java中使用<code>printf()</code>和<code>format()</code>方法来打印带有格式化数字的输出。 <code>String</code>类有一个等效的类方法<code>format()</code>，它返回一个<code>String</code>对象而不是一个<code>PrintStream</code>对象。</p>
+<p>使用<code>String</code>的<code>static format()</code>方法可以创建重用的格式化字符串，而不是一次性打印语句。 例如 - </p>
+<pre><code class="java">System.out.printf(&quot;The value of the float variable is &quot; +
+                  &quot;%f, while the value of the integer &quot; +
+                  &quot;variable is %d, and the string &quot; +
+                  &quot;is %s&quot;, floatVar, intVar, stringVar);
+Java
+</code></pre>
+<p>上面打印语句可使用格式化写为：</p>
+<pre><code class="java">String fs;
+fs = String.format(&quot;The value of the float variable is &quot; +
+                   &quot;%f, while the value of the integer &quot; +
+                   &quot;variable is %d, and the string &quot; +
+                   &quot;is %s&quot;, floatVar, intVar, stringVar);
+System.out.println(fs);
+Java
+</code></pre>
+<h2 id="4-String类方法"><a href="#4-String类方法" class="headerlink" title="4. String类方法"></a>4. String类方法</h2><p>以下是<code>String</code>类定义的方法列表 - </p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_charat.html">char charAt(int index)</a></td>
+<td>返回指定索引处的字符。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_compareto.html">int compareTo(Object o)</a></td>
+<td>将此<code>String</code>对象与另一个对象进行比较。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_compareto_anotherstring.html">int compareTo(String anotherString)</a></td>
+<td>按字典顺序比较两个字符串。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_comparetoignorecase.html">int compareToIgnoreCase(String str)</a></td>
+<td>按字典顺序比较两个字符串，但不区分大小写。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_concat.html">String concat(String str)</a></td>
+<td>将指定的字符串连接到此字符串的末尾。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_contentequals.html">boolean contentEquals(StringBuffer sb)</a></td>
+<td>当且仅当此<code>String</code>表示的字符串与指定的<code>StringBuffer</code>相同的字符序列时，才返回<code>true</code>。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>[static String copyValueOf(char<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_copyvalueof.html">] data)</a></td>
+<td>返回表示指定数组中字符序列的<code>String</code>对象形式。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>[static String copyValueOf(char<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_copyvalueof_dataoffsetcount.html">] data, int offset, int count)</a></td>
+<td>返回表示指定数组中字符序列的<code>String</code>对象形式。</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_endswith.html">boolean endsWith(String suffix)</a></td>
+<td>判断此字符串是否以指定的字符作为后缀结尾。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_equals.html">boolean equals(Object anObject)</a></td>
+<td>将此字符串与指定的对象进行比较。</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_equalsignorecase.html">boolean equalsIgnoreCase(String anotherString)</a></td>
+<td>将此<code>String</code>与另一个<code>String</code>进行比较，忽略大小写。</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_getbytes.html">byte getBytes()</a></td>
+<td>使用平台的默认字符集将此<code>String</code>编码为字节序列，将结果存储到新的字节数组中。</td>
+</tr>
+<tr>
+<td>13</td>
+<td>[byte<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_getbytes_charsetname.html">] getBytes(String charsetName)</a></td>
+<td>使用指定的字符集将此String编码为字节序列，将结果存储到新的字节数组中。</td>
+</tr>
+<tr>
+<td>14</td>
+<td>[void getChars(int srcBegin, int srcEnd, char<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_getchars.html">] dst, int dstBegin)</a></td>
+<td>将此字符串中的字符复制到目标字符数组中。</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_hashcode.html">int hashCode()</a></td>
+<td>返回此字符串的哈希码。</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_indexof.html">int indexOf(int ch)</a></td>
+<td>返回指定字符在此字符串中第一次出现的索引。</td>
+</tr>
+<tr>
+<td>17</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_indexof_fromindex.html">int indexOf(int ch, int fromIndex)</a></td>
+<td>返回指定字符在此字符串中第一次出现的索引，它从指定索引处开始搜索。</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_indexof_str.html">int indexOf(String str)</a></td>
+<td>返回指定子字符串在此字符串中第一次出现的索引。</td>
+</tr>
+<tr>
+<td>19</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_indexof_strfromindex.html">int indexOf(String str, int fromIndex)</a></td>
+<td>从指定的索引处开始，返回指定子字符串在此字符串中第一次出现的索引。</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_intern.html">String intern()</a></td>
+<td>返回字符串对象的规范表示。</td>
+</tr>
+<tr>
+<td>21</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_lastindexof.html">int lastIndexOf(int ch)</a></td>
+<td>返回指定字符在此字符串中最后一次出现的索引。</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_lastindexof_chfromindex.html">int lastIndexOf(int ch, int fromIndex)</a></td>
+<td>返回指定字符在此字符串中最后一次出现的索引，它从指定的索引开始向后搜索。</td>
+</tr>
+<tr>
+<td>23</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_lastindexof_str.html">int lastIndexOf(String str)</a></td>
+<td>返回指定子字符串在些字符串中最后出现的索引。</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_lastindexof_fromindex.html">int lastIndexOf(String str, int fromIndex)</a></td>
+<td>返回指定子字符串在此字符串中最后一次出现的索引，它从指定索引开始向后搜索。</td>
+</tr>
+<tr>
+<td>25</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_length.html">int length()</a></td>
+<td>返回此字符串的长度。</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_matches.html">boolean matches(String regex)</a></td>
+<td>判断此字符串是否与给定的正则表达式匹配。</td>
+</tr>
+<tr>
+<td>27</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_regionmatches_ignorecase.html">boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)</a></td>
+<td>判断两个字符串区域是否相等。</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_regionmatches.html">boolean regionMatches(int toffset, String other, int ooffset, int len)</a></td>
+<td>判断两个字符串区域是否相等。</td>
+</tr>
+<tr>
+<td>29</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_replace.html">String replace(char oldChar, char newChar)</a></td>
+<td>返回一个新字符串，该字符串是使用<code>newChar</code>替换此字符串中出现的所有<code>oldChar</code>后的字符串。</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_replaceall.html">String replaceAll(String regex, String replacement)</a></td>
+<td>将替换此字符串中匹配给定正则表达式的每个子字符串。</td>
+</tr>
+<tr>
+<td>31</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_replacefirst.html">String replaceFirst(String regex, String replacement)</a></td>
+<td>将替换此字符串中第一个匹配给定正则表达式的子字符串。</td>
+</tr>
+<tr>
+<td>32</td>
+<td>[String<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_split.html">] split(String regex)</a></td>
+<td>将此字符串拆分为给定正则表达式的匹配项。</td>
+</tr>
+<tr>
+<td>33</td>
+<td>[String<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_split_regexlimit.html">] split(String regex, int limit)</a></td>
+<td>将此字符串拆分为给定正则表达式的匹配项。</td>
+</tr>
+<tr>
+<td>34</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_startswith.html">boolean startsWith(String prefix)</a></td>
+<td>判断此字符串是否以指定的字符串前缀开头。</td>
+</tr>
+<tr>
+<td>35</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_startswith_prefixtoffset.html">boolean startsWith(String prefix, int toffset)</a></td>
+<td>判断此字符串在指定的索引是否以指定的前缀开始。</td>
+</tr>
+<tr>
+<td>36</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_subsequence.html">CharSequence subSequence(int beginIndex, int endIndex)</a></td>
+<td>返回一个新的字符序列，它是该序列的子序列。</td>
+</tr>
+<tr>
+<td>37</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_substring.html">String substring(int beginIndex)</a></td>
+<td>返回一个新字符串，该字符串是此字符串的子字符串。</td>
+</tr>
+<tr>
+<td>38</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_substring_beginendindex.html">String substring(int beginIndex, int endIndex)</a></td>
+<td>返回一个新字符串，该字符串是此字符串的子字符串。</td>
+</tr>
+<tr>
+<td>39</td>
+<td>[char<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_tochararray.html">] toCharArray()</a></td>
+<td>将此字符串转换为新的字符数组。</td>
+</tr>
+<tr>
+<td>40</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_tolowercase.html">String toLowerCase()</a></td>
+<td>使用默认语言环境的规则将此<code>String</code>中的所有字符转换为小写。</td>
+</tr>
+<tr>
+<td>41</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_tolowercase_locale.html">String toLowerCase(Locale locale)</a></td>
+<td>使用给定<code>Locale</code>的规则将此<code>String</code>中的所有字符转换为小写。</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_tostring.html">String toString()</a></td>
+<td>将这个对象(已经是一个字符串)本身返回。</td>
+</tr>
+<tr>
+<td>43</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_touppercase.html">String toUpperCase()</a></td>
+<td>使用默认语言环境的规则将此<code>String</code>中的所有字符转换为大写。</td>
+</tr>
+<tr>
+<td>44</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_touppercase_locale.html">String toUpperCase(Locale locale)</a></td>
+<td>使用给定<code>Locale</code>的规则将此<code>String</code>中的所有字符转换为大写。</td>
+</tr>
+<tr>
+<td>45</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_trim.html">String trim()</a></td>
+<td>返回字符串的副本，移除前导和尾随空格。</td>
+</tr>
+<tr>
+<td>46</td>
+<td><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_string_valueof.html">static String valueOf(primitive data type x)</a></td>
+<td>返回传递的数据类型参数的字符串表示形式。</td>
+</tr>
+</tbody></table>
+<h1 id="Java数组"><a href="#Java数组" class="headerlink" title="Java数组"></a>Java数组</h1><p>java提供了一种叫作数组的数据结构，它是一种用来存储相同类型元素的固定大小顺序集合。 数组用于存储数据集合，但也可以将数组视为相同类型的变量集合。</p>
+<p>声明一个数组变量(如：<code>numbers</code>)并使用<code>numbers[0]</code>，<code>numbers[1]</code>和<code>...</code>，<code>numbers[99]</code>来表示单个变量，例如<code>number0</code>，<code>number1</code>，<code>...</code>和<code>number99</code>，而不是单独地声明各个变量。</p>
+<p>本教程介绍如何声明数组变量，创建数组和索引访问数组。</p>
+<h2 id="1-声明数组变量"><a href="#1-声明数组变量" class="headerlink" title="1. 声明数组变量"></a>1. 声明数组变量</h2><p>要在程序中使用数组，需要先声明一个变量以引用该数组，并且要指定该变量的数组类型。 以下是声明数组变量的语法 - </p>
+<p><strong>语法</strong></p>
+<pre><code class="java">dataType[] arrayRefVar;   // 推荐方式。
+// 或者
+dataType arrayRefVar[];  // 有效，但不是推荐方式。
+Java
+</code></pre>
+<blockquote>
+<p>注 - 格式：<code>dataType [] arrayRefVar</code>是推荐方式。 格式：<code>dataType arrayRefVar []</code>来自C/C++语言，可在Java中采用以适应C/C++程序员。</p>
+</blockquote>
+<p><strong>示例</strong></p>
+<p>以下代码片段是此语法的示例 - </p>
+<pre><code class="java">double[] myList;   // 推荐方式。
+// 或者
+double myList[];   // 有效，但不是推荐方式。
+Java
+</code></pre>
+<h2 id="2-创建数组"><a href="#2-创建数组" class="headerlink" title="2. 创建数组"></a>2. 创建数组</h2><p>可以使用<code>new</code>运算符来创建数组，如以下语法 - </p>
+<pre><code class="java">// 声明
+dataType[] arrayRefVar;   // 推荐方式。
+// 创建
+arrayRefVar = new dataType[arraySize];
+Java
+</code></pre>
+<p>上面语句做了两件事 - </p>
+<ul>
+<li>它使用<code>new dataType[arraySize]</code>来创建了一个数组。</li>
+<li>它将新创建的数组的引用分配给变量<code>arrayRefVar</code>。</li>
+</ul>
+<p>声明一个数组变量，创建一个数组，并将该数组的引用分配给变量，可以在一个语句中完成，如下所示 - </p>
+<pre><code class="java">dataType[] arrayRefVar = new dataType[arraySize];
+Java
+</code></pre>
+<p>或者，可以按如下方式创建数组 - </p>
+<pre><code class="java">dataType[] arrayRefVar = &#123;value0, value1, ..., valuek&#125;;
+Java
+</code></pre>
+<p>通过索引访问数组元素。 数组索引值从<code>0</code>开始; 也就是说，它们从<code>0</code>开始到<code>arrayRefVar.length - 1</code>。</p>
+<p><strong>示例</strong></p>
+<p>下面语句中声明了一个数组变量<code>myList</code>，它创建了一个包含<code>10</code>个<code>double</code>类型元素的数组，并将数组变量的引用分配给<code>myList</code>  - </p>
+<pre><code class="java">double[] myList = new double[10];
+Java
+</code></pre>
+<p>下图表示数组<code>myList</code>。 这里，<code>myList</code>数组中包含十个<code>double</code>值，索引从<code>0</code>到<code>9</code>。<br><img src="https://www.yiibai.com/uploads/article/2019/03/15/111459_59516.jpg" alt="数组存储结构示例"></p>
+<h2 id="3-处理数组"><a href="#3-处理数组" class="headerlink" title="3. 处理数组"></a>3. 处理数组</h2><p>处理数组元素时，经常使用<code>for</code>循环或<code>foreach</code>循环，因为数组中的所有元素都是相同的类型，并且数组的大小是已知的。</p>
+<p><strong>示例</strong><br>这是一个完整的示例，演示了如何创建，初始化和处理数组 - </p>
+<pre><code class="java">import java.util.*;
+
+public class Test &#123;
+
+    public static void main(String[] args) &#123;
+        double[] myList = &#123; 10.01, 12.19, 23.44, 43.95, 77.88, 65.00 &#125;;
+
+        // 打印所有元素
+        for (int i = 0; i &lt; myList.length; i++) &#123;
+            System.out.print(myList[i] + &quot;, &quot;);
+        &#125;
+        System.out.println(&quot; &quot;);
+
+        // 求和
+        double total = 0;
+        for (int i = 0; i &lt; myList.length; i++) &#123;
+            total += myList[i];
+        &#125;
+        System.out.println(&quot;总和：&quot; + total);
+
+        // 查找最大值
+        double max = myList[0];
+        for (int i = 1; i &lt; myList.length; i++) &#123;
+            if (myList[i] &gt; max)
+                max = myList[i];
+        &#125;
+        System.out.println(&quot;元素最大值：&quot; + max);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">10.01, 12.19, 23.44, 43.95, 77.88, 65.0,  
+总和：232.47
+元素最大值：77.88
+Shell
+</code></pre>
+<h4 id="3-1-foreach循环"><a href="#3-1-foreach循环" class="headerlink" title="3.1. foreach循环"></a>3.1. foreach循环</h4><p>JDK 1.5引入了<code>foreach</code>循环或增强<code>for</code>循环，它能够在不使用索引变量的情况下顺序遍历整个数组。</p>
+<p><strong>示例</strong></p>
+<p>以下代码演示如何遍历数组<code>myList</code>中的所有元素 - </p>
+<pre><code class="java">import java.util.*;
+
+public class Test &#123;
+
+    public static void main(String[] args) &#123;
+        double[] myList = &#123; 10.01, 12.19, 23.44, 43.95, 77.88, 65.00 &#125;;
+
+        // Print all the array elements
+        for (double element : myList) &#123;
+            System.out.print(element+&quot;, &quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">10.01, 12.19, 23.44, 43.95, 77.88, 65.0,
+Shell
+</code></pre>
+<h4 id="3-2-将数组传递给方法"><a href="#3-2-将数组传递给方法" class="headerlink" title="3.2. 将数组传递给方法"></a>3.2. 将数组传递给方法</h4><p>就像将原始类型值传递给方法一样，也可以将数组传递给方法。 例如，以下<code>printArray()</code>方法用来打印<code>int</code>数组中的元素 - </p>
+<p><strong>示例</strong></p>
+<pre><code class="java">import java.util.*;
+
+public class Test &#123;
+
+    public static void main(String[] args) &#123;
+        double[] myList = &#123; 10.01, 12.19, 23.44, 43.95, 77.88, 65.00 &#125;;
+
+        // Print all the array elements
+        printArray(myList);
+    &#125;
+
+    public static void printArray(double[] array) &#123;
+        for (int i = 0; i &lt; array.length; i++) &#123;
+            System.out.print(array[i] + &quot; &quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">10.01 12.19 23.44 43.95 77.88 65.0
+Shell
+</code></pre>
+<h4 id="3-3-从方法返回数组"><a href="#3-3-从方法返回数组" class="headerlink" title="3.3. 从方法返回数组"></a>3.3. 从方法返回数组</h4><p>方法可以返回数组。 例如，以下方法返回一个与给定参数数组相反的数组 - </p>
+<pre><code class="java">import java.util.*;
+
+public class Test &#123;
+
+    public static void main(String[] args) &#123;
+        double[] myList = &#123; 10.01, 12.19, 23.44, 43.95, 77.88, 65.00 &#125;;
+
+        // Print all the array elements
+        printArray(myList);
+        printArray(reverse(myList));
+    &#125;
+
+    public static void printArray(double[] array) &#123;
+        for (int i = 0; i &lt; array.length; i++) &#123;
+            System.out.print(array[i] + &quot; &quot;);
+        &#125;
+        System.out.println(&quot; &quot;);
+    &#125;
+
+    public static double[] reverse(double[] list) &#123;
+        double[] result = new double[list.length];
+
+        for (int i = 0, j = result.length - 1; i &lt; list.length; i++, j--) &#123;
+            result[j] = list[i];
+        &#125;
+        return result;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">10.01 12.19 23.44 43.95 77.88 65.0  
+65.0 77.88 43.95 23.44 12.19 10.01
+Shell
+</code></pre>
+<h4 id="3-4-Arrays类"><a href="#3-4-Arrays类" class="headerlink" title="3.4. Arrays类"></a>3.4. Arrays类</h4><p><code>java.util.Arrays</code>类包含各种静态方法，用于排序和搜索数组，比较数组和填充数组元素。 对于所有基本类型，这些方法都会重载。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>public static int binarySearch(Object[] a, Object key)</code></td>
+<td>使用二进制搜索算法搜索指定的Object(Byte，Int，double等)数组以获取指定值。 必须在进行此调用之前对数组进行排序。 如果搜索关键字包含在列表中，则返回搜索关键字的索引; 否则，它返回( -(插入点 + 1))。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>public static boolean equals(long[] a, long[] a2)</code></td>
+<td>如果两个指定的<code>long</code>数组相等，则返回<code>true</code>。 如果两个数组包含相同数量的元素，则两个数组被认为是相等的，并且两个数组中的所有相应元素对相等。如果两个数组相等，则返回<code>true</code>。 所有其他原始数据类型(Byte，Short，Int等)可以使用相同的方法。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>public static void fill(int[] a, int val)</code></td>
+<td>将指定的<code>int</code>值分配给指定的<code>int</code>数组的每个元素。所有其他原始数据类型(Byte，Short，Int等)可以使用相同的方法。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>public static void sort(Object[] a)</code></td>
+<td>根据元素的自然顺序，将指定的对象数组按升序排序。 所有其他原始数据类型(Byte，Short，Int等)可以使用相同的方法。</td>
+</tr>
+</tbody></table>
+<h1 id="Java日期时间"><a href="#Java日期时间" class="headerlink" title="Java日期时间"></a>Java日期时间</h1><p>Java的<code>java.util</code>包提供了<code>Date</code>类，该类封装了当前的日期和时间。<code>Date</code>类支持两个构造函数，如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>构造函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>Date()</code></td>
+<td>此构造函数使用当前日期和时间来初始化对象。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Date(long millisec)</code></td>
+<td>此构造函数接受一个参数，该参数等于自1970年1月1日午夜以来经过的毫秒数。</td>
+</tr>
+</tbody></table>
+<p>以下是<code>Date</code>类的方法列表 - </p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>boolean after(Date date)</code></td>
+<td>如果调用<code>Date</code>对象包含的日期晚于<code>date</code>指定的日期，则返回<code>true</code>，否则返回<code>false</code>。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>boolean before(Date date)</code></td>
+<td>如果调用<code>Date</code>对象包含的日期早于<code>date</code>指定的日期，则返回<code>true</code>，否则返回<code>false</code>。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Object clone( )</code></td>
+<td>复制调用的<code>Date</code>对象。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>int compareTo(Date date)</code></td>
+<td>将调用对象的值与<code>date</code>的值进行比较。 如果值相等则返回<code>0</code>。 如果调用对象早于<code>date</code>，则返回负值。 如果调用对象晚于<code>date</code>，则返回正值。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>int compareTo(Object obj)</code></td>
+<td>如果<code>obj</code>对象是<code>Date</code>类对象，则与<code>compareTo(Date)</code>操作相同。 否则，它会抛出<code>ClassCastException</code>。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>boolean equals(Object date)</code></td>
+<td>如果调用<code>Date</code>对象包含与<code>date</code>指定的时间和日期相同的时间和日期，则返回<code>true</code>，否则返回<code>false</code>。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>long getTime()</code></td>
+<td>返回自1970年1月1日以来经过的毫秒数。</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>int hashCode()</code></td>
+<td>返回调用对象的哈希码。</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>void setTime(long time)</code></td>
+<td>设置时间指定的时间和日期，表示从1970年1月1日午夜开始的经过时间(以毫秒为单位)。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>String toString( )</code></td>
+<td>将调用<code>Date</code>对象转换为字符串并返回结果。</td>
+</tr>
+</tbody></table>
+<h4 id="1-获取当前日期和时间"><a href="#1-获取当前日期和时间" class="headerlink" title="1. 获取当前日期和时间"></a>1. 获取当前日期和时间</h4><p>这是一种在Java中获取当前日期和时间的简单方法。可以使用<code>Date</code>对象<code>toString()</code>方法来打印当前日期和时间，如下所示 - </p>
+<pre><code class="java">import java.util.Date;
+public class Test &#123;
+
+   public static void main(String args[]) &#123;
+      // 实例化Date对象
+      Date date = new Date();
+
+      // display time and date using toString()
+      System.out.println(date.toString());
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Fri Mar 15 13:00:37 CST 2020
+Shell
+</code></pre>
+<h4 id="2-使用SimpleDateFormat设置日期格式"><a href="#2-使用SimpleDateFormat设置日期格式" class="headerlink" title="2. 使用SimpleDateFormat设置日期格式"></a>2. 使用SimpleDateFormat设置日期格式</h4><p><code>SimpleDateFormat</code>是一个具体的类，用于以区域设置的方式格式化和解析日期。 <code>SimpleDateFormat</code>用于从为日期时间格式选择用户定义的模式。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Test &#123;
+
+    public static void main(String args[]) &#123;
+        Date dNow = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat(&quot;yyyy.MM.dd (E)&#39;at&#39; hh:mm:ss a zzz&quot;);
+
+        System.out.println(&quot;Current Date: &quot; + ft.format(dNow));
+
+        SimpleDateFormat ft2 = new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;);
+
+        System.out.println(&quot;Current Datetime: &quot; + ft2.format(dNow));
+
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Current Date: 2019.03.15 (星期五)at 01:04:52 下午 CST
+Current Datetime: 2019-03-15 01:04:52
+Shell
+</code></pre>
+<p><strong>DateFormat格式代码</strong></p>
+<p>要指定时间格式，请使用时间模式字符串。 在此模式中，所有ASCII字母都保留为模式字母，其定义如下 - </p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>字符</th>
+<th>描述</th>
+<th>示全歼</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>G</td>
+<td>时代指示符</td>
+<td>AD</td>
+</tr>
+<tr>
+<td>2</td>
+<td>y</td>
+<td>四位数的年份值</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>3</td>
+<td>M</td>
+<td>月份</td>
+<td>July or 07</td>
+</tr>
+<tr>
+<td>4</td>
+<td>d</td>
+<td>日</td>
+<td>10</td>
+</tr>
+<tr>
+<td>5</td>
+<td>h</td>
+<td>小时 A.M./P.M. (1~12)</td>
+<td>12</td>
+</tr>
+<tr>
+<td>6</td>
+<td>H</td>
+<td>24小时制的小时表示 (0~23)</td>
+<td>22</td>
+</tr>
+<tr>
+<td>7</td>
+<td>m</td>
+<td>分钟</td>
+<td>30</td>
+</tr>
+<tr>
+<td>8</td>
+<td>s</td>
+<td>秒钟</td>
+<td>55</td>
+</tr>
+<tr>
+<td>9</td>
+<td>S</td>
+<td>毫秒</td>
+<td>234</td>
+</tr>
+<tr>
+<td>10</td>
+<td>E</td>
+<td>星期几</td>
+<td>Tuesday</td>
+</tr>
+<tr>
+<td>11</td>
+<td>D</td>
+<td>一年中的第几天</td>
+<td>360</td>
+</tr>
+<tr>
+<td>12</td>
+<td>F</td>
+<td>一个月中的某一天</td>
+<td>2 (second Wed. in July)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>w</td>
+<td>一年中的第几个星期</td>
+<td>40</td>
+</tr>
+<tr>
+<td>14</td>
+<td>W</td>
+<td>一月中的第几个星期</td>
+<td>1</td>
+</tr>
+<tr>
+<td>15</td>
+<td>a</td>
+<td>A.M./P.M. 标记</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>16</td>
+<td>k</td>
+<td>小时 (1~24)</td>
+<td>24</td>
+</tr>
+<tr>
+<td>17</td>
+<td>K</td>
+<td>小时 A.M./P.M. (0~11)</td>
+<td>10</td>
+</tr>
+<tr>
+<td>18</td>
+<td>z</td>
+<td>时区</td>
+<td>Eastern Standard Time</td>
+</tr>
+<tr>
+<td>19</td>
+<td>‘</td>
+<td>转义文本</td>
+<td>Delimiter</td>
+</tr>
+<tr>
+<td>20</td>
+<td>`</td>
+<td>单引号</td>
+<td>`</td>
+</tr>
+</tbody></table>
+<h4 id="3-使用printf格式化日期"><a href="#3-使用printf格式化日期" class="headerlink" title="3. 使用printf格式化日期"></a>3. 使用printf格式化日期</h4><p>使用<code>printf</code>方法来完成日期和时间格式化。使用双字母格式，以<code>t</code>开头并以表格的一个字母结尾，如下面的代码所示。</p>
+<pre><code class="java">import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Test &#123;
+
+    public static void main(String args[]) &#123;
+        // Instantiate a Date object
+        Date date = new Date();
+
+        // display time and date
+        String str = String.format(&quot;Current Date/Time : %tc&quot;, date);
+
+        System.out.printf(str);
+
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Current Date/Time : 星期五 三月 15 13:18:24 CST 2019
+Shell
+</code></pre>
+<p>如果多次提供日期来格式化每个部分，那多少会有点愚蠢。 格式字符串可以指示要格式化的参数的索引。</p>
+<p>索引必须紧跟<code>%</code>，并且必须以<code>$</code>结尾。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Test &#123;
+
+    public static void main(String args[]) &#123;
+        // Instantiate a Date object
+        Date date = new Date();
+
+        // display time and date
+        System.out.printf(&quot;%1$s %2$tB %2$td, %2$tY&quot;, &quot;Due date:&quot;, date);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Due date: 三月 16, 2019
+Shell
+</code></pre>
+<p>或者，可以使用<code>&lt;</code>标志。 它表示再次使用与前面的格式规范相同的参数。</p>
+<pre><code class="java">import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Test &#123;
+
+    public static void main(String args[]) &#123;
+        // Instantiate a Date object
+        Date date = new Date();
+
+        // display formatted date
+        System.out.printf(&quot;%s %tB %&lt;te, %&lt;tY&quot;, &quot;Due date:&quot;, date);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Due date: 三月 16, 2019
+Shell
+</code></pre>
+<h4 id="4-日期和时间转换字符"><a href="#4-日期和时间转换字符" class="headerlink" title="4. 日期和时间转换字符"></a>4. 日期和时间转换字符</h4><p><strong>示例</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>字符</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>c</td>
+<td>完全日期和时间</td>
+<td>Mon May 04 09:51:52 CDT 2019</td>
+</tr>
+<tr>
+<td>2</td>
+<td>F</td>
+<td>ISO 8601 date</td>
+<td>2004-02-09</td>
+</tr>
+<tr>
+<td>3</td>
+<td>D</td>
+<td>U.S. formatted date (month/day/year)</td>
+<td>02/09/2004</td>
+</tr>
+<tr>
+<td>4</td>
+<td>T</td>
+<td>24小时时间</td>
+<td>18:05:19</td>
+</tr>
+<tr>
+<td>5</td>
+<td>r</td>
+<td>12小时时间</td>
+<td>06:05:19 pm</td>
+</tr>
+<tr>
+<td>6</td>
+<td>R</td>
+<td>24小时时间, 无秒钟。</td>
+<td>18:05</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Y</td>
+<td>四位数年份(前导零)</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>8</td>
+<td>y</td>
+<td>年份的最后两位数(带前导零)</td>
+<td>19</td>
+</tr>
+<tr>
+<td>9</td>
+<td>C</td>
+<td>年份的前两位数(带前导零)</td>
+<td>20</td>
+</tr>
+<tr>
+<td>10</td>
+<td>B</td>
+<td>月份全名称</td>
+<td>February</td>
+</tr>
+<tr>
+<td>11</td>
+<td>b</td>
+<td>缩写的月份名称</td>
+<td>Feb</td>
+</tr>
+<tr>
+<td>12</td>
+<td>m</td>
+<td>两位数月份(带前导零)</td>
+<td>02</td>
+</tr>
+<tr>
+<td>13</td>
+<td>d</td>
+<td>两位数的日期(带前导零)</td>
+<td>03</td>
+</tr>
+<tr>
+<td>14</td>
+<td>e</td>
+<td>两位数的日期(没有前导零)</td>
+<td>9</td>
+</tr>
+<tr>
+<td>15</td>
+<td>A</td>
+<td>完整的工作日名称</td>
+<td>Monday</td>
+</tr>
+<tr>
+<td>16</td>
+<td>a</td>
+<td>缩写的工作日名称</td>
+<td>Mon</td>
+</tr>
+<tr>
+<td>17</td>
+<td>j</td>
+<td>一年中的三位数日(带前导零)</td>
+<td>069</td>
+</tr>
+<tr>
+<td>18</td>
+<td>H</td>
+<td>两位数小时(前导零)，介于00和23之间</td>
+<td>18</td>
+</tr>
+<tr>
+<td>19</td>
+<td>k</td>
+<td>两位数小时(不带前导零)，介于0和23之间</td>
+<td>18</td>
+</tr>
+<tr>
+<td>20</td>
+<td>I</td>
+<td>两位数小时(前导零)，介于01和12之间</td>
+<td>06</td>
+</tr>
+<tr>
+<td>21</td>
+<td>l</td>
+<td>两位数小时(不带前导零)，介于1和12之间</td>
+<td>6</td>
+</tr>
+<tr>
+<td>22</td>
+<td>M</td>
+<td>两位数分钟(带前导零)</td>
+<td>05</td>
+</tr>
+<tr>
+<td>23</td>
+<td>S</td>
+<td>两位数秒(带前导零)</td>
+<td>19</td>
+</tr>
+<tr>
+<td>24</td>
+<td>L</td>
+<td>三位数毫秒(带前导零)</td>
+<td>047</td>
+</tr>
+<tr>
+<td>25</td>
+<td>N</td>
+<td>九位纳秒(带前导零)</td>
+<td>047000000</td>
+</tr>
+<tr>
+<td>26</td>
+<td>P</td>
+<td>大写上午或下午标记</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>27</td>
+<td>p</td>
+<td>小写上午或下午标记</td>
+<td>pm</td>
+</tr>
+<tr>
+<td>28</td>
+<td>z</td>
+<td>GMT的RFC 822数字偏移量</td>
+<td>-0800</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Z</td>
+<td>时区</td>
+<td>PST</td>
+</tr>
+<tr>
+<td>30</td>
+<td>s</td>
+<td>自1970-01-01 00:00:00 GMT以来的秒数</td>
+<td>1078884319</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Q</td>
+<td>自1970-01-01 00:00:00 GMT以来的毫秒数</td>
+<td>1078884319047</td>
+</tr>
+</tbody></table>
+<p>还有其他与日期和时间相关的有用类。 有关更多详细信息，请参阅Java标准文档。</p>
+<h4 id="5-将字符串解析为日期"><a href="#5-将字符串解析为日期" class="headerlink" title="5. 将字符串解析为日期"></a>5. 将字符串解析为日期</h4><p><code>SimpleDateFormat</code>类有一些额外的方法，特别是<code>parse()</code>，它用于根据存储在给定的<code>SimpleDateFormat</code>对象中的格式来解析字符串。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">import java.util.*;
+import java.text.*;
+
+public class Test &#123;
+
+    public static void main(String args[]) &#123;
+        SimpleDateFormat ft = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+        String input = args.length == 0 ? &quot;2019-11-11&quot; : args[0];
+
+        System.out.print(input + &quot; 解析为：&quot;);
+        Date t;
+        try &#123;
+            t = ft.parse(input);
+            System.out.println(t);
+        &#125; catch (ParseException e) &#123;
+            System.out.println(&quot;Unparseable using &quot; + ft);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">2019-11-11 解析为：Mon Nov 11 00:00:00 CST 2019
+Shell
+</code></pre>
+<h4 id="6-睡眠一段时间"><a href="#6-睡眠一段时间" class="headerlink" title="6. 睡眠一段时间"></a>6. 睡眠一段时间</h4><p>可以在计算机生命周期的任何时间段内睡眠。 例如，以下程序将睡眠<code>3</code>秒钟 - </p>
+<pre><code class="java">import java.util.*;
+import java.text.*;
+
+public class Test &#123;
+
+    public static void main(String args[]) &#123;
+        try &#123;
+            System.out.println(new Date());
+            Thread.sleep(5 * 60 * 10);
+            System.out.println(new Date());
+        &#125; catch (Exception e) &#123;
+            System.out.println(&quot;Got an exception!&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Sat Mar 16 15:51:43 CST 2019
+Sat Mar 16 15:51:46 CST 2019
+Shell
+</code></pre>
+<h4 id="7-测量经过的时间"><a href="#7-测量经过的时间" class="headerlink" title="7. 测量经过的时间"></a>7. 测量经过的时间</h4><p>有时，可能需要以毫秒为单位测量时间点。 重写上面的例子 - </p>
+<pre><code class="java">import java.util.*;
+import java.text.*;
+
+public class Test &#123;
+
+    public static void main(String args[]) &#123;
+        try &#123;
+            long start = System.currentTimeMillis();
+            System.out.println(new Date());
+
+            Thread.sleep(5 * 60 * 10);
+            System.out.println(new Date());
+
+            long end = System.currentTimeMillis();
+            long diff = end - start;
+            System.out.println(&quot;时间差为: &quot; + diff);
+        &#125; catch (Exception e) &#123;
+            System.out.println(&quot;Got an exception!&quot;);
+        &#125;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Sat Mar 16 15:53:25 CST 2019
+Sat Mar 16 15:53:28 CST 2019
+Difference is : 3021
+</code></pre>
+<h1 id="Java正则表达式"><a href="#Java正则表达式" class="headerlink" title="Java正则表达式"></a>Java正则表达式</h1><p>Java提供了<code>java.util.regex</code>包，用于与正则表达式进行模式匹配。 Java正则表达式与Perl编程语言非常相似，非常容易学习。</p>
+<p>正则表达式是一种特殊的字符序列，可使用模式中的专用语法来匹配或查找其他字符串或字符串集。 它们可用于搜索，编辑或操作文本和数据。</p>
+<p><code>java.util.regex</code>包主要由以下三个类组成 -</p>
+<ul>
+<li><code>Pattern</code>类 - <code>Pattern</code>对象是正则表达式的编译表示。 <code>Pattern</code>类不提供公共构造函数。 要创建模式，需要首先调用它的公共静态<code>compile()</code>方法，然后返回<code>Pattern</code>对象。 这些方法接受正则表达式作为第一个参数。</li>
+<li><code>Matcher</code>类 -  <code>Matcher</code>对象是解释模式并对输入字符串执行匹配操作的引擎。 与<code>Pattern</code>类一样，<code>Matcher</code>没有定义公共构造函数。 通过在<code>Pattern</code>对象上调用<code>matcher()</code>方法获取<code>Matcher</code>对象。</li>
+<li><code>PatternSyntaxException</code>  -  <code>PatternSyntaxException</code>对象是未经检查的异常，指示正则表达式模式中的语法错误。</li>
+</ul>
+<h2 id="1-捕获组"><a href="#1-捕获组" class="headerlink" title="1. 捕获组"></a>1. 捕获组</h2><p>捕获组是将多个字符视为一个单元的一种方法。 它们是通过将要分组的字符放在一组括号中来创建的。 例如，正则表达式(<code>dog</code>)创建包含字母<code>d</code>，<code>o</code>和<code>g</code>的单个组。</p>
+<p>捕获组通过从左到右计算它们的左括号来编号。 在表达式<code>((A)(B(C)))</code>中，例如，有四个这样的组 - </p>
+<ul>
+<li><code>((A)(B(C)))</code></li>
+<li><code>(A)</code></li>
+<li><code>(B(C))</code></li>
+<li><code>(C)</code></li>
+</ul>
+<p>要查找表达式中存在多少个组，请在<code>Matcher</code>对象上调用<code>groupCount()</code>方法。 <code>groupCount()</code>方法返回一个<code>int</code>类型值，显示<code>Matcher</code>模式中存在的捕获组数。</p>
+<p>还有一个特殊组，即组<code>0</code>，它始终代表整个表达式。 该组未包含在<code>groupCount()</code>报告的总数中。</p>
+<p><strong>示例</strong></p>
+<p>以下示例说明如何从给定的字母数字字符串中查找数字字符串 - </p>
+<pre><code class="java">import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexMatches &#123;
+
+   public static void main( String args[] ) &#123;
+      // String to be scanned to find the pattern.
+      String line = &quot;This order was placed for QT3000! OK?&quot;;
+      String pattern = &quot;(.*)(\\d+)(.*)&quot;;
+
+      // Create a Pattern object
+      Pattern r = Pattern.compile(pattern);
+
+      // Now create matcher object.
+      Matcher m = r.matcher(line);
+      if (m.find( )) &#123;
+         System.out.println(&quot;Found value: &quot; + m.group(0) );
+         System.out.println(&quot;Found value: &quot; + m.group(1) );
+         System.out.println(&quot;Found value: &quot; + m.group(2) );
+      &#125;else &#123;
+         System.out.println(&quot;NO MATCH&quot;);
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Found value: This order was placed for QT3000! OK?
+Found value: This order was placed for QT300
+Found value: 0
+Shell
+</code></pre>
+<h2 id="2-正则表达式语法"><a href="#2-正则表达式语法" class="headerlink" title="2. 正则表达式语法"></a>2. 正则表达式语法</h2><p>下面列出了Java中可用的所有正则表达式元字符语法 - </p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>子表达式</th>
+<th>匹配</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>^</code></td>
+<td>匹配行的开头。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>$</code></td>
+<td>匹配行的结尾。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>.</code></td>
+<td>匹配除换行符之外的任何单个字符，使用<code>m</code>选项也可以匹配换行符。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>[...]</code></td>
+<td>匹配括号中的任何单个字符。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>[^...]</code></td>
+<td>匹配括号内的任何单个字符。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>\A</code></td>
+<td>整个字符串的开头。</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>\z</code></td>
+<td>整个字符串的结尾。</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>\Z</code></td>
+<td>除允许的最终行终止符之外的整个字符串的结尾。</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>re*</code></td>
+<td>匹配前面表达式的<code>0</code>次或更多次出现。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>re+</code></td>
+<td>匹配前面表达式的<code>1</code>次或更多次出现。</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>re?</code></td>
+<td>匹配前面表达式的<code>0</code>或<code>1</code>次出现。</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>re&#123;n&#125;</code></td>
+<td>准确匹配前面表达式的<code>n</code>次出现次数。</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>re&#123;n,&#125;</code></td>
+<td>准确匹配前面表达式的<code>n</code>次以上出现次数。</td>
+</tr>
+<tr>
+<td>14</td>
+<td>aΙb</td>
+<td>匹配<code>a</code>或<code>b</code>。</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>(re)</code></td>
+<td>对正则表达式进行分组并记住匹配的文本。</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>(?: re)</code></td>
+<td>将正则表达式分组而不记住匹配的文本。</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>(?&gt; re)</code></td>
+<td>匹配独立模式而无需回溯。</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>\w</code></td>
+<td>匹配单词字符。</td>
+</tr>
+<tr>
+<td>19</td>
+<td><code>\W</code></td>
+<td>匹配非单词字符。</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>\s</code></td>
+<td>匹配空白符，相当于：<code>[\t\n\r\f]</code></td>
+</tr>
+<tr>
+<td>21</td>
+<td><code>\S</code></td>
+<td>匹配非空白。</td>
+</tr>
+<tr>
+<td>22</td>
+<td><code>\d</code></td>
+<td>匹配数字，相当于：<code>[0-9]</code>。</td>
+</tr>
+<tr>
+<td>23</td>
+<td><code>\D</code></td>
+<td>匹配非数字。</td>
+</tr>
+<tr>
+<td>24</td>
+<td><code>\A</code></td>
+<td>匹配字符串的开头。</td>
+</tr>
+<tr>
+<td>25</td>
+<td><code>\Z</code></td>
+<td>匹配字符串的结尾。如果存在换行符，则它在换行符之前匹配。</td>
+</tr>
+<tr>
+<td>26</td>
+<td><code>\z</code></td>
+<td>匹配字符串的结尾。</td>
+</tr>
+<tr>
+<td>27</td>
+<td><code>\G</code></td>
+<td>匹配最后一个匹配结束的点。</td>
+</tr>
+<tr>
+<td>28</td>
+<td><code>\n</code></td>
+<td>反向引用以捕获组号：<code>n</code>。</td>
+</tr>
+<tr>
+<td>29</td>
+<td><code>\b</code></td>
+<td>在括号外部匹配单词边界，在括号内匹配退格(<code>0x08</code>)。</td>
+</tr>
+<tr>
+<td>30</td>
+<td><code>\B</code></td>
+<td>匹配非字边界。</td>
+</tr>
+<tr>
+<td>31</td>
+<td><code>\n</code>,<code>\t</code></td>
+<td>匹配换行符，回车符，制表符等。</td>
+</tr>
+<tr>
+<td>32</td>
+<td><code>\E</code></td>
+<td>转义(引用)所有字符直到<code>\E</code>。</td>
+</tr>
+<tr>
+<td>33</td>
+<td><code>\Q</code></td>
+<td>结束以<code>\Q</code>开头引用。</td>
+</tr>
+</tbody></table>
+<p> <strong>start()和end()方法</strong></p>
+<p>以下是计算字符串中：<code>cat</code>一词的出现次数示例 - </p>
+<pre><code class="java">import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexMatches &#123;
+
+   private static final String REGEX = &quot;\\bcat\\b&quot;;
+   private static final String INPUT = &quot;cat cat cat cattie cat&quot;;
+
+   public static void main( String args[] ) &#123;
+      Pattern p = Pattern.compile(REGEX);
+      Matcher m = p.matcher(INPUT);   // get a matcher object
+      int count = 0;
+
+      while(m.find()) &#123;
+         count++;
+         System.out.println(&quot;Match number &quot;+count);
+         System.out.println(&quot;start(): &quot;+m.start());
+         System.out.println(&quot;end(): &quot;+m.end());
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Match number 1
+start(): 0
+end(): 3
+Match number 2
+start(): 4
+end(): 7
+Match number 3
+start(): 8
+end(): 11
+Match number 4
+start(): 19
+end(): 22
+Shell
+</code></pre>
+<p>可以看到此示例使用单词边界来确保字母：<code>c</code>,<code>a</code>,<code>t</code>不仅仅是较长单词中的子字符串。 它还提供了有关输入字符串中匹配发生位置的一些有用信息。</p>
+<p><code>start</code>方法返回上一个匹配操作期间给定组捕获的子序列的起始索引，<code>end</code>返回匹配的最后一个字符的索引加<code>1</code>。</p>
+<p><strong>matches和lookingAt方法</strong></p>
+<p><code>matches()</code>和<code>lookingAt()</code>方法都尝试将输入序列与模式匹配。 然而，不同之处在于匹配需要匹配整个输入序列，而查找则不需要。</p>
+<p>两种方法总是从输入字符串的开头开始。 以下是上述方法的示例 - </p>
+<pre><code class="java">import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexMatches &#123;
+
+   private static final String REGEX = &quot;foo&quot;;
+   private static final String INPUT = &quot;fooooooooooooooooo&quot;;
+   private static Pattern pattern;
+   private static Matcher matcher;
+
+   public static void main( String args[] ) &#123;
+      pattern = Pattern.compile(REGEX);
+      matcher = pattern.matcher(INPUT);
+
+      System.out.println(&quot;Current REGEX is: &quot;+REGEX);
+      System.out.println(&quot;Current INPUT is: &quot;+INPUT);
+
+      System.out.println(&quot;lookingAt(): &quot;+matcher.lookingAt());
+      System.out.println(&quot;matches(): &quot;+matcher.matches());
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Current REGEX is: foo
+Current INPUT is: fooooooooooooooooo
+lookingAt(): true
+matches(): false
+Shell
+</code></pre>
+<p><strong>replaceFirst和replaceAll方法</strong><br><code>replaceFirst()</code>和<code>replaceAll()</code>方法替换匹配给定正则表达式的文本。 正如其名称所示，<code>replaceFirst()</code>替换第一个匹配项，<code>replaceAll()</code>替换所有匹配项。</p>
+<p>以下是上述功能的示例 - </p>
+<pre><code class="java">import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexMatches &#123;
+
+   private static String REGEX = &quot;dog&quot;;
+   private static String INPUT = &quot;The dog says meow. &quot; + &quot;All dogs say meow.&quot;;
+   private static String REPLACE = &quot;cat&quot;;
+
+   public static void main(String[] args) &#123;
+      Pattern p = Pattern.compile(REGEX);
+
+      // get a matcher object
+      Matcher m = p.matcher(INPUT); 
+      INPUT = m.replaceAll(REPLACE);
+      System.out.println(INPUT);
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">The cat says meow. All cats say meow.
+Shell
+</code></pre>
+<p><strong>appendReplacement和appendTail方法</strong></p>
+<p><code>Matcher</code>类还提供了<code>appendReplacement</code>和<code>appendTail</code>方法来替换文本。</p>
+<p>以下是上述方法的示例 - </p>
+<pre><code class="java">import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexMatches &#123;
+
+   private static String REGEX = &quot;a*b&quot;;
+   private static String INPUT = &quot;aabfooaabfooabfoob&quot;;
+   private static String REPLACE = &quot;-&quot;;
+   public static void main(String[] args) &#123;
+
+      Pattern p = Pattern.compile(REGEX);
+
+      // get a matcher object
+      Matcher m = p.matcher(INPUT);
+      StringBuffer sb = new StringBuffer();
+      while(m.find()) &#123;
+         m.appendReplacement(sb, REPLACE);
+      &#125;
+      m.appendTail(sb);
+      System.out.println(sb.toString());
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">-foo-foo-foo-
+</code></pre>
+<h1 id="Java方法"><a href="#Java方法" class="headerlink" title="Java方法"></a>Java方法</h1><p>Java中的方法是一组语句，它们组合在一起以执行各种操作。 例如，当调用<code>System.out.println()</code>方法时，系统实际上会执行多个语句，以便在控制台上显示消息。</p>
+<p>下面将学习如何使用或不使用返回值创建自己的方法，使用或不使用参数调用方法，以及在程序设计中应用方法抽象。</p>
+<h2 id="1-创建方法"><a href="#1-创建方法" class="headerlink" title="1. 创建方法"></a>1. 创建方法</h2><p>下面来看看方法的语法 - </p>
+<pre><code class="java">public static int methodName(int a, int b) &#123;
+   // body
+&#125;
+Java
+</code></pre>
+<p>在上面语法中，</p>
+<ul>
+<li><code>public static</code> − 修辞符</li>
+<li><code>int</code> − 返回值的类型</li>
+<li><code>methodName</code> − 方法的名称</li>
+<li><code>a, b</code> − 形式参数</li>
+<li><code>int a, int b</code> − 参数列表</li>
+</ul>
+<p>方法定义由方法头和方法体组成。以下语法中显示了相同的内容 - </p>
+<pre><code class="java">modifier returnType nameOfMethod (Parameter List) &#123;
+   // method body
+&#125;
+Java
+</code></pre>
+<p>上面显示的语法包括 - </p>
+<ul>
+<li><code>modifier</code> - 它定义方法的访问类型，它可能是：<code>public</code>,<code>private</code>,<code>protected</code>或不指定。</li>
+<li><code>returnType</code> -  方法可以返回一个值。</li>
+<li><code>nameOfMethod</code> - 这是方法名称，方法签名由方法名称和参数列表组成。</li>
+<li><code>Parameter List</code> - 参数列表，它是方法的类型，顺序和参数数量。 这些是可选的，方法可能包含零参数。</li>
+<li><code>method body</code> - 方法体定义方法对语句的作用。</li>
+</ul>
+<p><strong>示例</strong></p>
+<p>以下代码中定义了<code>min()</code>方法。 这个方法有两个<code>int</code>类型的参数：<code>num1</code>和<code>num2</code>，并返回两者之间的最大值 - </p>
+<pre><code class="java">/** 返回两个数字之间的最小值 */
+public static int minFunction(int n1, int n2) &#123;
+   int min;
+   if (n1 &gt; n2)
+      min = n2;
+   else
+      min = n1;
+
+   return min; 
+&#125;
+Java
+</code></pre>
+<h2 id="2-方法调用"><a href="#2-方法调用" class="headerlink" title="2. 方法调用"></a>2. 方法调用</h2><p>可通过调用方法来使用方法，调用方法有两种方式，即方法有返回值或无返回任何值。</p>
+<p>方法调用的过程很简单。 当程序调用方法时，程序控制将转移到被调用的方法。 这个被调用的方法然后在两个条件下将控制权返回给调用者，即 - </p>
+<ul>
+<li><code>return</code>语句被执行。</li>
+<li>它到达方法的结束，即右大括号(<code>&#125;</code>)。</li>
+</ul>
+<p>对返回<code>void</code>的方法的调用 - </p>
+<pre><code class="java">System.out.println(&quot;This is Yiibai.com!&quot;);
+Java
+</code></pre>
+<p>对有返回值的方法的调用 - </p>
+<pre><code class="java">int result = sum(6, 9);
+Java
+</code></pre>
+<p>以下是演示如何定义方法以及如何调用方法的示例 - </p>
+<pre><code class="java">public class ExampleMinNumber &#123;
+
+   public static void main(String[] args) &#123;
+      int a = 111;
+      int b = 125;
+      int c = getMin(a, b);
+      System.out.println(&quot;最小值 = &quot; + c);
+   &#125;
+
+   /** 返回两个 int 数值的最小值 */
+   public static int getMin(int n1, int n2) &#123;
+      int min;
+      if (n1 &gt; n2)
+         min = n2;
+      else
+         min = n1;
+
+      return min; 
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">最小值 = 111
+Shell
+</code></pre>
+<h2 id="3-void关键字"><a href="#3-void关键字" class="headerlink" title="3. void关键字"></a>3. void关键字</h2><p><code>void</code>关键字允许创建不返回值的方法。在下面的例子中有一个返回值是<code>void</code>的方法<code>methodRankPoints</code>，它不返回任何值。 调用<code>void</code>方法必须是一个语句，即<code>methodRankPoints(245.67);</code>. 它是一个以分号结尾的Java语句，如以下示例所示 -</p>
+<pre><code class="java">public class ExampleVoid &#123;
+
+   public static void main(String[] args) &#123;
+      methodRankPoints(245.67);
+   &#125;
+
+   public static void methodRankPoints(double points) &#123;
+      if (points &gt;= 202.5) &#123;
+         System.out.println(&quot;Rank:A1&quot;);
+      &#125;else if (points &gt;= 122.4) &#123;
+         System.out.println(&quot;Rank:A2&quot;);
+      &#125;else &#123;
+         System.out.println(&quot;Rank:A3&quot;);
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Rank:A1
+Shell
+</code></pre>
+<h2 id="4-按值传递参数"><a href="#4-按值传递参数" class="headerlink" title="4. 按值传递参数"></a>4. 按值传递参数</h2><p>在按值传递参数时需要传递参数。它们的顺序应与方法规范中的参数顺序相同。参数可以通过值或引用传递。</p>
+<p>通过值传递参数是使用参数调用方法。 通过这样将参数值将传递给参数。</p>
+<p><strong>示例</strong></p>
+<p>以下程序显示了按值传递参数的示例。 即使在方法调用之后，参数的值仍保持不变。</p>
+<pre><code class="java">public class swappingExample &#123;
+
+   public static void main(String[] args) &#123;
+      int a = 30;
+      int b = 45;
+      System.out.println(&quot;Before swapping, a = &quot; + a + &quot; and b = &quot; + b);
+
+      // 调用交换方法
+      swapFunction(a, b);
+      System.out.println(&quot;Now, Before and After swapping values will be same here:&quot;);
+      System.out.println(&quot;After swapping, a = &quot; + a + &quot; and b is &quot; + b);
+   &#125;
+
+   public static void swapFunction(int a, int b) &#123;
+      System.out.println(&quot;Before swapping(Inside), a = &quot; + a + &quot; b = &quot; + b);
+      // 交换 n1 和 n2
+      int c = a;
+      a = b;
+      b = c;
+      System.out.println(&quot;After swapping(Inside), a = &quot; + a + &quot; b = &quot; + b);
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Before swapping, a = 30 and b = 45
+Before swapping(Inside), a = 30 b = 45
+After swapping(Inside), a = 45 b = 30
+Now, Before and After swapping values will be same here:
+After swapping, a = 30 and b is 45
+Shell
+</code></pre>
+<h2 id="5-方法重载"><a href="#5-方法重载" class="headerlink" title="5. 方法重载"></a>5. 方法重载</h2><p>当一个类有两个或多个同名但方法不同参数的方法时，称为方法重载。 它与重写不同。 在重写中，方法具有相同的方法名称，类型，参数数量等。</p>
+<p>在前面讨论的用于查找最小整数类型数的示例中，假设想要查找两个<code>double</code>类型的最小数值。 可引入重载的概念以创建具有相同名称但不同参数的两个或更多方法。</p>
+<p>参考以下示例代码 - </p>
+<pre><code class="java">public class ExampleOverloading &#123;
+
+   public static void main(String[] args) &#123;
+      int a = 11;
+      int b = 6;
+      double c = 7.3;
+      double d = 9.4;
+      int result1 = getMin(a, b);
+
+      // 具有相同函数名称，但数字不同参数
+      double result2 = getMin(c, d);
+      System.out.println(&quot;Minimum Value = &quot; + result1);
+      System.out.println(&quot;Minimum Value = &quot; + result2);
+   &#125;
+
+   // 处理 int 类型的数值(方法重载)
+   public static int getMin(int n1, int n2) &#123;
+      int min;
+      if (n1 &gt; n2)
+         min = n2;
+      else
+         min = n1;
+
+      return min; 
+   &#125;
+
+   //  处理 double 类型的数值(方法重载)
+   public static double getMin(double n1, double n2) &#123;
+     double min;
+      if (n1 &gt; n2)
+         min = n2;
+      else
+         min = n1;
+
+      return min; 
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Minimum Value = 6
+Minimum Value = 7.3
+Shell
+</code></pre>
+<p>重载方法使程序可读。这里，两个方法由相同的名称给出但具有不同的参数类型。结果是求<code>int</code>类型和<code>double</code>类型的最小数。</p>
+<h2 id="6-使用命令行参数"><a href="#6-使用命令行参数" class="headerlink" title="6. 使用命令行参数"></a>6. 使用命令行参数</h2><p>有时希望在运行程序时将一些信息传递给程序。它是通过将命令行参数传递给<code>main()</code>来实现的。</p>
+<p>命令行参数是执行时在命令行上直接跟随程序名称的信息。 要访问Java程序中的命令行参数非常简单。 它们作为字符串存储在传递给<code>main()</code>的<code>String</code>类型数组中。</p>
+<p><strong>示例</strong></p>
+<p>以下程序显示传递给程序的所有命令行参数 - </p>
+<pre><code class="java">public class CommandLine &#123;
+
+   public static void main(String args[]) &#123; 
+      for(int i = 0; i&lt;args.length; i++) &#123;
+         System.out.println(&quot;args[&quot; + i + &quot;]: &quot; +  args[i]);
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>使用以下方式执行此程序 - </p>
+<pre><code class="shell">C:/&gt; java CommandLine this is a command line 200 -100
+Shell
+</code></pre>
+<p>那么将得到以下结果：</p>
+<pre><code class="shell">args[0]: this
+args[1]: is
+args[2]: a
+args[3]: command
+args[4]: line
+args[5]: 200
+args[6]: -100
+Shell
+</code></pre>
+<h2 id="7-this-关键字"><a href="#7-this-关键字" class="headerlink" title="7. this 关键字"></a>7. this 关键字</h2><p><code>this</code>是Java中的一个关键字，用作对当前类对象的引用，在实例方法或构造函数中。 使用它可以引用类的成员，例如：构造函数，变量和方法。</p>
+<blockquote>
+<p>注 - <code>this</code>关键字仅在实例方法或构造函数中使用。</p>
+</blockquote>
+<p>通常，<code>this</code>关键字用于 - </p>
+<ul>
+<li><p>如果实例变量在构造函数或方法中具有相同的名称，则将它们与局部变量区分开来。</p>
+<pre><code class="java">class Student &#123;
+ private int age;   
+ Student(int age) &#123;
+    this.age = age;
+ &#125;
+&#125;
+Java
+</code></pre>
+</li>
+<li><p>从类中的其他方法调用一种类型的构造函数(参数化构造函数或默认值)，称为显式构造函数调用。</p>
+<pre><code class="java">class Student &#123;
+ int age
+ Student() &#123;
+    this(20);
+ &#125;
+
+ Student(int age) &#123;
+    this.age = age;    
+ &#125;
+&#125;
+Java
+</code></pre>
+</li>
+</ul>
+<p>以下是使用<code>this</code>关键字访问类成员的示例 - </p>
+<pre><code class="java">public class ThisExample &#123;
+   // 实例变量：num
+   int num = 10;
+   ThisExample() &#123;
+      System.out.println(&quot;This is an example program on keyword this&quot;);    
+   &#125;
+
+   ThisExample(int num) &#123;
+      // 调用默认构造方法
+      this();
+
+      // 将局部变量 num 分配给实例变量 num 
+      this.num = num;
+   &#125;
+
+   public void greet() &#123;
+      System.out.println(&quot;Hi Welcome to Yiibai&quot;);
+   &#125;
+
+   public void print() &#123;
+      // 局部变量：num
+      int num = 20;
+
+      // 打印局部变量
+      System.out.println(&quot;value of local variable num is : &quot;+num);
+
+      // 打印实例变量
+      System.out.println(&quot;value of instance variable num is : &quot;+this.num);
+
+      // 调用类方法 
+      this.greet();     
+   &#125;
+
+   public static void main(String[] args) &#123;
+      // 实例化该类
+      ThisExample obj1 = new ThisExample();
+
+      // 调用 print 方法
+      obj1.print();
+
+      //通过参数化构造函数将新值传递给 num 变量
+      ThisExample obj2 = new ThisExample(30);
+
+      // 再次调用 print 方法
+      obj2.print(); 
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果 - </p>
+<pre><code class="shell">This is an example program on keyword this 
+value of local variable num is : 20
+value of instance variable num is : 10
+Hi Welcome to Yiibai
+This is an example program on keyword this 
+value of local variable num is : 20
+value of instance variable num is : 30
+Hi Welcome to Yiibai
+Shell
+</code></pre>
+<h2 id="8-变量参数-var-args"><a href="#8-变量参数-var-args" class="headerlink" title="8. 变量参数(var-args)"></a>8. 变量参数(var-args)</h2><p>JDK 1.5允许将可变数量的相同类型的参数传递给方法。方法中的参数声明如下 - </p>
+<pre><code class="java">typeName... parameterName
+Java
+</code></pre>
+<p>在方法声明中，指定类型后跟省略号(<code>...</code>)。 在方法中只能指定一个可变长度参数，并且此参数必须是最后一个参数。</p>
+<pre><code class="java">public class VarargsDemo &#123;
+
+   public static void main(String args[]) &#123;
+       // 使用变量参数调用方法
+       printMax(314, 321, 213, 212, 356.5);
+       printMax(new double[]&#123;1, 2, 3&#125;);
+   &#125;
+
+   public static void printMax( double... numbers) &#123;
+      if (numbers.length == 0) &#123;
+         System.out.println(&quot;No argument passed&quot;);
+         return;
+      &#125;
+
+      double result = numbers[0];
+
+      for (int i = 1; i &lt;  numbers.length; i++)
+      if (numbers[i] &gt;  result)
+      result = numbers[i];
+      System.out.println(&quot;参数列表中的最大值是：&quot; + result);
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果 - </p>
+<pre><code class="shell">参数列表中的最大值是：356.5
+参数列表中的最大值是：3.0
+Shell
+</code></pre>
+<h2 id="9-finalize-方法"><a href="#9-finalize-方法" class="headerlink" title="9. finalize()方法"></a>9. finalize()方法</h2><p>finalize()方法在垃圾收集器对象最终销毁之前调用，它可用于确保对象完全终止。例如，可以使用<code>finalize()</code>来确保该对象拥有的打开文件已关闭。</p>
+<p>要将终结器添加到类中，只需定义<code>finalize()</code>方法即可。只要Java方法要回收该类的对象，它就会调用该方法。</p>
+<p>在<code>finalize()</code>方法中，将指定在销毁对象之前必须执行的操作。<code>finalize()</code>方法有这种一般形式 - </p>
+<pre><code class="java">protected void finalize( ) &#123;
+   // finalization code here
+&#125;
+Java
+</code></pre>
+<p>这里，关键字<code>protected</code>是一个修辞符，它阻止通过类外部定义的代码访问<code>finalize()</code>。<br>我们无法知道Java何时或甚至是否将执行<code>finalize()</code>方法。如果程序在垃圾收集发生之前结束，则<code>finalize()</code>将不会执行。</p>
+<h1 id="Java文件和输入和输出（I-O）"><a href="#Java文件和输入和输出（I-O）" class="headerlink" title="Java文件和输入和输出（I/O）"></a>Java文件和输入和输出（I/O）</h1><p><code>java.io</code>包几乎包含了在Java中执行输入和输出(I/O)所需的所有类。 所有这些流代表输入源和输出目的地。 <code>java.io</code>包中的流支持许多数据，如：原始，对象，本地化字符等。</p>
+<h2 id="1-流-Streams"><a href="#1-流-Streams" class="headerlink" title="1. 流(Streams)"></a>1. 流(Streams)</h2><p>流(<code>Streams</code>)可以定义为数据序列，它有两种 - </p>
+<ul>
+<li><code>InPutStream</code>  -  它用于从源读取数据。</li>
+<li><code>OutPutStream</code>  -  它用于将数据写入目标。</li>
+</ul>
+<p><img src="https://www.yiibai.com/uploads/article/2019/03/18/165922_71746.png" alt="Java流"></p>
+<p>Java为与文件和网络相关的I/O提供强大而灵活的支持，但本教程只涵盖了流和I/O相关的非常基本的功能。下面将看到一些最常用的例子 - </p>
+<p><strong>1.1. 字节流</strong><br>Java字节流用于执行<code>8</code>位字节的输入和输出。尽管有许多与字节流相关的类，但最常用的类是<code>FileInputStream</code>和<code>FileOutputStream</code>。以下示例使用这两个类将输入文件的内容复制到输出文件中 - </p>
+<pre><code class="java">import java.io.*;
+public class CopyFile &#123;
+
+   public static void main(String args[]) throws IOException &#123;  
+      FileInputStream in = null;
+      FileOutputStream out = null;
+
+      try &#123;
+         in = new FileInputStream(&quot;D:\\input.txt&quot;);
+         out = new FileOutputStream(&quot;D:\\output.txt&quot;);
+         int c;
+         while ((c = in.read()) != -1) &#123;
+            out.write(c);
+         &#125;
+      &#125;finally &#123;
+         if (in != null) &#123;
+            in.close();
+         &#125;
+         if (out != null) &#123;
+            out.close();
+         &#125;
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>假设在D盘下有一个文件：<code>input.txt</code>，它的内容如下 - </p>
+<pre><code class="txt">This is test for copy file.
+power by yiibai.com
+Txt
+</code></pre>
+<p>下一步，编译上面的程序并执行它，它将创建一个：<code>D:/output.txt</code>文件，内容与<code>D:/input.txt</code>中的相同。</p>
+<p><strong>1.2. 字符流</strong></p>
+<p>Java字节流用于执行<code>8</code>位字节的输入和输出，而Java字符流用于执行<code>16</code>位unicode的输入和输出。 尽管有许多与字符流相关的类，但最常用的类是<code>FileReader</code>和<code>FileWriter</code>。 虽然<code>FileReader</code>内部使用<code>FileInputStream</code>类，而<code>FileWriter</code>内部使用<code>FileOutputStream</code>类，但主要区别在于<code>FileReader</code>一次读取两个字节，而<code>FileWriter</code>一次写入两个字节。</p>
+<p>可以重新编写上面的例子，它使用这两个类将输入文件(具有unicode字符)复制到输出文件中 - </p>
+<pre><code class="java">import java.io.*;
+public class CopyFile &#123;
+
+   public static void main(String args[]) throws IOException &#123;
+      FileReader in = null;
+      FileWriter out = null;
+
+      try &#123;
+         in = new FileReader(&quot;D:/input.txt&quot;);
+         out = new FileWriter(&quot;D:/output.txt&quot;);
+
+         int c;
+         while ((c = in.read()) != -1) &#123;
+            out.write(c);
+         &#125;
+      &#125;finally &#123;
+         if (in != null) &#123;
+            in.close();
+         &#125;
+         if (out != null) &#123;
+            out.close();
+         &#125;
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>假设在D盘下有一个文件：<code>input.txt</code>，它的内容如下 - </p>
+<pre><code class="txt">This is test for copy file.
+power by yiibai.com
+Txt
+</code></pre>
+<p>下一步，编译上面的程序并执行它，它将创建一个：<code>D:/output.txt</code>文件，内容与<code>D:/input.txt</code>中的相同。</p>
+<h2 id="2-标准流"><a href="#2-标准流" class="headerlink" title="2. 标准流"></a>2. 标准流</h2><p>所有编程语言都支持标准I/O，用户的程序可以从键盘输入，然后在计算机屏幕上产生输出。 如果您了解C或C++编程语言，那么应该了解三个标准流：<code>STDIN</code>，<code>STDOUT</code>和<code>STDERR</code>。 同样，Java提供以下三个标准流 - </p>
+<ul>
+<li><strong>标准输入</strong> - 用于将数据提供给用户程序，通常键盘用作标准输入流并表示为<code>System.in</code>。</li>
+<li><strong>标准输出</strong> - 用于输出用户程序生成的数据，通常计算机屏幕用于标准输出流并表示为<code>System.out</code>。</li>
+<li><strong>标准错误</strong> - 用于输出用户程序生成的错误数据，通常计算机屏幕用于标准错误流并表示为<code>System.err</code>。</li>
+</ul>
+<p>以下是一个简单的程序，它使用<code>InputStreamReader</code>来读取标准输入流，直到用户键入：<code>q</code> - </p>
+<pre><code class="java">import java.io.*;
+public class ReadConsole &#123;
+
+   public static void main(String args[]) throws IOException &#123;
+      InputStreamReader cin = null;
+
+      try &#123;
+         cin = new InputStreamReader(System.in);
+         System.out.println(&quot;Enter characters, &#39;q&#39; to quit&gt;&quot;);
+         char c;
+         do &#123;
+            c = (char) cin.read();
+            System.out.print(c);
+         &#125; while(c != &#39;q&#39;);
+      &#125;finally &#123;
+         if (cin != null) &#123;
+            cin.close();
+         &#125;
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>将上面的代码保存在<code>ReadConsole.java</code>文件中，并尝试编译并执行它，如下面的程序所示。 程序继续读取并输出用户输入的字符，直到按<code>q</code>退出 - </p>
+<pre><code class="java">$javac ReadConsole.java
+$java ReadConsole
+Enter characters, &#39;q&#39; to quit&gt;
+1
+1
+a
+a
+C
+C
+Java
+</code></pre>
+<h2 id="3-读写文件"><a href="#3-读写文件" class="headerlink" title="3. 读写文件"></a>3. 读写文件</h2><p>如前所述，流可以定义为数据序列。 <code>InputStream</code>用于从源读取数据，<code>OutputStream</code>用于将数据写入目标。</p>
+<p>以下是处理输入和输出流的类层次结构。</p>
+<p><img src="https://www.yiibai.com/uploads/article/2019/03/19/090254_53502.jpg" alt="输入和输出流"></p>
+<p>两个重要的流是：<code>FileInputStream</code>和<code>FileOutputStream</code>，将在本教程中讨论。</p>
+<p><strong>3.1. FileInputStream</strong></p>
+<p>此流用于从文件中读取数据。 可以使用关键字<code>new</code>创建对象，并且有几种类型的构造函数可用。</p>
+<p>以下构造函数将文件名作为字符串来创建输入流对象以读取文件 - </p>
+<pre><code class="java">InputStream f = new FileInputStream(&quot;D:/java/hello.txt&quot;);
+Java
+</code></pre>
+<p>以下构造函数采用文件对象来创建输入流对象以读取文件。 首先，使用<code>File()</code>方法创建一个文件对象，如下所示 - </p>
+<pre><code class="java">File f = new File(&quot;D:/java/hello.txt&quot;);
+InputStream f = new FileInputStream(f);
+Java
+</code></pre>
+<p>当创建了<code>InputStream</code>对象，就可以使用一些辅助方法来读取流或在流上执行其他操作。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>public void close() throws IOException&#123;&#125;</code></td>
+<td>此方法关闭文件输出流。 释放与该文件关联的所有系统资源，抛出<code>IOException</code>。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>protected void finalize()throws IOException &#123;&#125;</code></td>
+<td>此方法清除与文件的连接。 确保在没有对此流的引用时调用此文件输出流的<code>close()</code>方法，抛出<code>IOException</code>。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>public int read(int r)throws IOException&#123;&#125;</code></td>
+<td>此方法从<code>InputStream</code>读取指定的数据字节，并返回一个<code>int</code>值。 返回数据的下一个字节，如果它是文件的末尾，则返回<code>-1</code>。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>public int read(byte[] r) throws IOException&#123;&#125;</code></td>
+<td>此方法将输入流中的<code>r.length</code>个字节读入数组。返回读取的总字节数。 如果它到达文件的结尾，则返回<code>-1</code>。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>public int available() throws IOException&#123;&#125;</code></td>
+<td>给出可以从此文件输入流中读取的字节数。 返回一个<code>int</code>值。</td>
+</tr>
+</tbody></table>
+<p>还有其他重要的输入流可用，有关更多详细信息，请参阅以下链接 - </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_bytearrayinputstream.html">ByteArrayInputStream</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_datainputstream.html">DataInputStream</a></li>
+</ul>
+<p><strong>3.2. FileOutputStream</strong></p>
+<p><code>FileOutputStream</code>用于创建文件并将数据写入文件。 如果文件尚不存在，则会在打开文件以进行输出之前创建该文件。</p>
+<p>这里有两个构造函数，可用于创建<code>FileOutputStream</code>对象。</p>
+<p>以下构造函数将文件名作为字符串来创建输入流对象以写入文件 - </p>
+<pre><code class="java">OutputStream f = new FileOutputStream(&quot;D:/java/hello.txt&quot;)
+Java
+</code></pre>
+<p>下面的构造函数接受一个文件对象来创建一个输出流对象来写入该文件。 首先，使用<code>File()</code>方法创建一个文件对象，如下所示 - </p>
+<pre><code class="java">File f = new File(&quot;D:/java/hello.txt&quot;);
+OutputStream f = new FileOutputStream(f);
+Java
+</code></pre>
+<p>当创建了<code>OutputStream</code>对象，就使用它的一些辅助方法来写入流或在流上执行其他操作。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>public void close() throws IOException&#123;&#125;</code></td>
+<td>此方法关闭文件输出流，释放与该文件关联的所有系统资源。抛出<code>IOException</code>。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>protected void finalize()throws IOException &#123;&#125;</code></td>
+<td>此方法清除与文件的连接，确保在没有对此流的引用时调用此文件输出流的<code>close()</code>方法。抛出<code>IOException</code>。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>public void write(int w)throws IOException&#123;&#125;</code></td>
+<td>此方法将指定的字节写入输出流。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>public void write(byte[] w)</code></td>
+<td>将长度为<code>w.length</code>的字节从字节数组写入<code>OutputStream</code>。</td>
+</tr>
+</tbody></table>
+<p>还有其他重要的输出流，有关更多详细信息，请参阅以下链接 - </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_bytearrayoutputstream.html">ByteArrayOutputStream</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_dataoutputstream.html">DataOutputStream</a></li>
+</ul>
+<p><strong>示例</strong></p>
+<p>以下是演示如何使用<code>InputStream</code>和<code>OutputStream</code>类对象的示例 - </p>
+<pre><code class="java">import java.io.*;
+public class fileStreamTest &#123;
+
+   public static void main(String args[]) &#123;
+
+      try &#123;
+         byte bWrite [] = &#123;11,21,3,40,5&#125;;
+         OutputStream os = new FileOutputStream(&quot;D:/test.txt&quot;);
+         for(int x = 0; x &lt; bWrite.length ; x++) &#123;
+            os.write( bWrite[x] );   // writes the bytes
+         &#125;
+         os.close();
+
+         InputStream is = new FileInputStream(&quot;D:/test.txt&quot;);
+         int size = is.available();
+
+         for(int i = 0; i &lt; size; i++) &#123;
+            System.out.print((char)is.read() + &quot;  &quot;);
+         &#125;
+         is.close();
+      &#125; catch (IOException e) &#123;
+         System.out.print(&quot;Exception&quot;);
+      &#125;    
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>上面的代码将创建文件<code>test.txt</code>并将以二进制格式写入给定的数字数据，同样也会在屏幕上输出。</p>
+<h2 id="4-文件导航和I-O"><a href="#4-文件导航和I-O" class="headerlink" title="4. 文件导航和I/O"></a>4. 文件导航和I/O</h2><p>可通过其他几个类来了解文件导航和I/O的基础知识。如下 - </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_file_class.html">File类</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_filereader_class.html">FileReader类</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_filewriter_class.html">FileWriter类</a></li>
+</ul>
+<h4 id="4-1-目录操作"><a href="#4-1-目录操作" class="headerlink" title="4.1. 目录操作"></a>4.1. 目录操作</h4><p>目录是一个文件，它可以包含其他文件和目录的列表。 使用<code>File</code>对象创建目录，列出目录中可用的文件。 有关完整的详细信息，请查看在File对象上调用的所有方法的列表以及与目录相关的内容。</p>
+<p><strong>4.1.1. 创建目录</strong></p>
+<p>有两种<code>File</code>类的方法，可用于创建目录 - </p>
+<ul>
+<li><code>mkdir()</code>方法创建一个目录，创建成功时返回<code>true</code>，失败时返回<code>false</code>。 失败表示<code>File</code>对象中指定的路径已存在，或者由于整个路径尚不存在或权限问题而无法创建目录。</li>
+<li><code>mkdirs()</code>方法创建目录和目录的所有上级目录。</li>
+</ul>
+<p>以下示例创建一个目录：<em>D:/tmp/user/java/bin</em> - </p>
+<p><strong>示例</strong></p>
+<pre><code class="java">import java.io.File;
+public class CreateDir &#123;
+
+   public static void main(String args[]) &#123;
+      String dirname = &quot;D:/tmp/user/java/bin&quot;;
+      File d = new File(dirname);
+
+      // 创建目录及父级目录
+      d.mkdirs();
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>编译并执行上面的代码来创建目录：<em>D:/tmp/user/java/bin</em>。</p>
+<blockquote>
+<p>注 -  Java会根据约定自动处理UNIX和Windows上的路径分隔符。如果在Windows版本的Java上使用正斜杠(/)，则路径仍将正确解析。</p>
+</blockquote>
+<p><strong>4.1.2. 列出目录</strong></p>
+<p>可以使用<code>File</code>对象的<code>list()</code>方法列出目录中可用的所有文件和目录，如下所示 - </p>
+<pre><code class="java">import java.io.File;
+public class ReadDir &#123;
+
+   public static void main(String[] args) &#123;
+      File file = null;
+      String[] paths;
+
+      try &#123;      
+         // 创建一个File对象
+         file = new File(&quot;D:/software&quot;);
+
+         // 文件和目录的数组
+         paths = file.list();
+
+         // 对于路径数组中的名称
+         for(String path:paths) &#123;
+            // 打印文件名和目录名
+            System.out.println(path);
+         &#125;
+      &#125; catch (Exception e) &#123;
+         // if any error occurs
+         e.printStackTrace();
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码，它将根据<code>D:/software</code>目录中目录和文件产生以下结果 - </p>
+<pre><code class="shell">apache-maven-3.5.4
+apache-tomcat-9.0.14
+Aptana_Studio
+eclipse
+EditPlusPortable
+javajars
+kafka_2.11-2.0.0
+mysql-5.7.23-winx64
+Navicat Premium 11
+php-cs-fixer.phar
+spring-2.0.5.RELEASE
+... ...
+</code></pre>
+<h1 id="Java异常处理"><a href="#Java异常处理" class="headerlink" title="Java异常处理"></a>Java异常处理</h1><p>异常(或异常事件)是在执行程序期间出现的问题。 当发生异常时，程序的正常流程被中断并且程序/应用程序异常终止，这是对于用户来说是非常不友好的。因此，要合理地处理这些异常。</p>
+<p>发生异常有许多不同的原因，以下是发生异常的一些情况。</p>
+<ul>
+<li>用户输入了无效数据。</li>
+<li>找不到需要打开的文件。</li>
+<li>在通信过程中丢失了网络连接，或者JVM内存不足。</li>
+</ul>
+<p>有一些异常是由用户错误引起的，也有一些异常是由程序员错误引起的，或者是由以某种物理资源引起的。</p>
+<p>基于这三类异常，您需要了解它们以了解在Java中异常处理工作原理。</p>
+<ul>
+<li><strong>已检查异常</strong> - 已检查异常是编译器在编译时检查(通知)的异常，这些异常也称为编译时异常。这些异常不能简单地忽略，程序员应该编写代码来处理这些异常。<br>例如，如果在程序中使用<code>FileReader</code>类从文件中读取数据，如果其构造函数中指定的文件不存在，则会发生<code>FileNotFoundException</code>异常，并且编译器会提示程序员处理异常。示例代码 -</li>
+</ul>
+<pre><code class="java">import java.io.File;
+import java.io.FileReader;
+
+public class FilenotFound_Demo &#123;
+
+   public static void main(String args[]) &#123;        
+      File file = new File(&quot;E://file.txt&quot;);
+      FileReader fr = new FileReader(file); 
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>如果编译上述程序，则会出现以下异常。</p>
+<pre><code class="shell">C:\&gt;javac FilenotFound_Demo.java
+FilenotFound_Demo.java:8: error: unreported exception FileNotFoundException; must be caught or declared to be thrown
+      FileReader fr = new FileReader(file);
+                      ^
+1 error
+Shell
+</code></pre>
+<blockquote>
+<p>注 - 由于<code>FileReader</code>类的<code>read()</code>和<code>close()</code>方法抛出<code>IOException</code>，可以看到到编译器通知要求处理<code>IOException</code>以及<code>FileNotFoundException</code>这两个异常。</p>
+</blockquote>
+<ul>
+<li><p><strong>未检查异常</strong> - 未检查的异常是在执行时发生的异常。这些也称为运行时异常。 这些包括编程错误，例如逻辑错误或API的不当使用，编译时忽略运行时异常。<br>例如，如果在程序中声明了一个大小为<code>5</code>的数组，但是却要访问数组的第<code>6</code>个元素，则会发生<code>ArrayIndexOutOfBoundsExceptionexception</code>异常。</p>
+<pre><code class="java">public class Unchecked_Demo &#123;
+
+ public static void main(String args[]) &#123;
+    int num[] = &#123;1, 2, 3, 4&#125;;
+    System.out.println(num[5]);// 访问第6个元素
+ &#125;
+&#125;
+Java
+</code></pre>
+<p>如果编译并执行上述程序，则会出现以下异常。</p>
+<pre><code class="shell">Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5
+  at Exceptions.Unchecked_Demo.main(Unchecked_Demo.java:8)
+Shell
+</code></pre>
+</li>
+<li><p><strong>错误</strong> - 这个严格来说不是异常，它是超出用户或程序员控制的问题。 代码中通常会忽略错误，因为很少对错误做任何事情。 例如，如果发生堆栈溢出，则会出现错误。 它们在编译时也被忽略。</p>
+</li>
+</ul>
+<h2 id="1-异常层次结构"><a href="#1-异常层次结构" class="headerlink" title="1. 异常层次结构"></a>1. 异常层次结构</h2><p>所有异常类都是<code>java.lang.Exception</code>类的子类型。 <code>Exception</code>类是<code>Throwable</code>类的子类。 除了<code>Exception</code>类之外，还有另一个名称为<code>Error</code>的子类，它派生自<code>Throwable</code>类。</p>
+<p>错误是在严重故障的情况下发生的异常情况，Java程序不处理这些情况。 生成错误以指示运行时环境生成的错误。例如：JVM内存不足。 通常，程序无法从错误中恢复。</p>
+<p><code>Exception</code>类有两个主要的子类：<code>IOException</code>类和<code>RuntimeException</code>类。</p>
+<p><img src="https://www.yiibai.com/uploads/article/2019/03/19/121433_14520.jpg" alt="Java异常层次结构"></p>
+<p>以下是最常见的已检查和未检查的<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/java_builtin_exceptions.html">Java内置异常类</a>列表。</p>
+<h2 id="2-异常方法"><a href="#2-异常方法" class="headerlink" title="2. 异常方法"></a>2. 异常方法</h2><p>以下是<code>Throwable</code>类中可用的方法列表。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>方法</th>
+<th>异常</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><code>public String getMessage()</code></td>
+<td>返回有关已发生的异常的详细消息，此消息在<code>Throwable</code>构造函数中初始化。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>public Throwable getCause()</code></td>
+<td>返回由<code>Throwable</code>对象表示的异常的原因。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>public String toString()</code></td>
+<td>返回与<code>getMessage()</code>结果连接的类名称。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>public void printStackTrace()</code></td>
+<td>将<code>toString()</code>的结果与堆栈跟踪一起打印到<code>System.err</code>(错误输出流)。</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>public StackTraceElement [] getStackTrace()</code></td>
+<td>返回包含堆栈跟踪上每个元素的数组。 索引<code>0</code>处的元素表示调用堆栈的顶部，而数组中的最后一个元素表示调用堆栈底部的方法。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>public Throwable fillInStackTrace()</code></td>
+<td>使用当前堆栈跟踪填充此<code>Throwable</code>对象的堆栈跟踪，添加堆栈跟踪中的任何先前信息。</td>
+</tr>
+</tbody></table>
+<h2 id="3-捕捉异常"><a href="#3-捕捉异常" class="headerlink" title="3. 捕捉异常"></a>3. 捕捉异常</h2><p>在方法中可使用<code>try</code>和<code>catch</code>关键字的组合捕获异常。<code>try/catch</code>块放在可能生成异常的代码周围。<code>try/catch</code>块中的代码称为受保护代码，使用<code>try/catch</code>的语法如下所示 - </p>
+<p><strong>语法</strong></p>
+<pre><code class="java">try &#123;
+   // Protected code
+&#125; catch (ExceptionName e1) &#123;
+   // Catch block
+&#125;
+Java
+</code></pre>
+<p>将容易出现异常的代码放在<code>try</code>块中。 发生异常时，异常由与其关联的<code>catch</code>块处理。 每个<code>try</code>块都应该紧跟一个<code>catch</code>块或者一个块<code>finally</code>。</p>
+<p><code>catch</code>语句涉及声明尝试捕获的异常类型。 如果受保护代码中发生异常，则会检查<code>try</code>之后的<code>catch</code>块(或多个块)。如果发生的异常类型列在<code>catch</code>块中，则异常将传递给<code>catch</code>块，就像将参数传递给方法参数一样。</p>
+<p><strong>示例</strong></p>
+<p>以下是使用<code>2</code>个元素声明的数组，然后尝试访问引发异常的数组的第<code>3</code>个元素。</p>
+<pre><code class="java">// 文件 : ExcepTest.java
+import java.io.*;
+
+public class ExcepTest &#123;
+
+   public static void main(String args[]) &#123;
+      try &#123;
+         int a[] = new int[2];
+         System.out.println(&quot;Access element three :&quot; + a[3]);
+      &#125; catch (ArrayIndexOutOfBoundsException e) &#123;
+         System.out.println(&quot;Exception thrown  :&quot; + e);
+      &#125;
+      System.out.println(&quot;Out of the block&quot;);
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果：</p>
+<pre><code class="shell">Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3
+Out of the block
+Shell
+</code></pre>
+<h2 id="4-多个try块"><a href="#4-多个try块" class="headerlink" title="4. 多个try块"></a>4. 多个try块</h2><p><code>try</code>块后面可以跟多个<code>catch</code>块，多个<code>catch</code>块的语法如下所示 - </p>
+<p><strong>语法</strong></p>
+<pre><code class="java">try &#123;
+   // Protected code
+&#125; catch (ExceptionType1 e1) &#123;
+   // Catch block
+&#125; catch (ExceptionType2 e2) &#123;
+   // Catch block
+&#125; catch (ExceptionType3 e3) &#123;
+   // Catch block
+&#125;
+Java
+</code></pre>
+<p>上面的语句中放置了三个<code>catch</code>块，但只需一次尝试即可获得任意数量的块。 如果受保护代码中发生异常，则会将异常抛出到列表中的第一个<code>catch</code>块。 如果抛出的异常的数据类型与<code>ExceptionType1</code>匹配，则会在那里捕获它。 如果不是，则异常传递给第二个<code>catch</code>语句。 这种情况一直持续到异常被捕获，在这种情况下，当前方法停止执行，异常将被抛到调用堆栈上的前一个方法。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>以下是显示如何使用多个<code>try/catch</code>语句的代码段。</p>
+<pre><code class="java">try &#123;
+   file = new FileInputStream(fileName);
+   x = (byte) file.read();
+&#125; catch (IOException i) &#123;
+   i.printStackTrace();
+   return -1;
+&#125; catch (FileNotFoundException f) // Not valid! &#123;
+   f.printStackTrace();
+   return -1;
+&#125;
+Java
+</code></pre>
+<p><strong>捕获多种类型的例外</strong><br>从Java 7开始，可以使用单个<code>catch</code>块处理多个异常，此功能简化了代码。 下面是应用示例 - </p>
+<pre><code class="java">catch (IOException|FileNotFoundException ex) &#123;
+   logger.log(ex);
+   throw ex;
+Java
+</code></pre>
+<h2 id="5-throws-throw关键字"><a href="#5-throws-throw关键字" class="headerlink" title="5. throws/throw关键字"></a>5. throws/throw关键字</h2><p>如果方法不处理已检查的异常，则该方法必须使用<code>throws</code>关键字声明它。 <code>throws</code>关键字应放置在方法签名的末尾。</p>
+<p>可以使用<code>throw</code>关键字抛出异常，可以是新实例化的异常，也可以是刚捕获的异常。</p>
+<p><code>throws</code>和<code>throw</code>关键字之间的区别是，<code>throws</code>用于推迟对已检查异常的处理，<code>throw</code>用于显式调用异常。</p>
+<p>以下方法声明它抛出<code>RemoteException</code>  - </p>
+<pre><code class="java">import java.io.*;
+public class className &#123;
+
+   public void deposit(double amount) throws RemoteException &#123;
+      // Method implementation
+      throw new RemoteException();
+   &#125;
+   // Remainder of class definition
+&#125;
+Java
+</code></pre>
+<p>可以将方法声明为抛出多个异常，在这种情况下，异常在以逗号分隔的列表中声明。 例如，以下方法声明它抛出<code>RemoteException</code>和<code>InsufficientFundsException</code>异常  - </p>
+<pre><code class="java">import java.io.*;
+public class className &#123;
+
+   public void withdraw(double amount) throws RemoteException, 
+      InsufficientFundsException &#123;
+      // Method implementation
+   &#125;
+   // Remainder of class definition
+&#125;
+Java
+</code></pre>
+<h2 id="6-finally块"><a href="#6-finally块" class="headerlink" title="6. finally块"></a>6. finally块</h2><p><code>finally</code>块在<code>try</code>块或<code>catch</code>块之后。无论受保护的代码块是否发生异常，最终都会执行<code>finally</code>块中的代码。</p>
+<p>使用<code>finally</code>块运行要执行的任何清理类型语句，无论受保护代码中发生什么。</p>
+<p><code>finally</code>块放置在<code>catch</code>块的末尾，它的语法语法如下 - </p>
+<pre><code class="java">try &#123;
+   // Protected code
+&#125; catch (ExceptionType1 e1) &#123;
+   // Catch block
+&#125; catch (ExceptionType2 e2) &#123;
+   // Catch block
+&#125; catch (ExceptionType3 e3) &#123;
+   // Catch block
+&#125;finally &#123;
+   // The finally block always executes.
+&#125;
+Java
+</code></pre>
+<p><strong>示例</strong></p>
+<pre><code class="java">public class ExcepTest &#123;
+
+   public static void main(String args[]) &#123;
+      int a[] = new int[2];
+      try &#123;
+         System.out.println(&quot;Access element three :&quot; + a[3]);
+      &#125; catch (ArrayIndexOutOfBoundsException e) &#123;
+         System.out.println(&quot;Exception thrown  :&quot; + e);
+      &#125;finally &#123;
+         a[0] = 6;
+         System.out.println(&quot;First element value: &quot; + a[0]);
+         System.out.println(&quot;The finally statement is executed&quot;);
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果 - </p>
+<pre><code class="shell">Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3
+First element value: 6
+The finally statement is executed
+Shell
+</code></pre>
+<p>使用<code>finally</code>时，需要注意以下规则 - </p>
+<ul>
+<li>没有<code>try</code>语句就不能存在<code>catch</code>子句。</li>
+<li>只要存在<code>try/catch</code>块，<code>finally</code>子句就不是必须的。</li>
+<li>如果没有<code>catch</code>子句或<code>finally</code>子句，则<code>try</code>块不能出现。</li>
+<li><code>try</code>，<code>catch</code>，<code>finally</code>块之间不能出现任何代码。</li>
+</ul>
+<h2 id="7-try-with-resources"><a href="#7-try-with-resources" class="headerlink" title="7.  try-with-resources"></a>7.  try-with-resources</h2><p>通常，当使用流，连接等任何资源时，要使用<code>finally</code>块显式关闭它们。 在下面的程序中使用<code>FileReader</code>从文件中读取数据，然后使用<code>finally</code>块关闭它。</p>
+<pre><code class="java">import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadData_Demo &#123;
+
+   public static void main(String args[]) &#123;
+      FileReader fr = null;        
+      try &#123;
+         File file = new File(&quot;file.txt&quot;);
+         fr = new FileReader(file); char [] a = new char[50];
+         fr.read(a);   // reads the content to the array
+         for(char c : a)
+         System.out.print(c);   // prints the characters one by one
+      &#125; catch (IOException e) &#123;
+         e.printStackTrace();
+      &#125;finally &#123;
+         try &#123;
+            fr.close();
+         &#125; catch (IOException ex) &#123;        
+            ex.printStackTrace();
+         &#125;
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p><code>try-with-resources</code>，也称为自动资源管理，是Java 7中引入的一种新的异常处理机制，它自动关闭<code>try/catch</code>块中使用的资源。</p>
+<p>要使用此语句，只需在括号内声明所需的资源，创建的资源将在块结束时自动关闭。 以下是<code>try-with-resources</code>语句的语法。</p>
+<p><strong>语法</strong></p>
+<pre><code class="java">try(FileReader fr = new FileReader(&quot;file path&quot;)) &#123;
+   // use the resource
+   &#125; catch () &#123;
+      // body of catch 
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>以下是使用<code>try-with-resources</code>语句读取文件中数据的程序。</p>
+<pre><code class="java">import java.io.FileReader;
+import java.io.IOException;
+
+public class Try_withDemo &#123;
+
+   public static void main(String args[]) &#123;
+      try(FileReader fr = new FileReader(&quot;E://file.txt&quot;)) &#123;
+         char [] a = new char[50];
+         fr.read(a);   // reads the contentto the array
+         for(char c : a)
+         System.out.print(c);   // prints the characters one by one
+      &#125; catch (IOException e) &#123;
+         e.printStackTrace();
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>在使用<code>try-with-resources</code>语句时，请牢记以下几点。</p>
+<ul>
+<li>要使用带有<code>try-with-resources</code>语句的类，它应该实现<code>AutoCloseable</code>接口，并且它的<code>close()</code>方法在运行时自动调用。</li>
+<li>可以在<code>try-with-resources</code>语句中声明多个类。</li>
+<li>当在<code>try-with-resources</code>语句的<code>try</code>块中声明多个类时，这些类将以相反的顺序关闭。</li>
+<li>除括号内的资源声明外，其它都与<code>try</code>块的普通<code>try/catch</code>块相同。</li>
+<li><code>try</code>中声明的资源在<code>try-block</code>开始之前实例化。</li>
+<li>在<code>try</code>块声明的资源被隐式声明为<code>final</code>。</li>
+</ul>
+<h2 id="8-用户定义的异常"><a href="#8-用户定义的异常" class="headerlink" title="8. 用户定义的异常"></a>8. 用户定义的异常</h2><p>可以在Java中创建自己的异常。 在编写自己的异常类时，请注意以下几点 - </p>
+<ul>
+<li>所有异常必须是<code>Throwable</code>的子类。</li>
+<li>如果要编写由处理或声明规则自动强制执行的已检查异常，则需要扩展<code>Exception</code>类。</li>
+<li>如果要编写运行时异常，则需要扩展<code>RuntimeException</code>类。</li>
+</ul>
+<p>可以定义自己的<code>Exception</code>类，如下所示 - </p>
+<pre><code class="java">class MyException extends Exception &#123;&#125;Java
+</code></pre>
+<p>只需要扩展预定义的<code>Exception</code>类来创建自己的<code>Exception</code>类。 这些都是经过检查的异常。 以下<code>InsufficientFundsException</code>类是一个用户定义的异常，它扩展了<code>Exception</code>类，使其成为一个已检查的异常。异常类与任何其他类一样，包含有用的字段和方法。</p>
+<p><strong>示例</strong></p>
+<pre><code class="java">// 文件：InsufficientFundsException.java
+import java.io.*;
+
+public class InsufficientFundsException extends Exception &#123;
+   private double amount;
+
+   public InsufficientFundsException(double amount) &#123;
+      this.amount = amount;
+   &#125;
+
+   public double getAmount() &#123;
+      return amount;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>为了演示如何使用用户定义的异常，以下<code>CheckingAccount</code>类的<code>withdraw()</code>方法中包含抛出<code>InsufficientFundsException</code>。</p>
+<pre><code class="java">// 文件名称：CheckingAccount.java
+import java.io.*;
+
+public class CheckingAccount &#123;
+   private double balance;
+   private int number;
+
+   public CheckingAccount(int number) &#123;
+      this.number = number;
+   &#125;
+
+   public void deposit(double amount) &#123;
+      balance += amount;
+   &#125;
+
+   public void withdraw(double amount) throws InsufficientFundsException &#123;
+      if(amount &lt;= balance) &#123;
+         balance -= amount;
+      &#125;else &#123;
+         double needs = amount - balance;
+         throw new InsufficientFundsException(needs);
+      &#125;
+   &#125;
+
+   public double getBalance() &#123;
+      return balance;
+   &#125;
+
+   public int getNumber() &#123;
+      return number;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>以下<code>BankDemo</code>程序演示了如何调用<code>CheckingAccount</code>类的<code>deposit()</code>和<code>withdraw()</code>方法。</p>
+<pre><code class="java">// 文件： BankDemo.java
+public class BankDemo &#123;
+
+   public static void main(String [] args) &#123;
+      CheckingAccount c = new CheckingAccount(101);
+      System.out.println(&quot;Depositing $500...&quot;);
+      c.deposit(500.00);
+
+      try &#123;
+         System.out.println(&quot;\nWithdrawing $100...&quot;);
+         c.withdraw(100.00);
+         System.out.println(&quot;\nWithdrawing $600...&quot;);
+         c.withdraw(600.00);
+      &#125; catch (InsufficientFundsException e) &#123;
+         System.out.println(&quot;Sorry, but you are short $&quot; + e.getAmount());
+         e.printStackTrace();
+      &#125;
+   &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面示例代码，得到以下结果 - </p>
+<pre><code class="shell">Depositing $500...
+
+Withdrawing $100...
+
+Withdrawing $600...
+Sorry, but you are short $200.0
+InsufficientFundsException
+         at CheckingAccount.withdraw(CheckingAccount.java:25)
+         at BankDemo.main(BankDemo.java:13)
+Shell
+</code></pre>
+<p><strong>常见异常</strong></p>
+<p>在Java中，可以定义两个分类:异常和错误。</p>
+<ul>
+<li><strong>JVM异常</strong> - 这些是JVM独占或逻辑抛出的异常/错误。 示例：<code>NullPointerException</code>，<code>ArrayIndexOutOfBoundsException</code>，<code>ClassCastException</code>。</li>
+<li><strong>程序化异常</strong> - 应用程序或API程序员明确抛出这些异常。 示例：<code>IllegalArgumentException</code>，<code>IllegalStateException</code>。</li>
+</ul>
+<h1 id="Java-Object类"><a href="#Java-Object类" class="headerlink" title="Java Object类"></a>Java Object类</h1><p>默认情况下，<code>Object</code>类是java中所有类的父类。 换句话说，它是java的顶级类。</p>
+<p>如果想引用你不知道的类型的对象，使用<code>Object</code>类是没有错的。请注意，父类引用变量可以引用子类对象，称为上转换。</p>
+<p>下面举一个例子，有一个<code>getObject()</code>方法返回一个对象，但它可以是任何类型，如：<code>Employee</code>，<code>Student</code>等这样的类，我们可以使用<code>Object</code>类引用来引用该对象。 例如：</p>
+<pre><code class="java">Object obj=getObject();//we don&#39;t know what object will be returned from this method
+Java
+</code></pre>
+<p><code>Object</code>类为所有对象提供了一些常见的行为，如对象可以进行比较，对象可以克隆，对象可以通知等。</p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0803/878080359_28912.gif" alt="img"></p>
+<h2 id="Object类的方法"><a href="#Object类的方法" class="headerlink" title="Object类的方法"></a>Object类的方法</h2><p><code>Object</code>类提供了许多方法。 它们如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public final Class getClass()</code></td>
+<td>返回此对象的<code>Class</code>类对象。 <code>Class</code>类可以进一步用于获取此类的元数据。</td>
+</tr>
+<tr>
+<td><code>public int hashCode()</code></td>
+<td>返回此对象的哈希码值</td>
+</tr>
+<tr>
+<td><code>public boolean equals(Object obj)</code></td>
+<td>将给定对象与此对象进行比较。</td>
+</tr>
+<tr>
+<td><code>protected Object clone() throws CloneNotSupportedException</code></td>
+<td>创建并返回此对象的精确副本(克隆)。</td>
+</tr>
+<tr>
+<td><code>public String toString()</code></td>
+<td>返回此对象的字符串表示形式。</td>
+</tr>
+<tr>
+<td><code>public final void notify()</code></td>
+<td>唤醒单线程，等待此对象的监视器。</td>
+</tr>
+<tr>
+<td><code>public final void notifyAll()</code></td>
+<td>唤醒所有线程，等待此对象的监视器。</td>
+</tr>
+<tr>
+<td><code>public final void wait(long timeout)throws InterruptedException</code></td>
+<td>导致当前线程等待指定的毫秒，直到另一个线程通知(调用<code>notify()</code>或<code>notifyAll()</code>方法)。</td>
+</tr>
+<tr>
+<td><code>public final void wait(long timeout,int nanos)throws InterruptedException</code></td>
+<td>导致当前线程等待指定的毫秒和纳秒，直到另一个线程通知(调用<code>notify()</code>或<code>notifyAll()</code>方法)。</td>
+</tr>
+<tr>
+<td><code>public final void wait()throws InterruptedException</code></td>
+<td>导致当前线程等待，直到另一个线程通知(调用<code>notify()</code>或<code>notifyAll()</code>方法)。</td>
+</tr>
+<tr>
+<td><code>protected void finalize()throws Throwable</code></td>
+<td>在对象被垃圾收集之前由垃圾收集器调用。</td>
+</tr>
+</tbody></table>
+<p>我们将在下一章详细学习这些方法。</p>
+<h1 id="Java包装类"><a href="#Java包装类" class="headerlink" title="Java包装类"></a>Java包装类</h1><p>java中的包装类提供了将原始数据类型转换为对象，以及将对象转换为原始数据类型的机制。</p>
+<p>自J2SE 5.0以来，自动装箱和取消装箱功能将原始对象和对象自动转换为原始数据类型。将原始数据类型自动转换为对象称为自动装箱，反之亦然。</p>
+<p><code>java.lang</code>包的八个类在java中称为包装类。八个包装类的列表如下：</p>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+</tbody></table>
+<p><strong>为什么需要包装类？</strong></p>
+<p>将原始类型和包装类分开以保持简单是一个明智的做法。当需要一个适合像面向对象编程的类型时就需要包装类。当希望数据类型变得简单时就使用原始类型。</p>
+<p>原始类型不能为<code>null</code>，但包装类可以为<code>null</code>。包装类可用于实现多态性。</p>
+<p>下面是一个简单的程序，显示了java中包装类的不同方面应用。</p>
+<pre><code class="java">import java.util.ArrayList;
+import java.util.List;
+
+public class WrapperClasses &#123;
+
+    private static void doSomething(Object obj)&#123;
+
+    &#125;
+
+    public static void main(String args[])&#123;
+        int i = 10;
+        char c = &#39;a&#39;;
+
+        // 原始数据很容易使用
+        int j = i+3;
+
+        // 由包装类实现的多态性，不能在这里传递原始数据
+        doSomething(new Character(c));
+
+        List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+        // 包装类可以在集合中使用
+        Integer in = new Integer(i);
+        list.add(in);
+
+        // 自动装箱负责原始到包装器类的转换
+        list.add(j);
+
+        //包装类可以为 null
+        in = null;
+    &#125;
+&#125;
+Java
+</code></pre>
+<p><strong>包装类示例：原始类型到包装类型</strong></p>
+<pre><code class="java">public class WrapperExample1 &#123;
+    public static void main(String args[]) &#123;
+        // Converting int into Integer
+        int a = 20;
+        Integer i = Integer.valueOf(a);// converting int into Integer
+        Integer j = a;// autoboxing, now compiler will write Integer.valueOf(a)
+                        // internally
+
+        System.out.println(a + &quot; &quot; + i + &quot; &quot; + j);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>输出结果 - </p>
+<pre><code class="java">20 20 20
+Java
+</code></pre>
+<p><strong>包装类示例：包装类型到原始类型</strong></p>
+<pre><code class="java">public class WrapperExample2 &#123;
+    public static void main(String args[]) &#123;
+        // Converting Integer to int
+        Integer a = new Integer(3);
+        int i = a.intValue();// converting Integer to int
+        int j = a;// unboxing, now compiler will write a.intValue() internally
+
+        System.out.println(a + &quot; &quot; + i + &quot; &quot; + j);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>输出结果 - </p>
+<pre><code class="java">3 3 3
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

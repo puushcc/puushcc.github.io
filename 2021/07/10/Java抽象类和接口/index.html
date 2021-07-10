@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Java抽象类和接口 | Puushcc</title>
+  <meta name="keywords" content=" 后端 , java基础 , javaSE ">
+  <meta name="description" content="Java抽象类和接口 | Puushcc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于我">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Puushcc">
+<meta property="og:description" content="关于我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-10T14:44:00.000Z">
+<meta property="article:modified_time" content="2021-07-10T14:54:50.894Z">
+<meta property="article:author" content="Puushcc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Puushcc</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://puushcc.github.io/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(27)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(26)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->java">
+                                        
+                                        java
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->java基础">
+                                        
+                                        java基础
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="后端<--->Java基础">
+                                        
+                                        Java基础
+                                        
+                                            <small>(24
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="运维">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        运维
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="运维<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="27">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://puushcc.github.io/">puushcc</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>后端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java基础</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaSE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux命令</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20instanceof%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java instanceof运算符">Java instanceof运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java基础 "
+           href="/2021/07/10/JDK%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="JDK安装和配置">JDK安装和配置</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%86%B3%E7%AD%96%E5%88%B6%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java决策制定">Java决策制定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java修饰符类型">Java修饰符类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java变量类型">Java变量类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8C%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java包">Java包</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java命令行参数">Java命令行参数</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本数据类型">Java基本数据类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本运算符">Java基本运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%9D%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java实例初始化程序块">Java实例初始化程序块</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本语法">Java基本语法</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象和类">Java对象和类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象克隆">Java对象克隆</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%B0%81%E8%A3%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java封装">Java封装</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8%E5%92%8C%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java按值调用和引用调用">Java按值调用和引用调用</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%95%B0%E7%BB%84/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java数组">Java数组</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E9%87%8D%E5%86%99/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java方法重载重写">Java方法重载重写</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%B3%A8%E9%87%8A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java注释">Java注释</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%BB%A7%E6%89%BF%E5%A4%9A%E6%80%81/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java继承多态">Java继承多态</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java静态绑定和动态绑定">Java静态绑定和动态绑定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20%E5%85%B3%E9%94%AE%E5%AD%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java 关键字">Java 关键字</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java循环控制">Java循环控制</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java抽象类和接口">Java抽象类和接口</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88OOP%EF%BC%89%E6%A6%82%E5%BF%B5/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java面向对象（OOP）概念">Java面向对象（OOP）概念</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java类">Java类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 java "
+           href="/2021/07/10/Java%E5%9F%BA%E7%A1%80/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基础">Java基础</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 运维 Linux "
+           href="/2021/07/10/Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="Linux,Linux命令"
+           data-author="" >
+            <span class="post-title" title="Linux命令">Linux命令</span>
+            <span class="post-date" title="2021-07-10 15:13:47">2021/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Java抽象类和接口" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Java抽象类和接口</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a> > 
+            
+            <a  data-rel="后端&lt;---&gt;Java基础">Java基础</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">后端</a>
+            
+            <a class="color2">java基础</a>
+            
+            <a class="color2">javaSE</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-07-11 02:14:12'>2021-07-10 20:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-text">Java抽象类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1"><span class="toc-text">Java中的抽象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%8A%BD%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">实现抽象的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Java%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-text">1. Java中的抽象类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E7%9C%9F%E5%AE%9E%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">理解抽象类的真实应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%9C%9F%E5%AE%9E%E5%9C%BA%E6%99%AF"><span class="toc-text">抽象类的另一个真实场景</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%8E%A5%E5%8F%A3"><span class="toc-text">Java接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Java%E6%8E%A5%E5%8F%A3%EF%BC%9F"><span class="toc-text">为什么要使用Java接口？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-8%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%94%B9%E8%BF%9B"><span class="toc-text">Java 8接口的改进</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">了解类和接口之间的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%A4%9A%E7%BB%A7%E6%89%BF%E6%8E%A5%E5%8F%A3"><span class="toc-text">Java多继承接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%BB%A7%E6%89%BF"><span class="toc-text">接口继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-8%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95"><span class="toc-text">Java 8接口中的默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-8%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-text">Java 8接口中的静态方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">Java抽象类和接口的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3"><span class="toc-text">使用抽象类和接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%A4%BA%E4%BE%8B"><span class="toc-text">Java抽象类和接口的示例</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java抽象类"><a href="#Java抽象类" class="headerlink" title="Java抽象类"></a>Java抽象类</h1><p>在java中用<code>abstract</code>关键字声明的类称为抽象类。 它可以有抽象和非抽象方法(带主体的方法)。</p>
+<p>在学习java抽象类之前，先来了解java中的抽象。</p>
+<h2 id="Java中的抽象"><a href="#Java中的抽象" class="headerlink" title="Java中的抽象"></a>Java中的抽象</h2><p>抽象是隐藏实现细节并仅向用户显示功能的过程。</p>
+<p>另一种方式，它只向用户显示重要的事情，并隐藏内部详细信息，例如：发送短信，只需输入文本并发送消息。您也不需要知道有关邮件传递的内部处理过程。</p>
+<p>抽象可以让你专注于对象做什么(实现的功能)，而不是它如何做。</p>
+<h3 id="实现抽象的方法"><a href="#实现抽象的方法" class="headerlink" title="实现抽象的方法"></a>实现抽象的方法</h3><p>在java中有两种实现抽象的方法，它们分别是：</p>
+<ol>
+<li>抽象类(部分)</li>
+<li>接口 (完全)</li>
+</ol>
+<h2 id="1-Java中的抽象类"><a href="#1-Java中的抽象类" class="headerlink" title="1. Java中的抽象类"></a>1. Java中的抽象类</h2><p>使用 <code>abstract</code>关键字声明的类被称为抽象类。需要扩展和实现它的方法。 它不能被实例化。</p>
+<p><strong>抽象类示例</strong></p>
+<pre><code class="java">abstract class A&#123;&#125;
+Java
+</code></pre>
+<p><strong>抽象方法</strong></p>
+<p>一个被声明为 <code>abstract</code> 而没有实现的方法称为抽象方法。</p>
+<p><strong>抽象方法示例</strong></p>
+<pre><code class="java">abstract void printStatus();//no body and abstract
+Java
+</code></pre>
+<p><strong>具有抽象方法的抽象类的示例</strong></p>
+<p>在这个例子中，<code>Bike</code>是一个抽象类，只包含一个抽象方法：<code>run()</code>。 它由 <code>Honda</code> 类提供实现。</p>
+<pre><code class="java">abstract class Bike &#123;
+    abstract void run();
+&#125;
+
+class Honda4 extends Bike &#123;
+    void run() &#123;// run 方法的实现
+        System.out.println(&quot;running safely..&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        Bike obj = new Honda4();
+        obj.run();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面示例中的代码执行结果如下 -</p>
+<pre><code class="java">running safely..
+Java
+</code></pre>
+<h2 id="理解抽象类的真实应用场景"><a href="#理解抽象类的真实应用场景" class="headerlink" title="理解抽象类的真实应用场景"></a>理解抽象类的真实应用场景</h2><p>在这个例子中，<code>Shape</code>是一个抽象类，它的实现分别由<code>Rectangle</code>和<code>Circle</code>类提供。 大多数情况下，我们不知道实现类(即对最终用户隐藏)，实现类的对象由工厂方法提供。<br><strong>工厂方法</strong>是用于返回类的实例的方法。 稍后我们将在下一节中了解和学习<strong>工厂方法</strong>。<br>在这个例子中，创建<code>Rectangle</code>类的实例，<code>Rectangle</code>类的<code>draw()</code>方法将被调用。创建一个类文件：<code>TestAbstraction1.java</code> ，它的代码如下所示 -</p>
+<pre><code class="java">abstract class Shape &#123;
+    abstract void draw();
+&#125;
+
+// In real scenario, implementation is provided by others i.e. unknown by end
+// user
+class Rectangle extends Shape &#123;
+    void draw() &#123;
+        System.out.println(&quot;drawing rectangle&quot;);
+    &#125;
+&#125;
+
+class Circle1 extends Shape &#123;
+    void draw() &#123;
+        System.out.println(&quot;drawing circle&quot;);
+    &#125;
+&#125;
+
+// In real scenario, method is called by programmer or user
+class TestAbstraction1 &#123;
+    public static void main(String args[]) &#123;
+        Shape s = new Circle1();// In real scenario, object is provided through
+                                // method e.g. getShape() method
+        s.draw();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行结果如下 -</p>
+<pre><code class="java">drawing circle
+Java
+</code></pre>
+<p><strong>在java中抽象类的另一个例子</strong></p>
+<p>创建一个Java文件：<code>TestBank.java</code>，代码如下所示 -</p>
+<pre><code class="java">abstract class Bank &#123;
+    abstract int getRateOfInterest();
+&#125;
+
+class SBI extends Bank &#123;
+    int getRateOfInterest() &#123;
+        return 7;
+    &#125;
+&#125;
+
+class PNB extends Bank &#123;
+    int getRateOfInterest() &#123;
+        return 8;
+    &#125;
+&#125;
+
+class TestBank &#123;
+    public static void main(String args[]) &#123;
+        Bank b;
+        b = new SBI();
+        System.out.println(&quot;Rate of Interest is: &quot; + b.getRateOfInterest() + &quot; %&quot;);
+        b = new PNB();
+        System.out.println(&quot;Rate of Interest is: &quot; + b.getRateOfInterest() + &quot; %&quot;);
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行结果如下 -</p>
+<pre><code class="java">Rate of Interest is: 7 %
+Rate of Interest is: 8 %
+Java
+</code></pre>
+<p><strong>具有构造函数，数据成员，方法等的抽象类</strong></p>
+<p>抽象类可以有数据成员，抽象方法，方法体，构造函数甚至<code>main()</code>方法。创建一个Java文件：<code>TestAbstraction2.java</code>，代码如下所示 -</p>
+<pre><code class="java">//example of abstract class that have method body  
+abstract class Bike &#123;
+    Bike() &#123;
+        System.out.println(&quot;bike is created&quot;);
+    &#125;
+
+    abstract void run();
+
+    void changeGear() &#123;
+        System.out.println(&quot;gear changed&quot;);
+    &#125;
+&#125;
+
+class Honda extends Bike &#123;
+    void run() &#123;
+        System.out.println(&quot;running safely..&quot;);
+    &#125;
+&#125;
+
+class TestAbstraction2 &#123;
+    public static void main(String args[]) &#123;
+        Bike obj = new Honda();
+        obj.run();
+        obj.changeGear();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行结果如下 -</p>
+<pre><code class="java">bike is created
+running safely..
+gear changed
+Java
+</code></pre>
+<blockquote>
+<p>规则：如果在类中有任何抽象方法，那个类必须声明为抽象的。</p>
+</blockquote>
+<pre><code class="java">class Bike12&#123;  
+    abstract void run();  
+&#125;
+Java
+</code></pre>
+<p>上面的 <code>Bike12</code> 是无法编译通过的。</p>
+<blockquote>
+<p>规则：如果你扩展任何具有抽象方法的抽象类，必须提供方法的实现或使这个类抽象化。</p>
+</blockquote>
+<h2 id="抽象类的另一个真实场景"><a href="#抽象类的另一个真实场景" class="headerlink" title="抽象类的另一个真实场景"></a>抽象类的另一个真实场景</h2><p>抽象类也可以用于提供接口的一些实现。 在这种情况下，终端用户可能不会被强制覆盖接口的所有方法。</p>
+<blockquote>
+<p>注意：如果您是初学者到Java，请跳过此示例先学习<a target="_blank" rel="noopener" href="http://www.yiibai.com/java/interface-in-java.html">接口(interface)</a>。</p>
+</blockquote>
+<pre><code class="java">interface A &#123;
+    void a();
+
+    void b();
+
+    void c();
+
+    void d();
+&#125;
+
+abstract class B implements A &#123;
+    public void c() &#123;
+        System.out.println(&quot;I am C&quot;);
+    &#125;
+&#125;
+
+class M extends B &#123;
+    public void a() &#123;
+        System.out.println(&quot;I am a&quot;);
+    &#125;
+
+    public void b() &#123;
+        System.out.println(&quot;I am b&quot;);
+    &#125;
+
+    public void d() &#123;
+        System.out.println(&quot;I am d&quot;);
+    &#125;
+&#125;
+
+class Test5 &#123;
+    public static void main(String args[]) &#123;
+        A a = new M();
+        a.a();
+        a.b();
+        a.c();
+        a.d();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行结果如下 -</p>
+<pre><code class="java">I am a
+I am b
+I am c
+I am d
+</code></pre>
+<h1 id="Java接口"><a href="#Java接口" class="headerlink" title="Java接口"></a>Java接口</h1><p>java中的接口是类的蓝图。 它有静态常量和抽象方法。java中的接口是一种实现抽象的机制。 接口中只有抽象方法而不是方法体。接口用于在Java中实现抽象和多重继承。</p>
+<p>Java接口也表示IS-A关系。它不能像抽象类一样被实例化。</p>
+<h2 id="为什么要使用Java接口？"><a href="#为什么要使用Java接口？" class="headerlink" title="为什么要使用Java接口？"></a>为什么要使用Java接口？</h2><p>需要使用接口主要有三个原因。如下面给出。</p>
+<ul>
+<li>它用于实现抽象。</li>
+<li>通过接口，可以支持多重继承的功能。</li>
+<li>它可用于实现松耦合。</li>
+</ul>
+<h2 id="Java-8接口的改进"><a href="#Java-8接口的改进" class="headerlink" title="Java 8接口的改进"></a>Java 8接口的改进</h2><p>由于Java 8，接口可以有默认和静态方法，稍后讨论。</p>
+<p><strong>由编译器内部添加</strong><br>java编译器在接口方法之前添加<code>public</code>和<code>abstract</code>关键字。还有，它在数据成员之前添加<code>public</code>，<code>static</code>和<code>final</code>关键字。</p>
+<p>换句话说，接口字段默认是<code>public</code>，<code>static</code>和<code>final</code>，方法默认是<code>public</code>和<code>abstract</code>。</p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0703/957110359_32640.png" alt="img"></p>
+<h2 id="了解类和接口之间的关系"><a href="#了解类和接口之间的关系" class="headerlink" title="了解类和接口之间的关系"></a>了解类和接口之间的关系</h2><p>如下图所示，一个类扩展了另一个类，一个接口扩展了另一个接口，一个类实现了一个接口。<br><img src="http://www.yiibai.com/uploads/images/201703/0703/573120302_99574.png" alt="img"></p>
+<p><strong>Java接口示例</strong></p>
+<p>在这个例子中，<code>Printable</code>接口只有一个方法，它的实现是在<code>A</code>类中提供的。</p>
+<pre><code class="java">interface printable &#123;
+    void print();
+&#125;
+
+class A6 implements printable &#123;
+    public void print() &#123;
+        System.out.println(&quot;Hello, Interface&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        A6 obj = new A6();
+        obj.print();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行结果如下 - </p>
+<pre><code class="java">Hello, Interface
+Java
+</code></pre>
+<p><strong>Java接口示例：Drawable</strong></p>
+<p>在这个例子中，<code>Drawable</code>接口只有一个方法。 它的实现由<code>Rectangle</code>和<code>Circle</code>类提供。 在实际情况下，接口由一些开发者定义，但实现由不同的实现提供者提供。 并且它被别人使用。实现部分被使用接口的用户隐藏。</p>
+<p>创建一个 Java 文件：<code>TestInterface1.java</code>，其代码如下 -</p>
+<pre><code class="java">//Interface declaration: by first user  
+interface Drawable &#123;
+    void draw();
+&#125;
+
+// Implementation: by second user
+class Rectangle implements Drawable &#123;
+    public void draw() &#123;
+        System.out.println(&quot;drawing rectangle&quot;);
+    &#125;
+&#125;
+
+class Circle implements Drawable &#123;
+    public void draw() &#123;
+        System.out.println(&quot;drawing circle&quot;);
+    &#125;
+&#125;
+
+// Using interface: by third user
+class TestInterface1 &#123;
+    public static void main(String args[]) &#123;
+        Drawable d = new Circle();// In real scenario, object is provided by
+                                    // method e.g. getDrawable()
+        d.draw();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码得到以下结果 -</p>
+<pre><code class="java">drawing circle
+Java
+</code></pre>
+<p><strong>Java接口示例：Bank</strong></p>
+<p>让我们来看看另一个提供了<code>Bank</code>接口实现的java接口的例子。创建一个 Java 文件：<code>TestInterface2.java</code>，其代码如下 -</p>
+<pre><code class="java">interface Bank &#123;
+    float rateOfInterest();
+&#125;
+
+class SBI implements Bank &#123;
+    public float rateOfInterest() &#123;
+        return 9.15f;
+    &#125;
+&#125;
+
+class PNB implements Bank &#123;
+    public float rateOfInterest() &#123;
+        return 9.7f;
+    &#125;
+&#125;
+
+class TestInterface2 &#123;
+    public static void main(String[] args) &#123;
+        Bank b = new SBI();
+        System.out.println(&quot;ROI: &quot; + b.rateOfInterest());
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码得到以下结果 -</p>
+<pre><code class="java">ROI: 9.15
+Java
+</code></pre>
+<h2 id="Java多继承接口"><a href="#Java多继承接口" class="headerlink" title="Java多继承接口"></a>Java多继承接口</h2><p>如果一个类实现了多个接口，或者一个接口扩展了多个接口，即被称为多重继承。</p>
+<p><img src="http://www.yiibai.com/uploads/images/201703/0703/469120316_18026.png" alt="img"></p>
+<p>参考以下示例代码的实现 -</p>
+<pre><code class="java">interface Printable &#123;
+    void print();
+&#125;
+
+interface Showable &#123;
+    void show();
+&#125;
+
+class A7 implements Printable, Showable &#123;
+    public void print() &#123;
+        System.out.println(&quot;Hello&quot;);
+    &#125;
+
+    public void show() &#123;
+        System.out.println(&quot;Welcome&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        A7 obj = new A7();
+        obj.print();
+        obj.show();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码得到以下结果 -</p>
+<pre><code class="java">Hello
+Welcome
+Java
+</code></pre>
+<p><strong>问题：在java中不支持通过类实现多继承，但可通过接口实现，为什么？</strong></p>
+<p>正如在继承章节中所解释的，在类中不支持多重继承是因为模糊。 但是在接口的情况下可以支持，因为接口没有歧义，接口的具体实现由实现类提供。 例如：</p>
+<pre><code class="java">interface Printable &#123;
+    void print();
+&#125;
+
+interface Showable &#123;
+    void print();
+&#125;
+
+class TestTnterface3 implements Printable, Showable &#123;
+    public void print() &#123;
+        System.out.println(&quot;Hello&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        TestTnterface1 obj = new TestTnterface1();
+        obj.print();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>上面代码执行得到以下结果 -</p>
+<pre><code class="java">Hello
+Java
+</code></pre>
+<p>从上面的例子可以看到，<code>Printable</code>和<code>Showable</code>接口有相同的方法，但它的实现是由<code>TestTnterface1</code>类提供的，所以没有歧义。</p>
+<h2 id="接口继承"><a href="#接口继承" class="headerlink" title="接口继承"></a>接口继承</h2><p>类可以实现多个接口，但接口也扩展另一个接口。</p>
+<pre><code class="java">interface Printable &#123;
+    void print();
+&#125;
+
+interface Showable extends Printable &#123;
+    void show();
+&#125;
+
+class TestInterface4 implements Showable &#123;
+    public void print() &#123;
+        System.out.println(&quot;Hello&quot;);
+    &#125;
+
+    public void show() &#123;
+        System.out.println(&quot;Welcome&quot;);
+    &#125;
+
+    public static void main(String args[]) &#123;
+        TestInterface4 obj = new TestInterface4();
+        obj.print();
+        obj.show();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码，得到如下结果 -</p>
+<pre><code class="java">Hello
+Welcome
+Java
+</code></pre>
+<h3 id="Java-8接口中的默认方法"><a href="#Java-8接口中的默认方法" class="headerlink" title="Java 8接口中的默认方法"></a>Java 8接口中的默认方法</h3><p>从Java 8开始，我们可以在接口中有方法体。 但需要使其为默认方法。现在来看看一个例子，创建一个Java文件：<code>TestInterfaceDefault.java</code>，其代码如下 -</p>
+<pre><code class="java">interface Drawable &#123;
+    void draw();
+
+    default void msg() &#123;
+        System.out.println(&quot;default method&quot;);
+    &#125;
+&#125;
+
+class Rectangle implements Drawable &#123;
+    public void draw() &#123;
+        System.out.println(&quot;drawing rectangle&quot;);
+    &#125;
+&#125;
+
+class TestInterfaceDefault &#123;
+    public static void main(String args[]) &#123;
+        Drawable d = new Rectangle();
+        d.draw();
+        d.msg();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码，得到如下结果 -</p>
+<pre><code class="java">drawing rectangle
+default method
+Java
+</code></pre>
+<h3 id="Java-8接口中的静态方法"><a href="#Java-8接口中的静态方法" class="headerlink" title="Java 8接口中的静态方法"></a>Java 8接口中的静态方法</h3><p>从Java 8开始，我们可以在接口中有静态方法。 让我们来看看下面的一个例子，创建一个Java文件：<code>TestInterfaceStatic.java</code> 其代码如下：</p>
+<pre><code class="java">interface Drawable &#123;
+    void draw();
+
+    static int cube(int x) &#123;
+        return x * x * x;
+    &#125;
+&#125;
+
+class Rectangle implements Drawable &#123;
+    public void draw() &#123;
+        System.out.println(&quot;drawing rectangle&quot;);
+    &#125;
+&#125;
+
+class TestInterfaceStatic &#123;
+    public static void main(String args[]) &#123;
+        Drawable d = new Rectangle();
+        d.draw();
+        System.out.println(Drawable.cube(3));
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面代码，得到如下结果 -</p>
+<pre><code class="java">drawing rectangle
+27
+Java
+</code></pre>
+<p><strong>问题：什么是标记或标记的接口？</strong></p>
+<p>没有成员的接口(仅定义一个空的接口)称为标记或标记接口。 例如：可序列化，可克隆，远程等。它们用于向JVM提供一些基本信息，以便JVM可以执行一些有用的操作。</p>
+<pre><code class="java">//How Serializable interface is written?  
+public interface Serializable&#123;  
+&#125;
+Java
+</code></pre>
+<p><strong>Java嵌套接口</strong></p>
+<p><strong>注意：</strong> 一个接口中可以有另一个接口，即被称为嵌套接口。有关于这方面的知识，将在<a target="_blank" rel="noopener" href="http://www.yiibai.com/java/nested-interface.html">嵌套类</a>的章节中详细学习。 例如：</p>
+<pre><code class="java">interface printable &#123;
+    void print();
+
+    interface MessagePrintable &#123;
+        void msg();
+    &#125;
+&#125;
+</code></pre>
+<h1 id="Java抽象类和接口的区别"><a href="#Java抽象类和接口的区别" class="headerlink" title="Java抽象类和接口的区别"></a>Java抽象类和接口的区别</h1><p>抽象类和接口之间的区别是一个流行的问试问题。抽象类和接口是java编程语言的核心部分。是选择接口还是抽象类是每个架构师都面临的设计决策。</p>
+<p>在本系列Java教程中，提供了有关<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/interface-in-java.html">java接口</a>和<a target="_blank" rel="noopener" href="https://www.yiibai.com/java/abstract-class-in-java.html">抽象类</a>的讲解和示例。</p>
+<p>抽象类和接口都用于实现抽象，可以声明抽象方法。抽象类和接口都不能被实例化。但是在下面给出的抽象类和接口之间有许多区别。</p>
+<table>
+<thead>
+<tr>
+<th>抽象类</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>抽象类可以有抽象和非抽象方法。</td>
+<td>接口只能有抽象方法。从Java 8开始，它也可以有默认和静态方法。</td>
+</tr>
+<tr>
+<td>抽象类不支持多重继承。</td>
+<td>接口支持多继承。</td>
+</tr>
+<tr>
+<td>抽象类可以有<code>final</code>，非<code>final</code>，静态和非静态变量。</td>
+<td>接口只有静态和<code>final</code>变量。</td>
+</tr>
+<tr>
+<td>抽象类可以提供接口的实现。</td>
+<td>接口不能提供抽象类的实现。</td>
+</tr>
+<tr>
+<td><code>abstract</code>关键字用来声明抽象类。</td>
+<td><code>interface</code>关键字用于声明接口。</td>
+</tr>
+</tbody></table>
+<p>简单地说，抽象类实现了部分抽象(0到100％)，而接口实现了完全抽象(100％)。</p>
+<h4 id="使用抽象类和接口"><a href="#使用抽象类和接口" class="headerlink" title="使用抽象类和接口"></a>使用抽象类和接口</h4><p>在大多数时候，使用接口和抽象类是设计系统的最佳方法，例如在JDK中<code>java.util.List</code>是一个包含很多方法的接口，因此有一个抽象类　－　<code>java.util.AbstractLis</code>为<code>List</code>接口的所有方法提供基础实现，以便任何子类都可以扩展此类并仅实现所需的方法。</p>
+<p>应该始终以接口为基础并在定义每个子类时都应该实现方法，如果有一些方法只应该实现某些子类，可以扩展基接口并使用这些方法创建一个新接口。子类可以选择在基接口或子接口之间进行选择，以根据其要求实现。如果方法的数量增长很多，那么提供一个实现子接口的骨架抽象类并为子类提供在接口和抽象类之间进行选择的灵活性也是一个不错的做法。</p>
+<h4 id="Java抽象类和接口的示例"><a href="#Java抽象类和接口的示例" class="headerlink" title="Java抽象类和接口的示例"></a>Java抽象类和接口的示例</h4><p>让我们来看看下面一个简单的例子，使用接口和抽象类。</p>
+<pre><code class="java">//创建具有4种方法的接口
+interface A &#123;
+    void a();// 默认使用修辞符是：public 和 abstract
+
+    void b();
+
+    void c();
+
+    void d();
+&#125;
+
+// 创建实现接口A的方法的抽象类
+// 
+abstract class B implements A &#123;
+    public void c() &#123;
+        System.out.println(&quot;I am C&quot;);
+    &#125;
+&#125;
+
+// 创建抽象类的子类，需要提供抽象类方法的实现
+class M extends B &#123;
+    public void a() &#123;
+        System.out.println(&quot;I am a&quot;);
+    &#125;
+
+    public void b() &#123;
+        System.out.println(&quot;I am b&quot;);
+    &#125;
+
+    public void d() &#123;
+        System.out.println(&quot;I am d&quot;);
+    &#125;
+&#125;
+
+// 创建一个调用A接口方法的测试类
+class Test5 &#123;
+    public static void main(String args[]) &#123;
+        A a = new M();
+        a.a();
+        a.b();
+        a.c();
+        a.d();
+    &#125;
+&#125;
+Java
+</code></pre>
+<p>执行上面的示例代码，得到以下结果 -</p>
+<pre><code class="shell">I am a
+I am b
+I am c
+I am d
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
