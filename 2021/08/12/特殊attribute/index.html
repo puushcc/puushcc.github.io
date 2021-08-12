@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>特殊attribute | Puushcc</title>
+  <meta name="keywords" content=" 前端框架 , Vue API , attribute ">
+  <meta name="description" content="特殊attribute | Puushcc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于我">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Puushcc">
+<meta property="og:description" content="关于我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-10T14:44:00.000Z">
+<meta property="article:modified_time" content="2021-07-10T14:54:50.894Z">
+<meta property="article:author" content="Puushcc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Puushcc</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://puushcc.github.io/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(37)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(25)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->Java基础">
+                                        
+                                        Java基础
+                                        
+                                            <small>(25
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="运维">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        运维
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="运维<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="操作系统">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        操作系统
+                        <small>(6)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="操作系统<--->进程管理">
+                                        
+                                        进程管理
+                                        
+                                            <small>(6
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端框架">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        前端框架
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="前端框架<--->Vue API">
+                                        
+                                        Vue API
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端框架<--->VUE脚手架">
+                                        
+                                        VUE脚手架
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="37">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://puushcc.github.io/">puushcc</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>操作系统</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>后端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>进程管理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>配置文件</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>前端框架</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>渲染函数 & JSX</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>attribute</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java基础</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaSE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux命令</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>render</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Vue API</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue.config.js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>VUE脚手架</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>VUE项目结构</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 前端框架 Vue API "
+           href="/2021/08/12/%E7%89%B9%E6%AE%8Aattribute/"
+           data-tag="前端框架,Vue API,attribute"
+           data-author="" >
+            <span class="post-title" title="特殊attribute">特殊attribute</span>
+            <span class="post-date" title="2021-08-12 23:35:13">2021/08/12</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE脚手架 "
+           href="/2021/08/12/Vue%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"
+           data-tag="前端框架,VUE脚手架,配置文件,vue.config.js"
+           data-author="" >
+            <span class="post-title" title="Vue配置文件">Vue配置文件</span>
+            <span class="post-date" title="2021-08-12 23:02:34">2021/08/12</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE脚手架 "
+           href="/2021/08/11/VUE%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"
+           data-tag="前端框架,VUE脚手架,VUE项目结构"
+           data-author="" >
+            <span class="post-title" title="VUE项目结构">VUE项目结构</span>
+            <span class="post-date" title="2021-08-11 21:19:47">2021/08/11</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE脚手架 "
+           href="/2021/08/11/Vue%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0-&-JSX/"
+           data-tag="前端框架,VUE脚手架,render,渲染函数 &amp; JSX"
+           data-author="" >
+            <span class="post-title" title="Vue渲染函数 &amp; JSX">Vue渲染函数 &amp; JSX</span>
+            <span class="post-date" title="2021-08-11 21:19:47">2021/08/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2021/07/24/js/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-07-24 17:34:18">2021/07/24</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%95%E5%85%A5%E8%BF%9B%E7%A8%8B/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="为什么引入进程">为什么引入进程</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程同步">进程同步</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程控制">进程控制</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9D%97%EF%BC%88PCB%EF%BC%89/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程控制模块（PCB）">进程控制模块（PCB）</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程的描述">进程的描述</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E7%BB%8F%E5%85%B8%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="经典进程同步问题">经典进程同步问题</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/JDK%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="JDK安装和配置">JDK安装和配置</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20instanceof%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java instanceof运算符">Java instanceof运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java修饰符类型">Java修饰符类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8C%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java包">Java包</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%86%B3%E7%AD%96%E5%88%B6%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java决策制定">Java决策制定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java变量类型">Java变量类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java命令行参数">Java命令行参数</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本数据类型">Java基本数据类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本运算符">Java基本运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本语法">Java基本语法</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%9D%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java实例初始化程序块">Java实例初始化程序块</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%B0%81%E8%A3%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java封装">Java封装</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象和类">Java对象和类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8%E5%92%8C%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java按值调用和引用调用">Java按值调用和引用调用</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%95%B0%E7%BB%84/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java数组">Java数组</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E9%87%8D%E5%86%99/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java方法重载重写">Java方法重载重写</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%B3%A8%E9%87%8A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java注释">Java注释</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象克隆">Java对象克隆</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%BB%A7%E6%89%BF%E5%A4%9A%E6%80%81/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java继承多态">Java继承多态</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java静态绑定和动态绑定">Java静态绑定和动态绑定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20%E5%85%B3%E9%94%AE%E5%AD%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java 关键字">Java 关键字</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java抽象类和接口">Java抽象类和接口</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java循环控制">Java循环控制</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88OOP%EF%BC%89%E6%A6%82%E5%BF%B5/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java面向对象（OOP）概念">Java面向对象（OOP）概念</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java类">Java类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 运维 Linux "
+           href="/2021/07/10/Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="Linux,Linux命令"
+           data-author="" >
+            <span class="post-title" title="Linux命令">Linux命令</span>
+            <span class="post-date" title="2021-07-10 15:13:47">2021/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-特殊attribute" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">特殊attribute</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="前端框架">前端框架</a> > 
+            
+            <a  data-rel="前端框架&lt;---&gt;Vue API">Vue API</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">前端框架</a>
+            
+            <a class="color3">Vue API</a>
+            
+            <a class="color5">attribute</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-08-12 23:35:13'>2021-08-12 23:35</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#key"><span class="toc-text">key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref"><span class="toc-text">ref</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/#%E7%89%B9%E6%AE%8A-attribute">https://cn.vuejs.org/v2/api/#%E7%89%B9%E6%AE%8A-attribute</a></p>
+<h3 id="key"><a href="#key" class="headerlink" title="key"></a><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/#key">key</a></h3><ul>
+<li><p><strong>预期</strong>：<code>number | string | boolean (2.4.2 新增) | symbol (2.5.12 新增)</code></p>
+<p><code>key</code> 的特殊 attribute 主要用在 Vue 的虚拟 DOM 算法，在新旧 nodes 对比时辨识 VNodes。如果不使用 key，Vue 会使用一种最大限度减少动态元素并且尽可能的尝试就地修改/复用相同类型元素的算法。而使用 key 时，它会基于 key 的变化重新排列元素顺序，并且会移除 key 不存在的元素。</p>
+<p>有相同父元素的子元素必须有<strong>独特的 key</strong>。重复的 key 会造成渲染错误。</p>
+<p>最常见的用例是结合 <code>v-for</code>：</p>
+<pre><code class="html">&lt;ul&gt;
+  &lt;li v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>它也可以用于强制替换元素/组件而不是重复使用它。当你遇到如下场景时它可能会很有用：</p>
+<ul>
+<li>完整地触发组件的生命周期钩子</li>
+<li>触发过渡</li>
+</ul>
+<p>例如：</p>
+<pre><code class="html">&lt;transition&gt;
+  &lt;span :key=&quot;text&quot;&gt;&#123;&#123; text &#125;&#125;&lt;/span&gt;
+&lt;/transition&gt;
+</code></pre>
+<p>当 <code>text</code> 发生改变时，<code>&lt;span&gt;</code> 总是会被替换而不是被修改，因此会触发过渡。</p>
+</li>
+</ul>
+<h3 id="ref"><a href="#ref" class="headerlink" title="ref"></a><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/#ref">ref</a></h3><ul>
+<li><p><strong>预期</strong>：<code>string</code></p>
+<p><code>ref</code> 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 <code>$refs</code> 对象上。如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例：</p>
+<pre><code class="html">&lt;!-- `vm.$refs.p` will be the DOM node --&gt;
+&lt;p ref=&quot;p&quot;&gt;hello&lt;/p&gt;
+
+&lt;!-- `vm.$refs.child` will be the child component instance --&gt;
+&lt;child-component ref=&quot;child&quot;&gt;&lt;/child-component&gt;
+</code></pre>
+<p>当 <code>v-for</code> 用于元素或组件的时候，引用信息将是包含 DOM 节点或组件实例的数组。</p>
+<p>关于 ref 注册时间的重要说明：因为 ref 本身是作为渲染结果被创建的，在初始渲染的时候你不能访问它们 - 它们还不存在！<code>$refs</code> 也不是响应式的，因此你不应该试图用它在模板中做数据绑定。</p>
+</li>
+<li><p><strong>参考</strong>：<a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0">子组件 ref</a></p>
+</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
