@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java基本数据类型 | Puushcc</title>
-  <meta name="keywords" content=" 后端 , java基础 , javaSE ">
-  <meta name="description" content="Java基本数据类型 | Puushcc">
+  <title>搭建vuex环境 | Puushcc</title>
+  <meta name="keywords" content=" 前端框架 , 状态管理 , vuex ">
+  <meta name="description" content="搭建vuex环境 | Puushcc">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于我">
 <meta property="og:type" content="website">
@@ -794,9 +794,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Java基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-vuex" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java基本数据类型</h1>
+        <h1 class="article-title">搭建vuex环境</h1>
     
     <div class="article-meta">
         
@@ -806,9 +806,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="后端">后端</a> > 
+            <a  data-rel="前端框架">前端框架</a> > 
             
-            <a  data-rel="后端&lt;---&gt;Java基础">Java基础</a>
+            <a  data-rel="前端框架&lt;---&gt;Vuex">Vuex</a>
             
         </span>
         
@@ -816,18 +816,18 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">后端</a>
+            <a class="color5">前端框架</a>
             
-            <a class="color2">java基础</a>
+            <a class="color5">状态管理</a>
             
-            <a class="color2">javaSE</a>
+            <a class="color5">vuex</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-07-11 01:57:24'>2021-07-10 20:13</time>
+            发布时间 : <time class="date" title='最后更新: 2021-08-15 14:40:35'>2021-08-15 14:40</time>
         
     </div>
     <div class="article-meta">
@@ -849,7 +849,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">Java基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. 原始数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. 引用数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Java%E6%96%87%E5%AD%97"><span class="toc-text">3. Java文字</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">1、安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD-CDN-%E5%BC%95%E7%94%A8"><span class="toc-text">直接下载 &#x2F; CDN 引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NPM"><span class="toc-text">NPM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yarn"><span class="toc-text">Yarn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise"><span class="toc-text">Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E6%9E%84%E5%BB%BA"><span class="toc-text">自己构建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-text">2、核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#State"><span class="toc-text">State</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getter"><span class="toc-text">Getter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mutation"><span class="toc-text">Mutation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Action"><span class="toc-text">Action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module"><span class="toc-text">Module</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-text">3、项目结构</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -865,164 +865,383 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java基本数据类型"><a href="#Java基本数据类型" class="headerlink" title="Java基本数据类型"></a>Java基本数据类型</h1><p>变量是用于存储值的保留内存位置。当创建变量时，它会在内存中保留一些空间。</p>
-<p>根据变量的数据类型，操作系统分配内存并决定可以存储在保留内存中的内容。 因此，通过为变量分配不同的数据类型，可以在这些变量中存储整数，小数或字符。</p>
-<p>Java中有两种数据类型 - </p>
+        <p><a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/">https://vuex.vuejs.org/zh/</a></p>
+<h2 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h2><h3 id="直接下载-CDN-引用"><a href="#直接下载-CDN-引用" class="headerlink" title="直接下载 / CDN 引用"></a>直接下载 / CDN 引用</h3><p><a target="_blank" rel="noopener" href="https://unpkg.com/vuex">https://unpkg.com/vuex(opens new window)</a></p>
+<p><a target="_blank" rel="noopener" href="https://unpkg.com/">Unpkg.com (opens new window)</a>提供了基于 NPM 的 CDN 链接。以上的链接会一直指向 NPM 上发布的最新版本。您也可以通过 <code>https://unpkg.com/vuex@2.0.0</code> 这样的方式指定特定的版本。</p>
+<p>在 Vue 之后引入 <code>vuex</code> 会进行自动安装：</p>
+<pre><code class="html">&lt;script src=&quot;/path/to/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/path/to/vuex.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><pre><code class="bash">npm install vuex --save
+</code></pre>
+<h3 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h3><pre><code class="bash">yarn add vuex
+</code></pre>
+<p>在一个模块化的打包系统中，您必须显式地通过 <code>Vue.use()</code> 来安装 Vuex：</p>
+<pre><code class="js">import Vue from &#39;vue&#39;
+import Vuex from &#39;vuex&#39;
+
+Vue.use(Vuex)
+</code></pre>
+<p>当使用全局 script 标签引用 Vuex 时，不需要以上安装过程。</p>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>Vuex 依赖 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises">Promise (opens new window)</a>。如果你支持的浏览器并没有实现 Promise (比如 IE)，那么你可以使用一个 polyfill 的库，例如 <a target="_blank" rel="noopener" href="https://github.com/stefanpenner/es6-promise">es6-promise (opens new window)</a>。</p>
+<p>你可以通过 CDN 将其引入：</p>
+<pre><code class="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>然后 <code>window.Promise</code> 会自动可用。</p>
+<p>如果你喜欢使用诸如 npm 或 Yarn 等包管理器，可以按照下列方式执行安装：</p>
+<pre><code class="bash">npm install es6-promise --save # npm
+yarn add es6-promise # Yarn
+</code></pre>
+<p>或者更进一步，将下列代码添加到你使用 Vuex 之前的一个地方：</p>
+<pre><code class="js">import &#39;es6-promise/auto&#39;
+</code></pre>
+<h3 id="自己构建"><a href="#自己构建" class="headerlink" title="自己构建"></a>自己构建</h3><p>如果需要使用 dev 分支下的最新版本，您可以直接从 GitHub 上克隆代码并自己构建。</p>
+<pre><code class="bash">git clone https://github.com/vuejs/vuex.git node_modules/vuex
+cd node_modules/vuex
+npm install
+npm run build
+</code></pre>
+<h2 id="2、核心概念"><a href="#2、核心概念" class="headerlink" title="2、核心概念"></a>2、核心概念</h2><h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><p>vuex的基本数据，用来存储变量</p>
+<p><strong>单一状态树</strong></p>
+<p>Vuex使用单一状态树，即用一个对象就包含了全部的状态数据。<code>state</code>作为构造器选项，定义了所有我们需要的基本状态参数。</p>
+<p><strong>在Vue组件中获得Vuex属性</strong></p>
+<p>我们可以通过Vue的<code>Computed</code>获得Vuex的state</p>
+<pre><code class="js">const store = new Vuex.Store(&#123;
+    state: &#123;
+        count:0
+    &#125;
+&#125;)
+const app = new Vue(&#123;
+    //..
+    store,
+    computed: &#123;
+        count: function()&#123;
+            return this.$store.state.count
+        &#125;
+    &#125;,
+    //..
+&#125;)
+每当 store.state.count 变化的时候, 都会重新求取计算属性，并且触发更新相关联的 DOM
+</code></pre>
+<p><strong>mapState辅助函数</strong></p>
+<p>当一个组件需要获取多个状态时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 mapState 辅助函数帮助我们生成计算属性，让你少按几次键。</p>
+<pre><code class="js">// 在单独构建的版本中辅助函数为 Vuex.mapState
+import &#123; mapState &#125; from &#39;vuex&#39;
+
+export default &#123;
+  // ...
+  computed: mapState(&#123;
+    // 箭头函数可使代码更简练
+    count: state =&gt; state.count,
+
+    // 传字符串参数 &#39;count&#39; 等同于 `state =&gt; state.count`
+    countAlias: &#39;count&#39;,
+
+    // 为了能够使用 `this` 获取局部状态，必须使用常规函数
+    countPlusLocalState (state) &#123;
+      return state.count + this.localCount
+    &#125;
+  &#125;)
+&#125;
+</code></pre>
+<p>当映射的计算属性的名称与 state 的子节点名称相同时，我们也可以给 mapState 传一个字符串数组。</p>
+<pre><code class="js">computed: mapState([
+  // 映射 this.count 为 store.state.count
+  &#39;count&#39;
+])
+</code></pre>
+<p><strong>对象展开运算符</strong></p>
+<p>mapState 函数返回的是一个对象。我们如何将它与局部计算属性混合使用呢？通常，我们需要使用一个工具函数将多个对象合并为一个，以使我们可以将最终对象传给 computed 属性。但是自从有了对象展开运算符，我们可以极大地简化写法：</p>
+<pre><code class="js">computed: &#123;
+  localComputed () //本地计算属性
+  //使用对象展开运算符将此对象混入到外部对象中
+  ...mapState(&#123;
+    //..
+  &#125;)
+&#125;
+</code></pre>
+<p>对象运算符<br><code>...</code> 展开运算符（spread operator）允许一个表达式在某处展开。展开运算符在多个参数（用于函数调用）或多个元素（用于数组字面量）或者多个变量（用于解构赋值）的地方可以使用。</p>
+<p>展开运算符不能用在对象当中，因为目前展开运算符只能在可遍历对象（iterables）可用。iterables的实现是依靠[Symbol.iterator]函数，而目前只有Array,Set,String内置[Symbol.iterator]方法，而Object尚未内置该方法，因此无法使用展开运算符。不过ES7草案当中已经加入了对象展开运算符特性。<br>例子：</p>
+<pre><code class="js">    function test(a,b,c) &#123;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    &#125;
+    var args = [0,1,2];
+    test(...args);  // 0  1  2
+</code></pre>
 <ul>
-<li>原始数据类型</li>
-<li>引用/对象数据类型</li>
+<li><p>ES7草案中的对象展开运算符<br>ES6中还不支持对对象的展开运算符，但是ES7中将支持。对象展开运算符符可以让我们更快捷地操作对象，如下例子：</p>
+<pre><code class="js">    let &#123;x,y,...z&#125;=&#123;x:1,y:2,a:3,b:4&#125;;
+    x; //1
+    y; //2
+    z; //&#123;a:3,b:4&#125;
+</code></pre>
+</li>
 </ul>
-<h2 id="1-原始数据类型"><a href="#1-原始数据类型" class="headerlink" title="1. 原始数据类型"></a>1. 原始数据类型</h2><p>Java支持八种原始数据类型。 原始数据类型由语言预定义，并由关键字命名。下面来详细了解和学习这八种原始数据类型。</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>描述</th>
-<th>值范围</th>
-<th>默认值</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>byte</td>
-<td>表示<code>8</code>位有符号二进制补码整数</td>
-<td><code>-128 (-2^7)</code> - <code>127 (2^7 -1)</code></td>
-<td><code>0</code></td>
-<td><code>byte a = 100, byte b = -50</code></td>
-</tr>
-<tr>
-<td>short</td>
-<td>表示<code>16</code>位有符号二进制补码整数</td>
-<td><code>-2^15</code>-<code>2^15 -1</code></td>
-<td><code>0</code></td>
-<td><code>short s = 10000, short r = -20000</code></td>
-</tr>
-<tr>
-<td>int</td>
-<td>表示<code>32</code>位有符号二进制补码整数</td>
-<td><code>-2^31</code>-<code>2^31 -1</code></td>
-<td><code>0</code></td>
-<td><code>int a = 100000, int b = -200000</code></td>
-</tr>
-<tr>
-<td>long</td>
-<td>表示<code>64</code>位带符号的二进制补码整数</td>
-<td><code>-2^63</code>-<code>2^63 -1</code></td>
-<td><code>0L</code></td>
-<td><code>long a = 100000L, long b = -200000L</code></td>
-</tr>
-<tr>
-<td>float</td>
-<td>表示单精度<code>32</code>位IEEE 754浮点数</td>
-<td>-</td>
-<td><code>0.0f</code></td>
-<td><code>float f1 = 234.5f</code></td>
-</tr>
-<tr>
-<td>double</td>
-<td>表示双精度<code>64</code>位IEEE 754浮点数</td>
-<td>-</td>
-<td><code>0.0d</code></td>
-<td><code>double d1 = 123.4</code></td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>表示一个比特位的信息</td>
-<td><code>true</code>/<code>false</code></td>
-<td><code>false</code></td>
-<td><code>boolean one = true</code></td>
-</tr>
-<tr>
-<td>char</td>
-<td>表示单个16位Unicode字符</td>
-<td><code>\u0000</code>-<code>\uffff</code></td>
-<td>-</td>
-<td><code>char letterA = &#39;A&#39;</code></td>
-</tr>
-</tbody></table>
-<h2 id="2-引用数据类型"><a href="#2-引用数据类型" class="headerlink" title="2. 引用数据类型"></a>2. 引用数据类型</h2><ul>
-<li>使用类中已定义构造函数创建引用变量。 它们用于访问对象。 声明这些变量属于无法更改的特定类型。 例如，<code>Employee</code>，<code>Dog</code>类等。</li>
-<li>类对象和各种类型的数组变量属于引用数据类型。</li>
-<li>任何引用变量的默认值为<code>null</code>。</li>
-<li>引用变量可用于引用声明类型的任何对象或任何兼容类型。</li>
-<li>示例：<code>Dog dog = new Dog(&quot;小屁狗&quot;);</code></li>
+<p><strong>组件仍然保有局部状态</strong></p>
+<p>使用 Vuex 并不意味着你需要将所有的状态放入 Vuex。虽然将所有的状态放到 Vuex 会使状态变化更显式和易调试，但也会使代码变得冗长和不直观。</p>
+<p>如果有些状态严格属于单个组件，最好还是作为组件的局部状态。你应该根据你的应用开发需要进行权衡和确定</p>
+<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><p>从基本数据(state)派生的数据，相当于state的计算属性</p>
+<p>getters接收state作为其第一个参数，接受其他 getters 作为第二个参数，如不需要，第二个参数可以省略如下例子：</p>
+<pre><code class="js">const store = new Vuex.Store(&#123;
+    state: &#123;
+        count:0
+    &#125;，
+    getters: &#123;
+        // 单个参数
+        countDouble: function(state)&#123;
+            return state.count * 2
+        &#125;,
+        // 两个参数
+        countDoubleAndDouble: function(state, getters) &#123;
+            return getters.countDouble * 2
+        &#125;
+    &#125;
+&#125;)
+</code></pre>
+<p>与state一样，我们也可以通过Vue的<code>Computed</code>获得Vuex的getters。</p>
+<pre><code class="js">const app = new Vue(&#123;
+    //..
+    store,
+    computed: &#123;
+        count: function()&#123;
+            return this.$store.state.count
+        &#125;,
+        countDouble: function()&#123;
+            return this.$store.getters.countDouble
+        &#125;,
+        countDoubleAndDouble: function()&#123;
+            return this.$store.getters.countDoubleAndDouble
+        &#125;
+    &#125;,
+    //..
+&#125;)    
+</code></pre>
+<p><strong>mapGetters 辅助函数</strong></p>
+<p>mapGetters 辅助函数仅仅是将 store 中的 getters 映射到局部计算属性，与state类似</p>
+<pre><code class="js">import &#123; mapGetters &#125; from &#39;vuex&#39;
+
+export default &#123;
+  // ...
+  computed: &#123;
+  // 使用对象展开运算符将 getters 混入 computed 对象中
+    ...mapGetters([
+      &#39;countDouble&#39;,
+      &#39;CountDoubleAndDouble&#39;,
+      //..
+    ])
+  &#125;
+&#125;
+</code></pre>
+<p>如果你想将一个 getter 属性另取一个名字，使用对象形式：</p>
+<pre><code class="js">mapGetters(&#123;
+  // 映射 this.double 为 store.getters.countDouble
+  double: &#39;countDouble&#39;
+&#125;)
+</code></pre>
+<h3 id="Mutation"><a href="#Mutation" class="headerlink" title="Mutation"></a>Mutation</h3><p>提交mutation是更改Vuex中的store中的状态的唯一方法</p>
+<p>提交更新数据的方法，必须是同步的(如果需要异步使用action)。每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。</p>
+<p>回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数，提交载荷作为第二个参数。（提交荷载在大多数情况下应该是一个对象）,提交荷载也可以省略的。</p>
+<p>mutation必须是同步的，如果要异步需要使用action。</p>
+<pre><code class="js">const store = new Vuex.Store(&#123;
+  state: &#123;
+    count: 1
+  &#125;,
+  mutations: &#123;
+    //无提交荷载
+    increment(state) &#123;
+        state.count++
+    &#125;
+    //提交荷载
+    incrementN(state, obj) &#123;
+      state.count += obj.n
+    &#125;
+  &#125;
+&#125;)
+</code></pre>
+<p>你不能直接调用一个 mutation handler。这个选项更像是事件注册：“当触发一个类型为 increment 的 mutation 时，调用此函数。”要唤醒一个 mutation handler，你需要以相应的 type 调用 store.commit 方法：</p>
+<pre><code class="js">//无提交荷载
+store.commit(&#39;increment&#39;)
+//提交荷载
+store.commit(&#39;incrementN&#39;, &#123;
+  n: 100
+&#125;)
+</code></pre>
+<p><strong>对象风格的提交方式</strong></p>
+<p>我们也可以使用这样包含 type 属性的对象的提交方式</p>
+<pre><code class="js">store.commit(&#123;
+  type: &#39;incrementN&#39;,
+  n: 10
+&#125;)
+</code></pre>
+<p><strong>Mutations 需遵守 Vue 的响应规则</strong></p>
+<ul>
+<li><p>最好提前在你的 store 中初始化好所有所需属性。</p>
+</li>
+<li><p>当需要在对象上添加新属性时，你应该</p>
+<ul>
+<li><p>使用 Vue.set(obj, ‘newProp’, 123), 或者</p>
+</li>
+<li><p>以新对象替换老对象。例如，利用对象展开运算符我们可以这样写state.obj = {…state.obj, newProp: 123 }</p>
+</li>
 </ul>
-<h2 id="3-Java文字"><a href="#3-Java文字" class="headerlink" title="3. Java文字"></a>3. Java文字</h2><p>文字是固定值的源代码表示。它们直接在代码中表示，无需任何计算。可以将文字分配给任何基本类型变量。 例如 - </p>
-<pre><code class="java">byte a = 68;
-char a = &#39;A&#39;;
-Java
+</li>
+</ul>
+<p>mapMutations 辅助函数<br>与其他辅助函数类似，你可以在组件中使用 this.$store.commit(‘xxx’) 提交 mutation，或者使用 mapMutations 辅助函数将组件中的 methods 映射为 store.commit 调用（需要在根节点注入 store）。</p>
+<pre><code class="js">import &#123; mapMutations &#125; from &#39;vuex&#39;
+
+export default &#123;
+  //..
+  methods: &#123;
+    ...mapMutations([
+      &#39;increment&#39; // 映射 this.increment() 为 this.$store.commit(&#39;increment&#39;)
+    ]),
+    ...mapMutations(&#123;
+      add: &#39;increment&#39; // 映射 this.add() 为 this.$store.commit(&#39;increment&#39;)
+    &#125;)
+  &#125;
+&#125;
 </code></pre>
-<p><code>byte</code>，<code>int</code>，<code>long</code>和<code>short</code>也可以用十进制(基数为<code>10</code>)，十六进制(基数<code>16</code>)或八进制(基数<code>8</code>)数字表示。</p>
-<p>前缀<code>0</code>用于表示八进制，前缀<code>0x</code>表示使用这些数字系统进行文字时的十六进制。 例如 - </p>
-<pre><code class="java">int decimal = 100;
-int octal = 0144;
-int hexa =  0x64;
-Java
+<h3 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h3><p>和mutation的功能大致相同.Action 类似于 mutation，不同在于：</p>
+<ul>
+<li>Action 提交的是 mutation，而不是直接变更状态。</li>
+<li>Action 可以包含任意异步操作。</li>
+</ul>
+<p>我们用如下例子来解释actions：</p>
+<pre><code class="js">const store = new Vuex.Store(&#123;
+  state: &#123;
+    count: 0
+  &#125;,
+  mutations: &#123;
+    increment (state) &#123;
+      state.count++
+    &#125;
+  &#125;,
+  actions: &#123;
+    increment (context) &#123;
+      setInterval(function()&#123;
+        context.commit(&#39;increment&#39;)
+      &#125;, 1000)
+    &#125;
+  &#125;
+&#125;)
 </code></pre>
-<p>Java中的字符串文字通过在一对双引号之间包含一系列字符来指定，就像它们在大多数其他编程语言中一样。 字符串文字的例子是 - </p>
-<pre><code class="java">&quot;Hello World&quot;
-&quot;two\nlines&quot;
-&quot;&quot;This is in quotes&quot;&quot;
-Java
+<p>注意：Action 函数接受一个与 store 实例具有相同方法和属性的 context 对象，因此你可以调用 context.commit 提交一个 mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters。</p>
+<p><strong>分发actions</strong></p>
+<p>Action 通过 <code>store.dispatch</code> 方法触发：</p>
+<p>store.dispatch(‘increment’)</p>
+<p><strong>其他与mutations类似的地方</strong></p>
+<p>Actions 支持同样的载荷方式和对象方式进行分发：</p>
+<pre><code class="js">// 以载荷形式分发
+store.dispatch(&#39;incrementN&#39;, &#123;
+  n: 10
+&#125;)
+
+// 以对象形式分发
+store.dispatch(&#123;
+  type: &#39;incrementN&#39;,
+  n: 10
+&#125;)
 </code></pre>
-<p>字符串和字符类型的文字可以包含任何Unicode字符。 例如 - </p>
-<pre><code class="java">char a = &#39;\u0001&#39;;
-String a = &quot;\u0001&quot;;
-Java
+<p>mapActions辅助函数</p>
+<p>你在组件中使用 <code>this.$store.dispatch(&#39;xxx&#39;)</code> 分发 action，或者使用 <code>mapActions</code> 辅助函数将组件的 methods 映射为 <code>store.dispatch</code> 调用（需要先在根节点注入 <code>store</code>）:</p>
+<pre><code class="js">import &#123; mapActions &#125; from &#39;vuex&#39;
+
+export default &#123;
+  //..
+  methods: &#123;
+    ...mapActions([
+      &#39;incrementN&#39; //映射 this.incrementN() 为 this.$store.dispatch(&#39;incrementN&#39;)
+    ]),
+    ...mapActions(&#123;
+      add: &#39;incrementN&#39; //映射 this.add() 为 this.$store.dispatch(&#39;incrementN&#39;)
+    &#125;)
+  &#125;
+&#125;
 </code></pre>
-<p>Java语言也支持<code>String</code>和<code>char</code>文字的几个特殊转义序列。它们是 -</p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>代表的字符</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>\n</code></td>
-<td>换行符(0x0a)</td>
-</tr>
-<tr>
-<td><code>\r</code></td>
-<td>回车(0x0d)</td>
-</tr>
-<tr>
-<td><code>\f</code></td>
-<td>换页(0x0c)</td>
-</tr>
-<tr>
-<td><code>\b</code></td>
-<td>退格(0x08)</td>
-</tr>
-<tr>
-<td><code>\s</code></td>
-<td>空格(0x20)</td>
-</tr>
-<tr>
-<td><code>\t</code></td>
-<td>制表符</td>
-</tr>
-<tr>
-<td><code>\&quot;</code></td>
-<td>双引号</td>
-</tr>
-<tr>
-<td><code>\&#39;</code></td>
-<td>单引号</td>
-</tr>
-<tr>
-<td><code>\\</code></td>
-<td>反斜线</td>
-</tr>
-<tr>
-<td><code>\ddd</code></td>
-<td>八进制字符(ddd)</td>
-</tr>
-<tr>
-<td><code>\uxxxx</code></td>
-<td>十六进制UNICODE字符(xxxx)</td>
-</tr>
-</tbody></table>
+<h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3><p>模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。</p>
+<p>使用单一状态树，导致应用的所有状态集中到一个很大的对象。但是，当应用变得很大时，store 对象会变得臃肿不堪。</p>
+<p>为了解决以上问题，Vuex 允许我们将 store 分割到模块（module）。每个模块拥有自己的 state、mutation、action、getters、甚至是嵌套子模块——从上至下进行类似的分割：</p>
+<pre><code class="js">const moduleA = &#123;
+  state: &#123; ... &#125;,
+  mutations: &#123; ... &#125;,
+  actions: &#123; ... &#125;,
+  getters: &#123; ... &#125;
+&#125;
+
+const moduleB = &#123;
+  state: &#123; ... &#125;,
+  mutations: &#123; ... &#125;,
+  actions: &#123; ... &#125;
+&#125;
+
+const store = new Vuex.Store(&#123;
+  modules: &#123;
+    a: moduleA,
+    b: moduleB
+  &#125;
+&#125;)
+
+store.state.a // -&gt; moduleA 的状态
+store.state.b // -&gt; moduleB 的状态
+</code></pre>
+<p><strong>模块的局部状态</strong></p>
+<p>对于模块内部的 <code>mutation</code> 和 <code>getter</code>，接收的第一个参数是模块的局部状态,对于模块内部的 getter，根节点状态会作为第三个参数</p>
+<pre><code class="js">const moduleA = &#123;
+  state: &#123; count: 0 &#125;,
+  mutations: &#123;
+    increment (state) &#123;
+      // state 模块的局部状态
+      state.count++
+    &#125;
+  &#125;,
+
+  getters: &#123;
+    doubleCount (state) &#123;
+      return state.count * 2
+    &#125;,
+    sumWithRootCount (state, getters, rootState) &#123;
+      return state.count + rootState.count
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<p>同样，对于模块内部的 action，<code>context.state</code> 是局部状态，根节点的状态是 <code>context.rootState</code>:</p>
+<pre><code class="js">const moduleA = &#123;
+  // ...
+  actions: &#123;
+    incrementIfOddOnRootSum (context) &#123;
+      if ((context.state.count + context.rootState.count) % 2 === 1) &#123;
+        commit(&#39;increment&#39;)
+      &#125;
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<h2 id="3、项目结构"><a href="#3、项目结构" class="headerlink" title="3、项目结构"></a>3、项目结构</h2><p>Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的规则：</p>
+<ol>
+<li>应用层级的状态应该集中到单个 store 对象中。</li>
+<li>提交 <strong>mutation</strong> 是更改状态的唯一方法，并且这个过程是同步的。</li>
+<li>异步逻辑都应该封装到 <strong>action</strong> 里面。</li>
+</ol>
+<p>只要你遵守以上规则，如何组织代码随你便。如果你的 store 文件太大，只需将 action、mutation 和 getter 分割到单独的文件。</p>
+<p>对于大型应用，我们会希望把 Vuex 相关代码分割到模块中。下面是项目结构示例：</p>
+<pre><code class="bash">├── index.html
+├── main.js
+├── api
+│   └── ... # 抽取出API请求
+├── components
+│   ├── App.vue
+│   └── ...
+└── store
+    ├── index.js          # 我们组装模块并导出 store 的地方
+    ├── actions.js        # 根级别的 action
+    ├── mutations.js      # 根级别的 mutation
+    └── modules
+        ├── cart.js       # 购物车模块
+        └── products.js   # 产品模块
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
