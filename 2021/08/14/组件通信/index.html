@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>组件通信 | Puushcc</title>
+  <meta name="keywords" content=" 前端框架 , VUE组件 , 组件通信 ">
+  <meta name="description" content="组件通信 | Puushcc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于我">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Puushcc">
+<meta property="og:description" content="关于我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-10T14:44:00.000Z">
+<meta property="article:modified_time" content="2021-07-10T14:54:50.894Z">
+<meta property="article:author" content="Puushcc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Puushcc</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://puushcc.github.io/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(40)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        后端
+                        <small>(25)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="后端<--->Java基础">
+                                        
+                                        Java基础
+                                        
+                                            <small>(25
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="运维">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        运维
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="运维<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="操作系统">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        操作系统
+                        <small>(6)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="操作系统<--->进程管理">
+                                        
+                                        进程管理
+                                        
+                                            <small>(6
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端框架">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        前端框架
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="前端框架<--->Vue API">
+                                        
+                                        Vue API
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端框架<--->VUE脚手架">
+                                        
+                                        VUE脚手架
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端框架<--->VUE组件">
+                                        
+                                        VUE组件
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="40">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://puushcc.github.io/">puushcc</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>操作系统</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>后端</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>进程管理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>可复用</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>配置文件</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>前端框架</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>渲染函数 & JSX</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>组件通信</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>attribute</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java基础</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaSE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux命令</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Mixin</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Props</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>render</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Vue API</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue.config.js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>VUE脚手架</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>VUE项目结构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>VUE组件</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 前端框架 VUE组件 "
+           href="/2021/08/14/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"
+           data-tag="前端框架,VUE组件,组件通信"
+           data-author="" >
+            <span class="post-title" title="组件通信">组件通信</span>
+            <span class="post-date" title="2021-08-14 21:41:39">2021/08/14</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE组件 "
+           href="/2021/08/13/Mixin/"
+           data-tag="前端框架,VUE组件,Mixin,可复用"
+           data-author="" >
+            <span class="post-title" title="Mixin">Mixin</span>
+            <span class="post-date" title="2021-08-13 00:44:34">2021/08/13</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE组件 "
+           href="/2021/08/13/Props/"
+           data-tag="前端框架,VUE组件,Props"
+           data-author="" >
+            <span class="post-title" title="Props">Props</span>
+            <span class="post-date" title="2021-08-13 00:14:52">2021/08/13</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 Vue API "
+           href="/2021/08/12/%E7%89%B9%E6%AE%8Aattribute/"
+           data-tag="前端框架,Vue API,attribute"
+           data-author="" >
+            <span class="post-title" title="特殊attribute">特殊attribute</span>
+            <span class="post-date" title="2021-08-12 23:35:13">2021/08/12</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE脚手架 "
+           href="/2021/08/12/Vue%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"
+           data-tag="前端框架,VUE脚手架,配置文件,vue.config.js"
+           data-author="" >
+            <span class="post-title" title="Vue配置文件">Vue配置文件</span>
+            <span class="post-date" title="2021-08-12 23:02:34">2021/08/12</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE脚手架 "
+           href="/2021/08/11/VUE%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"
+           data-tag="前端框架,VUE脚手架,VUE项目结构"
+           data-author="" >
+            <span class="post-title" title="VUE项目结构">VUE项目结构</span>
+            <span class="post-date" title="2021-08-11 21:19:47">2021/08/11</span>
+        </a>
+        
+        <a  class="全部文章 前端框架 VUE脚手架 "
+           href="/2021/08/11/Vue%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0-&-JSX/"
+           data-tag="前端框架,VUE脚手架,render,渲染函数 &amp; JSX"
+           data-author="" >
+            <span class="post-title" title="Vue渲染函数 &amp; JSX">Vue渲染函数 &amp; JSX</span>
+            <span class="post-date" title="2021-08-11 21:19:47">2021/08/11</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2021/07/24/js/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-07-24 17:34:18">2021/07/24</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%95%E5%85%A5%E8%BF%9B%E7%A8%8B/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="为什么引入进程">为什么引入进程</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程同步">进程同步</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程控制">进程控制</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9D%97%EF%BC%88PCB%EF%BC%89/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程控制模块（PCB）">进程控制模块（PCB）</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="进程的描述">进程的描述</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 操作系统 进程管理 "
+           href="/2021/07/12/%E7%BB%8F%E5%85%B8%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/"
+           data-tag="操作系统,进程管理"
+           data-author="" >
+            <span class="post-title" title="经典进程同步问题">经典进程同步问题</span>
+            <span class="post-date" title="2021-07-12 20:13:47">2021/07/12</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20instanceof%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java instanceof运算符">Java instanceof运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/JDK%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="JDK安装和配置">JDK安装和配置</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java修饰符类型">Java修饰符类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%86%B3%E7%AD%96%E5%88%B6%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java决策制定">Java决策制定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8C%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java包">Java包</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java命令行参数">Java命令行参数</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java变量类型">Java变量类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本数据类型">Java基本数据类型</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本语法">Java基本语法</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java基本运算符">Java基本运算符</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AE%9E%E4%BE%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%9D%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java实例初始化程序块">Java实例初始化程序块</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象克隆">Java对象克隆</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java对象和类">Java对象和类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%B0%81%E8%A3%85/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java封装">Java封装</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E9%87%8D%E5%86%99/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java方法重载重写">Java方法重载重写</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%B3%A8%E9%87%8A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java注释">Java注释</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%95%B0%E7%BB%84/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java数组">Java数组</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8%E5%92%8C%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java按值调用和引用调用">Java按值调用和引用调用</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%BB%A7%E6%89%BF%E5%A4%9A%E6%80%81/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java继承多态">Java继承多态</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%99%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java静态绑定和动态绑定">Java静态绑定和动态绑定</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%20%E5%85%B3%E9%94%AE%E5%AD%97/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java 关键字">Java 关键字</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java循环控制">Java循环控制</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java抽象类和接口">Java抽象类和接口</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88OOP%EF%BC%89%E6%A6%82%E5%BF%B5/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java面向对象（OOP）概念">Java面向对象（OOP）概念</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 后端 Java基础 "
+           href="/2021/07/10/Java%E7%B1%BB/"
+           data-tag="后端,java基础,javaSE"
+           data-author="" >
+            <span class="post-title" title="Java类">Java类</span>
+            <span class="post-date" title="2021-07-10 20:13:47">2021/07/10</span>
+        </a>
+        
+        <a  class="全部文章 运维 Linux "
+           href="/2021/07/10/Linux%E5%91%BD%E4%BB%A4/"
+           data-tag="Linux,Linux命令"
+           data-author="" >
+            <span class="post-title" title="Linux命令">Linux命令</span>
+            <span class="post-date" title="2021-07-10 15:13:47">2021/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-组件通信" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">组件通信</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="前端框架">前端框架</a> > 
+            
+            <a  data-rel="前端框架&lt;---&gt;VUE组件">VUE组件</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">前端框架</a>
+            
+            <a class="color1">VUE组件</a>
+            
+            <a class="color5">组件通信</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-08-14 22:01:54'>2021-08-14 21:41</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81props-emit"><span class="toc-text">一、props&#x2F;$emit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%88%B6%E7%BB%84%E4%BB%B6%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC"><span class="toc-text">1.父组件向子组件传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AD%90%E7%BB%84%E4%BB%B6%E5%90%91%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC%EF%BC%88%E9%80%9A%E8%BF%87%E4%BA%8B%E4%BB%B6%E5%BD%A2%E5%BC%8F%EF%BC%89"><span class="toc-text">2.子组件向父组件传值（通过事件形式）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-emit-on"><span class="toc-text">二、$emit&#x2F;$on</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-text">1.具体实现方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="toc-text">2.举个例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BC%98%E7%82%B9"><span class="toc-text">3 优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%BC%BA%E7%82%B9"><span class="toc-text">4 缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">5 应用场景</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81vuex"><span class="toc-text">三、vuex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E8%A6%81%E4%BB%8B%E7%BB%8DVuex%E5%8E%9F%E7%90%86"><span class="toc-text">1.简要介绍Vuex原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AE%80%E8%A6%81%E4%BB%8B%E7%BB%8D%E5%90%84%E6%A8%A1%E5%9D%97%E5%9C%A8%E6%B5%81%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-text">2.简要介绍各模块在流程中的功能：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Vuex%E4%B8%8ElocalStorage"><span class="toc-text">3.Vuex与localStorage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BC%98%E7%82%B9"><span class="toc-text">4 优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BC%BA%E7%82%B9"><span class="toc-text">5.缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">6.应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81-attrs-listeners"><span class="toc-text">四、$attrs&#x2F;$listeners</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-text">1.简介</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81provide-inject"><span class="toc-text">五、provide&#x2F;inject</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B-1"><span class="toc-text">1.简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%B8%BE%E4%B8%AA%E4%BE%8B%E5%AD%90-1"><span class="toc-text">2.举个例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-provide%E4%B8%8Einject-%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="toc-text">3.provide与inject 怎么实现数据响应式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BC%98%E7%82%B9-1"><span class="toc-text">4.优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E7%BC%BA%E7%82%B9-1"><span class="toc-text">5.缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="toc-text">6.应用场景</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81-parent-children%E4%B8%8E-ref"><span class="toc-text">六、$parent &#x2F; $children与 ref</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000019208626">https://segmentfault.com/a/1190000019208626</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zl_Alien/article/details/110873583">https://blog.csdn.net/zl_Alien/article/details/110873583</a></p>
+<p>组件是 vue.js最强大的功能之一，而组件实例的作用域是相互独立的，这就意味着不同组件之间的数据无法相互引用。一般来说，组件可以有以下几种关系：<br><img src="https://segmentfault.com/img/remote/1460000019208629" alt="image"></p>
+<p>如上图所示，A 和 B、B 和 C、B 和 D 都是父子关系，C 和 D 是兄弟关系，A 和 C 是隔代关系（可能隔多代）。</p>
+<p>针对不同的使用场景，如何选择行之有效的通信方式？这是我们所要探讨的主题。本文总结了vue组件间通信的几种方式，如props、<code>$emit</code>/<code>$on</code>、vuex、<code>$parent</code> / <code>$children</code>、<code>$attrs</code>/<code>$listeners</code>和provide/inject，以通俗易懂的实例讲述这其中的差别及使用场景，希望对小伙伴有些许帮助。</p>
+<p>本文的代码请猛戳<a target="_blank" rel="noopener" href="https://link.segmentfault.com/?url=https://github.com/ljianshu/Blog/tree/master/vue2.0%E5%AD%A6%E4%B9%A0">github博客</a>，纸上得来终觉浅，大家动手多敲敲代码！</p>
+<h2 id="一、props-emit"><a href="#一、props-emit" class="headerlink" title="一、props/$emit"></a>一、<code>props</code>/<code>$emit</code></h2><p>父组件A通过props的方式向子组件B传递，B to A 通过在 B 组件中 $emit, A 组件中 v-on 的方式实现。</p>
+<h3 id="1-父组件向子组件传值"><a href="#1-父组件向子组件传值" class="headerlink" title="1.父组件向子组件传值"></a>1.父组件向子组件传值</h3><p>接下来我们通过一个例子，说明父组件如何向子组件传递值：在子组件Users.vue中如何获取父组件App.vue中的数据 <code>users:[&quot;Henry&quot;,&quot;Bucky&quot;,&quot;Emily&quot;]</code></p>
+<pre><code class="xml">//App.vue父组件
+&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;users v-bind:users=&quot;users&quot;&gt;&lt;/users&gt;//前者自定义名称便于子组件调用，后者要传递数据名
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import Users from &quot;./components/Users&quot;
+export default &#123;
+  name: &#39;App&#39;,
+  data()&#123;
+    return&#123;
+      users:[&quot;Henry&quot;,&quot;Bucky&quot;,&quot;Emily&quot;]
+    &#125;
+  &#125;,
+  components:&#123;
+    &quot;users&quot;:Users
+  &#125;
+&#125;
+//users子组件
+&lt;template&gt;
+  &lt;div class=&quot;hello&quot;&gt;
+    &lt;ul&gt;
+      &lt;li v-for=&quot;user in users&quot;&gt;&#123;&#123;user&#125;&#125;&lt;/li&gt;//遍历传递过来的值，然后呈现到页面
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default &#123;
+  name: &#39;HelloWorld&#39;,
+  props:&#123;
+    users:&#123;           //这个就是父组件中子标签自定义名字
+      type:Array,
+      required:true
+    &#125;
+  &#125;
+&#125;
+&lt;/script&gt;
+</code></pre>
+<p><strong>总结：父组件通过props向下传递数据给子组件。注：组件中的数据共有三种形式：data、props、computed</strong></p>
+<p><strong>优点</strong></p>
+<p><code>props</code>传递数据优点是显而易见的，灵活简单，可以对<code>props</code>数据进行计算属性，数据监听等处理。父子组件通信灵活方便。这里可能单单仅限父子一层。</p>
+<p><strong>缺点</strong></p>
+<p><strong>1 props篡改</strong></p>
+<p>我们在子组件中使用父组件props的时候，如果涉及一些变量赋值，修改等操作，props被莫名其妙的修改了，连同父组件的数据也被篡改了，有的同学可能会很疑惑，父元素的props不是不能修改么，这里怎么改变了呢，vue中props到底能不能改变？,至于这个问题，不能直接给出答案，如果props是基础数据类型，当我们改变的时候，就会曝出错误。</p>
+<p><strong>2 跨层级通信，兄弟组件通讯困难</strong></p>
+<p>对于父组件-子组件-子组件的子组件这种跨层级的通信，显然需要我们一层一层的<code>prop</code>绑定属性和方法，如果遇到更复杂的情况，实现起来比较困难。</p>
+<p>对于兄弟组件之间的通讯，<code>props</code>需要通过父组件作为桥梁，实现子组件-&gt; 父组件 -&gt; 子组件通信模式，如果想要通过父组件做媒介，那么必定会造成父组件重新渲染，为了实现兄弟组件通信付出的代价比较大。</p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p><code>props</code>的应用场景很简单，就是正常不是嵌套很深的父子组件通信，和关系不是很复杂的兄弟组件组件通信。</p>
+<h3 id="2-子组件向父组件传值（通过事件形式）"><a href="#2-子组件向父组件传值（通过事件形式）" class="headerlink" title="2.子组件向父组件传值（通过事件形式）"></a>2.子组件向父组件传值（通过事件形式）</h3><p>接下来我们通过一个例子，说明子组件如何向父组件传递值：当我们点击“Vue.js Demo”后，子组件向父组件传递值，文字由原来的“传递的是一个值”变成“子向父组件传值”，实现子组件向父组件值的传递。</p>
+<p><img src="https://segmentfault.com/img/remote/1460000019208630" alt="子组件向父组件传值之前"></p>
+<pre><code class="handlebars">// 子组件
+&lt;template&gt;
+  &lt;header&gt;
+    &lt;h1 @click=&quot;changeTitle&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/h1&gt;//绑定一个点击事件
+  &lt;/header&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default &#123;
+  name: &#39;app-header&#39;,
+  data() &#123;
+    return &#123;
+      title:&quot;Vue.js Demo&quot;
+    &#125;
+  &#125;,
+  methods:&#123;
+    changeTitle() &#123;
+      this.$emit(&quot;titleChanged&quot;,&quot;子向父组件传值&quot;);//自定义事件  传递值“子向父组件传值”
+    &#125;
+  &#125;
+&#125;
+&lt;/script&gt;
+// 父组件
+&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;app-header v-on:titleChanged=&quot;updateTitle&quot; &gt;&lt;/app-header&gt;//与子组件titleChanged自定义事件保持一致
+   // updateTitle($event)接受传递过来的文字
+    &lt;h2&gt;&#123;&#123;title&#125;&#125;&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import Header from &quot;./components/Header&quot;
+export default &#123;
+  name: &#39;App&#39;,
+  data()&#123;
+    return&#123;
+      title:&quot;传递的是一个值&quot;
+    &#125;
+  &#125;,
+  methods:&#123;
+    updateTitle(e)&#123;   //声明这个函数
+      this.title = e;
+    &#125;
+  &#125;,
+  components:&#123;
+   &quot;app-header&quot;:Header,
+  &#125;
+&#125;
+&lt;/script&gt;
+</code></pre>
+<p><strong>总结：子组件通过events给父组件发送消息，实际上就是子组件把自己的数据发送到父组件。</strong></p>
+<h2 id="二、-emit-on"><a href="#二、-emit-on" class="headerlink" title="二、$emit/$on"></a>二、<code>$emit</code>/<code>$on</code></h2><p><strong>这种方法通过一个空的Vue实例作为中央事件总线（事件中心），用它来触发事件和监听事件,巧妙而轻量地实现了任何组件间的通信，包括父子、兄弟、跨级</strong>。当我们的项目比较大时，可以选择更好的状态管理解决方案vuex。</p>
+<h4 id="1-具体实现方式："><a href="#1-具体实现方式：" class="headerlink" title="1.具体实现方式："></a>1.具体实现方式：</h4><pre><code class="reasonml">    var Event=new Vue();
+    Event.$emit(事件名,数据);
+    Event.$on(事件名,data =&gt; &#123;&#125;);
+</code></pre>
+<h4 id="2-举个例子"><a href="#2-举个例子" class="headerlink" title="2.举个例子"></a>2.举个例子</h4><p>假设兄弟组件有三个，分别是A、B、C组件，C组件如何获取A或者B组件的数据</p>
+<pre><code class="handlebars">&lt;div id=&quot;itany&quot;&gt;
+    &lt;my-a&gt;&lt;/my-a&gt;
+    &lt;my-b&gt;&lt;/my-b&gt;
+    &lt;my-c&gt;&lt;/my-c&gt;
+&lt;/div&gt;
+&lt;template id=&quot;a&quot;&gt;
+  &lt;div&gt;
+    &lt;h3&gt;A组件：&#123;&#123;name&#125;&#125;&lt;/h3&gt;
+    &lt;button @click=&quot;send&quot;&gt;将数据发送给C组件&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;template id=&quot;b&quot;&gt;
+  &lt;div&gt;
+    &lt;h3&gt;B组件：&#123;&#123;age&#125;&#125;&lt;/h3&gt;
+    &lt;button @click=&quot;send&quot;&gt;将数组发送给C组件&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;template id=&quot;c&quot;&gt;
+  &lt;div&gt;
+    &lt;h3&gt;C组件：&#123;&#123;name&#125;&#125;，&#123;&#123;age&#125;&#125;&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+var Event = new Vue();//定义一个空的Vue实例
+var A = &#123;
+    template: &#39;#a&#39;,
+    data() &#123;
+      return &#123;
+        name: &#39;tom&#39;
+      &#125;
+    &#125;,
+    methods: &#123;
+      send() &#123;
+        Event.$emit(&#39;data-a&#39;, this.name);
+      &#125;
+    &#125;
+&#125;
+var B = &#123;
+    template: &#39;#b&#39;,
+    data() &#123;
+      return &#123;
+        age: 20
+      &#125;
+    &#125;,
+    methods: &#123;
+      send() &#123;
+        Event.$emit(&#39;data-b&#39;, this.age);
+      &#125;
+    &#125;
+&#125;
+var C = &#123;
+    template: &#39;#c&#39;,
+    data() &#123;
+      return &#123;
+        name: &#39;&#39;,
+        age: &quot;&quot;
+      &#125;
+    &#125;,
+    mounted() &#123;//在模板编译完成后执行
+     Event.$on(&#39;data-a&#39;,name =&gt; &#123;
+         this.name = name;//箭头函数内部不会产生新的this，这边如果不用=&gt;,this指代Event
+     &#125;)
+     Event.$on(&#39;data-b&#39;,age =&gt; &#123;
+         this.age = age;
+     &#125;)
+    &#125;
+&#125;
+var vm = new Vue(&#123;
+    el: &#39;#itany&#39;,
+    components: &#123;
+      &#39;my-a&#39;: A,
+      &#39;my-b&#39;: B,
+      &#39;my-c&#39;: C
+    &#125;
+&#125;);    
+&lt;/script&gt;
+</code></pre>
+<p><img src="https://segmentfault.com/img/remote/1460000019208631?w=626&h=242" alt="image"><br><code>$on</code> 监听了自定义事件 data-a和data-b，因为有时不确定何时会触发事件，一般会在 mounted 或 created 钩子中来监听。</p>
+<h4 id="3-优点"><a href="#3-优点" class="headerlink" title="3 优点"></a>3 优点</h4><p>1 简单灵活，父子兄弟通信不受限制。<br>eventBus的通信方式，相比之前的几种比较简单，而且不受到组件层级的影响，可以实现任意两个组件的通信。需要数据就通过on绑定，传递数据就emit触发。</p>
+<p>2 通信方式不受框架影响<br>eventBus的通信方式，不只是vue可以用，react,小程序都可以使用这种通信方式，而且笔者感觉这种通信方式更适合小程序通信，至于为什么稍后会一一道来。</p>
+<h4 id="4-缺点"><a href="#4-缺点" class="headerlink" title="4 缺点"></a>4 缺点</h4><p>1 维护困难，容易引起连锁问题<br>如果我们采用事件总线这种通信模式，因为所有事件是高度集中，统一管理的，中间如果有一个环节出现错误，就会造成牵一发动全身的灾难.而且后期维护也是十分困难的。</p>
+<p>2 需要谨小慎微的命令规范<br>现实的应用场景，要比demo场景复杂的多，实际场景会有无数对父子组件，无数对兄弟组件，我们不肯能每个事件都叫相同名字，所以eventBus绑定事件的命名要有严格的规范，不能起重复名字，也不能用错名字。</p>
+<p>3 不利于组件化开发<br>eventBus通信方式是无法进行有效的组件化开发的，假设一个场景，一个页面上有多个公共组件，我们只要向其中的一个传递数据，但是每个公共组件都绑定了数据接受的方法。我们怎么样做到把数据传递给需要的组件呢？</p>
+<h4 id="5-应用场景"><a href="#5-应用场景" class="headerlink" title="5 应用场景"></a>5 应用场景</h4><p>实现总线这种方式更适合，微信小程序，和基于vue构建的小程序，至于为什么呢，因为我们都知道小程序采用双线程模型（渲染层+逻辑层）（如下图所示），渲染层作用就是小程序wxml渲染到我们的视线中，而逻辑层就是我们写的代码逻辑，在性能上，我们要知道在渲染层浪费的性能要远大于逻辑层的代码执行性能开销，如果我们在小程序里采用通过props等传递方式，属性是绑定在小程序标签里面的，所以势必要重新渲染视图层。如果页面结构复杂，可能会造成卡顿等情况，所以我们通过eventBus可以绕过渲染层，直接有逻辑层讲数据进行推送，节约了性能的开销。</p>
+<h2 id="三、vuex"><a href="#三、vuex" class="headerlink" title="三、vuex"></a>三、vuex</h2><p><img src="https://segmentfault.com/img/remote/1460000019208632" alt="image"></p>
+<h3 id="1-简要介绍Vuex原理"><a href="#1-简要介绍Vuex原理" class="headerlink" title="1.简要介绍Vuex原理"></a>1.简要介绍Vuex原理</h3><p>Vuex实现了一个单向数据流，在全局拥有一个State存放数据，当组件要更改State中的数据时，必须通过Mutation进行，Mutation同时提供了订阅者模式供外部插件调用获取State数据的更新。而当所有异步操作(常见于调用后端接口异步获取更新数据)或批量的同步操作需要走Action，但Action也是无法直接修改State的，还是需要通过Mutation来修改State的数据。最后，根据State的变化，渲染到视图上。</p>
+<h3 id="2-简要介绍各模块在流程中的功能："><a href="#2-简要介绍各模块在流程中的功能：" class="headerlink" title="2.简要介绍各模块在流程中的功能："></a>2.简要介绍各模块在流程中的功能：</h3><ul>
+<li>Vue Components：Vue组件。HTML页面上，负责接收用户操作等交互行为，执行dispatch方法触发对应action进行回应。</li>
+<li>dispatch：操作行为触发方法，是唯一能执行action的方法。</li>
+<li>actions：<strong>操作行为处理模块,由组件中的<code>$store.dispatch(&#39;action 名称&#39;, data1)</code>来触发。然后由commit()来触发mutation的调用 , 间接更新 state</strong>。负责处理Vue Components接收到的所有交互行为。包含同步/异步操作，支持多个同名方法，按照注册的顺序依次触发。向后台API请求的操作就在这个模块中进行，包括触发其他action以及提交mutation的操作。该模块提供了Promise的封装，以支持action的链式触发。</li>
+<li>commit：状态改变提交操作方法。对mutation进行提交，是唯一能执行mutation的方法。</li>
+<li>mutations：<strong>状态改变操作方法，由actions中的<code>commit(&#39;mutation 名称&#39;)</code>来触发</strong>。是Vuex修改state的唯一推荐方法。该方法只能进行同步操作，且方法名只能全局唯一。操作之中会有一些hook暴露出来，以进行state的监控等。</li>
+<li>state：页面状态管理容器对象。集中存储Vue components中data对象的零散数据，全局唯一，以进行统一的状态管理。页面显示所需的数据从该对象中进行读取，利用Vue的细粒度数据响应机制来进行高效的状态更新。</li>
+<li>getters：state对象读取方法。图中没有单独列出该模块，应该被包含在了render中，Vue Components通过该方法读取全局state对象。</li>
+</ul>
+<h3 id="3-Vuex与localStorage"><a href="#3-Vuex与localStorage" class="headerlink" title="3.Vuex与localStorage"></a>3.Vuex与localStorage</h3><p>vuex 是 vue 的状态管理器，存储的数据是响应式的。但是并不会保存起来，刷新之后就回到了初始状态，<strong>具体做法应该在vuex里数据改变的时候把数据拷贝一份保存到localStorage里面，刷新之后，如果localStorage里有保存的数据，取出来再替换store里的state。</strong></p>
+<pre><code class="pf">let defaultCity = &quot;上海&quot;
+try &#123;   // 用户关闭了本地存储功能，此时在外层加个try...catch
+  if (!defaultCity)&#123;
+    defaultCity = JSON.parse(window.localStorage.getItem(&#39;defaultCity&#39;))
+  &#125;
+&#125;catch(e)&#123;&#125;
+export default new Vuex.Store(&#123;
+  state: &#123;
+    city: defaultCity
+  &#125;,
+  mutations: &#123;
+    changeCity(state, city) &#123;
+      state.city = city
+      try &#123;
+      window.localStorage.setItem(&#39;defaultCity&#39;, JSON.stringify(state.city));
+      // 数据改变的时候把数据拷贝一份保存到localStorage里面
+      &#125; catch (e) &#123;&#125;
+    &#125;
+  &#125;
+&#125;)
+</code></pre>
+<p>这里需要注意的是：由于vuex里，我们保存的状态，都是数组，而localStorage只支持字符串，所以需要用JSON转换：</p>
+<pre><code class="smali">JSON.stringify(state.subscribeList);   // array -&gt; string
+JSON.parse(window.localStorage.getItem(&quot;subscribeList&quot;));    // string -&gt; array 
+</code></pre>
+<h3 id="4-优点"><a href="#4-优点" class="headerlink" title="4 优点"></a>4 优点</h3><p>1 根本解决复杂组件的通信问题<br>vuex在一定程度上根本解决了vue复杂的组件通信情况,我们不再关心两个毫无干系的两个组件的通信问题。</p>
+<p>2 支持异步组件通信<br>vuex中actions允许我们做一些异步操作，然后通过commit可以把数据传入对应的mutation,至于actions为什么可以执行异步，是因为里面底层通过Promise.resolve能够获取异步任务完成的状态。</p>
+<h3 id="5-缺点"><a href="#5-缺点" class="headerlink" title="5.缺点"></a>5.缺点</h3><p>1 流程相比稍微复杂<br>vuex通信方式相比其他方式，比较复杂，而且如果不同的模块，需要建立独立的modules。</p>
+<h3 id="6-应用场景"><a href="#6-应用场景" class="headerlink" title="6.应用场景"></a>6.应用场景</h3><p>实际开发场景中，不会存在demo项目这样简单的通信，vuex的出现，就是解决这些比较复杂的组件通信场景。对于中大型项目，vuex是很不错的状态管理，数据通信方案。</p>
+<h2 id="四、-attrs-listeners"><a href="#四、-attrs-listeners" class="headerlink" title="四、$attrs/$listeners"></a>四、<code>$attrs</code>/<code>$listeners</code></h2><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>多级组件嵌套需要传递数据时，通常使用的方法是通过vuex。但如果仅仅是传递数据，而不做中间处理，使用 vuex 处理，未免有点大材小用。为此Vue2.4 版本提供了另一种方法—-<code>$attrs</code>/<code>$listeners</code></p>
+<ul>
+<li><code>$attrs</code>：包含了父作用域中不被 prop 所识别 (且获取) 的特性绑定 (class 和 style 除外)。当一个组件没有声明任何 prop 时，这里会包含所有父作用域的绑定 (class 和 style 除外)，并且可以通过 v-bind=”$attrs” 传入内部组件。通常配合 interitAttrs 选项一起使用。</li>
+<li><code>$listeners</code>：包含了父作用域中的 (不含 .native 修饰器的) v-on 事件监听器。它可以通过 v-on=”$listeners” 传入内部组件</li>
+</ul>
+<p>接下来我们看个跨级通信的例子：</p>
+<pre><code class="xml">// index.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;浪里行舟&lt;/h2&gt;
+    &lt;child-com1
+      :foo=&quot;foo&quot;
+      :boo=&quot;boo&quot;
+      :coo=&quot;coo&quot;
+      :doo=&quot;doo&quot;
+      title=&quot;前端工匠&quot;
+    &gt;&lt;/child-com1&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+const childCom1 = () =&gt; import(&quot;./childCom1.vue&quot;);
+export default &#123;
+  components: &#123; childCom1 &#125;,
+  data() &#123;
+    return &#123;
+      foo: &quot;Javascript&quot;,
+      boo: &quot;Html&quot;,
+      coo: &quot;CSS&quot;,
+      doo: &quot;Vue&quot;
+    &#125;;
+  &#125;
+&#125;;
+&lt;/script&gt;
+// childCom1.vue
+&lt;template class=&quot;border&quot;&gt;
+  &lt;div&gt;
+    &lt;p&gt;foo: &#123;&#123; foo &#125;&#125;&lt;/p&gt;
+    &lt;p&gt;childCom1的$attrs: &#123;&#123; $attrs &#125;&#125;&lt;/p&gt;
+    &lt;child-com2 v-bind=&quot;$attrs&quot;&gt;&lt;/child-com2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+const childCom2 = () =&gt; import(&quot;./childCom2.vue&quot;);
+export default &#123;
+  components: &#123;
+    childCom2
+  &#125;,
+  inheritAttrs: false, // 可以关闭自动挂载到组件根元素上的没有在props声明的属性
+  props: &#123;
+    foo: String // foo作为props属性绑定
+  &#125;,
+  created() &#123;
+    console.log(this.$attrs); // &#123; &quot;boo&quot;: &quot;Html&quot;, &quot;coo&quot;: &quot;CSS&quot;, &quot;doo&quot;: &quot;Vue&quot;, &quot;title&quot;: &quot;前端工匠&quot; &#125;
+  &#125;
+&#125;;
+&lt;/script&gt;
+// childCom2.vue
+&lt;template&gt;
+  &lt;div class=&quot;border&quot;&gt;
+    &lt;p&gt;boo: &#123;&#123; boo &#125;&#125;&lt;/p&gt;
+    &lt;p&gt;childCom2: &#123;&#123; $attrs &#125;&#125;&lt;/p&gt;
+    &lt;child-com3 v-bind=&quot;$attrs&quot;&gt;&lt;/child-com3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+const childCom3 = () =&gt; import(&quot;./childCom3.vue&quot;);
+export default &#123;
+  components: &#123;
+    childCom3
+  &#125;,
+  inheritAttrs: false,
+  props: &#123;
+    boo: String
+  &#125;,
+  created() &#123;
+    console.log(this.$attrs); // &#123;&quot;coo&quot;: &quot;CSS&quot;, &quot;doo&quot;: &quot;Vue&quot;, &quot;title&quot;: &quot;前端工匠&quot; &#125;
+  &#125;
+&#125;;
+&lt;/script&gt;
+// childCom3.vue
+&lt;template&gt;
+  &lt;div class=&quot;border&quot;&gt;
+    &lt;p&gt;childCom3: &#123;&#123; $attrs &#125;&#125;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default &#123;
+  props: &#123;
+    coo: String,
+    title: String
+  &#125;
+&#125;;
+&lt;/script&gt;
+</code></pre>
+<p><img src="https://segmentfault.com/img/remote/1460000019208633" alt="image"><br>如上图所示<code>$attrs</code>表示没有继承数据的对象，格式为{属性名：属性值}。Vue2.4提供了<code>$attrs</code> , <code>$listeners</code> 来传递数据与事件，跨级组件之间的通讯变得更简单。</p>
+<p>简单来说：<code>$attrs</code>与<code>$listeners</code> 是两个对象，<code>$attrs</code> 里存放的是父组件中绑定的非 Props 属性，<code>$listeners</code>里存放的是父组件中绑定的非原生事件。</p>
+<h2 id="五、provide-inject"><a href="#五、provide-inject" class="headerlink" title="五、provide/inject"></a>五、provide/inject</h2><h4 id="1-简介-1"><a href="#1-简介-1" class="headerlink" title="1.简介"></a>1.简介</h4><p>Vue2.2.0新增API,这对选项需要一起使用，<strong>以允许一个祖先组件向其所有子孙后代注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效</strong>。一言而蔽之：祖先组件中通过provider来提供变量，然后在子孙组件中通过inject来注入变量。<br><strong>provide / inject API 主要解决了跨级组件间的通信问题，不过它的使用场景，主要是子组件获取上级组件的状态，跨级组件间建立了一种主动提供与依赖注入的关系</strong>。</p>
+<h4 id="2-举个例子-1"><a href="#2-举个例子-1" class="headerlink" title="2.举个例子"></a>2.举个例子</h4><p>假设有两个组件： A.vue 和 B.vue，B 是 A 的子组件</p>
+<pre><code class="dart">// A.vue
+export default &#123;
+  provide: &#123;
+    name: &#39;浪里行舟&#39;
+  &#125;
+&#125;
+// B.vue
+export default &#123;
+  inject: [&#39;name&#39;],
+  mounted () &#123;
+    console.log(this.name);  // 浪里行舟
+  &#125;
+&#125;
+</code></pre>
+<p>可以看到，在 A.vue 里，我们设置了一个 <strong>provide: name</strong>，值为 浪里行舟，它的作用就是将 <strong>name</strong> 这个变量提供给它的所有子组件。而在 B.vue 中，通过 <code>inject</code> 注入了从 A 组件中提供的 <strong>name</strong> 变量，那么在组件 B 中，就可以直接通过 <strong>this.name</strong> 访问这个变量了，它的值也是 浪里行舟。这就是 provide / inject API 最核心的用法。</p>
+<p>需要注意的是：<strong>provide 和 inject 绑定并不是可响应的。这是刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的属性还是可响应的</strong>—-vue官方文档<br>所以，上面 A.vue 的 name 如果改变了，B.vue 的 this.name 是不会改变的，仍然是 浪里行舟。</p>
+<h4 id="3-provide与inject-怎么实现数据响应式"><a href="#3-provide与inject-怎么实现数据响应式" class="headerlink" title="3.provide与inject 怎么实现数据响应式"></a>3.provide与inject 怎么实现数据响应式</h4><p>一般来说，有两种办法：</p>
+<ul>
+<li>provide祖先组件的实例，然后在子孙组件中注入依赖，这样就可以在子孙组件中直接修改祖先组件的实例的属性，不过这种方法有个缺点就是这个实例上挂载很多没有必要的东西比如props，methods</li>
+<li>使用2.6最新API Vue.observable 优化响应式 provide(推荐)</li>
+</ul>
+<p>我们来看个例子：孙组件D、E和F获取A组件传递过来的color值，并能实现数据响应式变化，即A组件的color变化后，组件D、E、F会跟着变（核心代码如下：）</p>
+<p><img src="https://segmentfault.com/img/remote/1460000019208634" alt="image"></p>
+<pre><code class="javascript">// A 组件 
+&lt;div&gt;
+      &lt;h1&gt;A 组件&lt;/h1&gt;
+      &lt;button @click=&quot;() =&gt; changeColor()&quot;&gt;改变color&lt;/button&gt;
+      &lt;ChildrenB /&gt;
+      &lt;ChildrenC /&gt;
+&lt;/div&gt;
+......
+  data() &#123;
+    return &#123;
+      color: &quot;blue&quot;
+    &#125;;
+  &#125;,
+  // provide() &#123;
+  //   return &#123;
+  //     theme: &#123;
+  //       color: this.color //这种方式绑定的数据并不是可响应的
+  //     &#125; // 即A组件的color变化后，组件D、E、F不会跟着变
+  //   &#125;;
+  // &#125;,
+  provide() &#123;
+    return &#123;
+      theme: this//方法一：提供祖先组件的实例
+    &#125;;
+  &#125;,
+  methods: &#123;
+    changeColor(color) &#123;
+      if (color) &#123;
+        this.color = color;
+      &#125; else &#123;
+        this.color = this.color === &quot;blue&quot; ? &quot;red&quot; : &quot;blue&quot;;
+      &#125;
+    &#125;
+  &#125;
+  // 方法二:使用2.6最新API Vue.observable 优化响应式 provide
+  // provide() &#123;
+  //   this.theme = Vue.observable(&#123;
+  //     color: &quot;blue&quot;
+  //   &#125;);
+  //   return &#123;
+  //     theme: this.theme
+  //   &#125;;
+  // &#125;,
+  // methods: &#123;
+  //   changeColor(color) &#123;
+  //     if (color) &#123;
+  //       this.theme.color = color;
+  //     &#125; else &#123;
+  //       this.theme.color = this.theme.color === &quot;blue&quot; ? &quot;red&quot; : &quot;blue&quot;;
+  //     &#125;
+  //   &#125;
+  // &#125;
+// F 组件 
+&lt;template functional&gt;
+  &lt;div class=&quot;border2&quot;&gt;
+    &lt;h3 :style=&quot;&#123; color: injections.theme.color &#125;&quot;&gt;F 组件&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default &#123;
+  inject: &#123;
+    theme: &#123;
+      //函数式组件取值不一样
+      default: () =&gt; (&#123;&#125;)
+    &#125;
+  &#125;
+&#125;;
+&lt;/script&gt;
+</code></pre>
+<h4 id="4-优点-1"><a href="#4-优点-1" class="headerlink" title="4.优点"></a>4.优点</h4><p>虽说provide 和 inject 主要为高阶插件/组件库提供用例，但如果你能在业务中熟练运用，可以达到事半功倍的效果！</p>
+<p>1 组件通信不受到子组件层级的影响<br>provide inject用法 和 react.context非常相似， provide相当于Context.Provider ,inject 相当于 Context.Consumer,让父组件通信不受到组件深层次子孙组件的影响。</p>
+<p>2 适用于插槽，嵌套插槽<br>provide inject 让插槽嵌套的父子组件通信变得简单，这就是刚开始我们说的，为什么 el-form 和 el-form-item能够协调管理表单的状态一样。在element源码中 el-form 就是将this本身provide出去的。</p>
+<h4 id="5-缺点-1"><a href="#5-缺点-1" class="headerlink" title="5.缺点"></a>5.缺点</h4><p>1 不适合兄弟通讯<br>provide-inject 协调作用就是获取父级组件们提供的状态，方法，属性等，流向一直都是由父到子，provide提供内容不可能被兄弟组件获取到的，所以兄弟组件的通信不肯能靠这种方式来完成。</p>
+<p>2 父级组件无法主动通信<br>provide-inject更像父亲挣钱给儿子花一样，儿子可以从父亲这里拿到提供的条件，但是父亲却无法向儿子索取任何东西。正如这个比方，父组件对子组件的状态一无所知。也不能主动向子组件发起通信。</p>
+<h4 id="6-应用场景-1"><a href="#6-应用场景-1" class="headerlink" title="6.应用场景"></a>6.应用场景</h4><p><code>provide-inject</code>这种通信方式，更适合深层次的复杂的父子代通信，子孙组件可以共享父组件的状态，还有一点就是适合<code>el-form</code> <code>el-form-item</code>这种插槽类型的情景。</p>
+<h2 id="六、-parent-children与-ref"><a href="#六、-parent-children与-ref" class="headerlink" title="六、$parent / $children与 ref"></a>六、<code>$parent</code> / <code>$children</code>与 <code>ref</code></h2><ul>
+<li><code>ref</code>：如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例</li>
+<li><code>$parent</code> / <code>$children</code>：访问父 / 子实例</li>
+</ul>
+<p>需要注意的是：这两种都是直接得到组件实例，使用后可以直接调用组件的方法或访问数据。我们先来看个用 <code>ref</code>来访问组件的例子：</p>
+<pre><code class="dart">// component-a 子组件
+export default &#123;
+  data () &#123;
+    return &#123;
+      title: &#39;Vue.js&#39;
+    &#125;
+  &#125;,
+  methods: &#123;
+    sayHello () &#123;
+      window.alert(&#39;Hello&#39;);
+    &#125;
+  &#125;
+&#125;
+// 父组件
+&lt;template&gt;
+  &lt;component-a ref=&quot;comA&quot;&gt;&lt;/component-a&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  export default &#123;
+    mounted () &#123;
+      const comA = this.$refs.comA;
+      console.log(comA.title);  // Vue.js
+      comA.sayHello();  // 弹窗
+    &#125;
+  &#125;
+&lt;/script&gt;
+</code></pre>
+<p>不过，<strong>这两种方法的弊端是，无法在跨级或兄弟间通信</strong>。</p>
+<pre><code class="xml">// parent.vue
+&lt;component-a&gt;&lt;/component-a&gt;
+&lt;component-b&gt;&lt;/component-b&gt;
+&lt;component-b&gt;&lt;/component-b&gt;
+</code></pre>
+<p>我们想在 component-a 中，访问到引用它的页面中（这里就是 parent.vue）的两个 component-b 组件，那这种情况下，就得配置额外的插件或工具了，比如 Vuex 和 Bus 的解决方案。</p>
+<p><strong>优点</strong></p>
+<p><strong>简单，方便</strong><br><code>this.$children</code>,<code>this.$parent</code> <code>this.$refs</code> 这种通信方式，更加的简单直接获取vue实例，对vue实例下的数据和方法直接获取或者引用。</p>
+<hr>
+<p><strong>缺点</strong></p>
+<p>1 $this.children不可控性大,有一定风险</p>
+<p>2 不利于组件化<br>直接获取组件实例这种方式，在一定程度上妨碍了组件化开发，组件化开发的过程中，那些方法提供给外部，那些方法是内部使用，在没有提前商量的情况下，父子组件状态不透明的情况下，一切都是未知的，所以不同开发人员在获取组件下的方法时候，存在风险，提供的组件方法，属性是否有一些内部耦合。组件开发思路初衷，也不是由组件外部来对内部作出一定改变，而往往是内部的改变，通知外部绑定的方法事件。反过来如果是子组件内部，主动向父组件传递一些信息，也不能确定父组件是否存在。</p>
+<p>3 兄弟组件深层次嵌套组件通讯困难<br>和props方式一下，如果是兄弟直接组件的通信，需要通过父组件作为中间通讯的桥梁，而深层次的组件通讯，虽然不需要像props通讯那样逐层绑定，但是有一点，需要逐渐向上层或下层获取目标实例，如何能精准获取这是一个非常头疼的问题，而且每当深入一层，风险性和不确定性会逐级扩大。</p>
+<h3 id="应用场景-1"><a href="#应用场景-1" class="headerlink" title="应用场景"></a>应用场景</h3><p>直接通过实例获取的通信方式适合<strong>已知的</strong>，<strong>固定化</strong>的页面结构,这种通讯方式，要求父子组件高度透明化，知己知彼，很明确父子组件有那些方法属性，都是用来干什么。所以说这种方式更适合<strong>页面</strong>组件，而不适合一些<strong>第三方组件库</strong>，或者是<strong>公共组件</strong>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>常见使用场景可以分为三类：</p>
+<ul>
+<li>父子通信：</li>
+</ul>
+<p>父向子传递数据是通过 props，子向父是通过 events（<code>$emit</code>）；通过父链 / 子链也可以通信（<code>$parent</code> / <code>$children</code>）；ref 也可以访问组件实例；provide / inject API；<code>$attrs/$listeners</code></p>
+<ul>
+<li>兄弟通信：</li>
+</ul>
+<p>Bus；Vuex</p>
+<ul>
+<li>跨级通信：</li>
+</ul>
+<p>Bus；Vuex；provide / inject API、<code>$attrs/$listeners</code></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000015598236">https://segmentfault.com/a/1190000015598236</a></p>
+<ul>
+<li>父子组件通信: 父子关系</li>
+<li>eventBus通信 : 同一个路由下，复杂组件的通信。</li>
+<li>Vuex: 全局的、跨越路由、非父子组件的通信都可以用它关系</li>
+<li>利用$route的params或者query: 跨路由的可以用，但同一个路由下就不适合用了。</li>
+<li>localStorage / cookie / sessionStorage: 全局可以用，但是存储到本地</li>
+<li>甚至利用Vue实例上添加值 （不建议）</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

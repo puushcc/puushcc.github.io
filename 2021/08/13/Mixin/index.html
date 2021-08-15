@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java对象克隆 | Puushcc</title>
-  <meta name="keywords" content=" 后端 , java基础 , javaSE ">
-  <meta name="description" content="Java对象克隆 | Puushcc">
+  <title>Mixin | Puushcc</title>
+  <meta name="keywords" content=" 前端框架 , VUE组件 , Mixin , 可复用 ">
+  <meta name="description" content="Mixin | Puushcc">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于我">
 <meta property="og:type" content="website">
@@ -762,9 +762,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Java对象克隆" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Mixin" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java对象克隆</h1>
+        <h1 class="article-title">Mixin</h1>
     
     <div class="article-meta">
         
@@ -774,9 +774,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="后端">后端</a> > 
+            <a  data-rel="前端框架">前端框架</a> > 
             
-            <a  data-rel="后端&lt;---&gt;Java基础">Java基础</a>
+            <a  data-rel="前端框架&lt;---&gt;VUE组件">VUE组件</a>
             
         </span>
         
@@ -784,18 +784,20 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">后端</a>
+            <a class="color5">前端框架</a>
             
-            <a class="color2">java基础</a>
+            <a class="color1">VUE组件</a>
             
-            <a class="color2">javaSE</a>
+            <a class="color1">Mixin</a>
+            
+            <a class="color4">可复用</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-07-11 02:22:38'>2021-07-10 20:13</time>
+            发布时间 : <time class="date" title='最后更新: 2021-08-13 00:44:34'>2021-08-13 00:44</time>
         
     </div>
     <div class="article-meta">
@@ -817,7 +819,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86"><span class="toc-text">Java对象克隆</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8clone-%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">为什么要使用clone()方法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clone-%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86"><span class="toc-text">clone()方法示例(对象克隆)</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span class="toc-text">基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E5%90%88%E5%B9%B6"><span class="toc-text">选项合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E5%B1%80-mixin"><span class="toc-text">全局 mixin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%89%E9%A1%B9%E5%90%88%E5%B9%B6%E7%AD%96%E7%95%A5"><span class="toc-text">自定义选项合并策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%B6%B3"><span class="toc-text">不足</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -833,53 +835,188 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java对象克隆"><a href="#Java对象克隆" class="headerlink" title="Java对象克隆"></a>Java对象克隆</h1><p>对象克隆是一种创建对象的精确副本的方法。 <code>Object</code>类的<code>clone()</code>方法用于克隆对象。<code>java.lang.Cloneable</code>接口必须由我们要创建其对象克隆的类实现。如果我们不实现<code>Cloneable</code>接口，<code>clone()</code>方法生成<code>CloneNotSupportedException</code>。</p>
-<p><code>clone()</code>方法在<code>Object</code>类中定义。 <code>clone()</code>方法的语法如下：</p>
-<pre><code class="java">protected Object clone() throws CloneNotSupportedException
-Java
-</code></pre>
-<h2 id="为什么要使用clone-方法？"><a href="#为什么要使用clone-方法？" class="headerlink" title="为什么要使用clone()方法？"></a>为什么要使用clone()方法？</h2><p><code>clone()</code>方法保存用于创建对象的精确副本的额外处理任务。 如果我们使用<code>new</code>关键字执行它，它将需要执行大量的处理，这就是为什么我们使用对象克隆。</p>
-<p><strong>对象克隆的优点</strong></p>
-<ul>
-<li>少处理任务。</li>
-</ul>
-<h2 id="clone-方法示例-对象克隆"><a href="#clone-方法示例-对象克隆" class="headerlink" title="clone()方法示例(对象克隆)"></a>clone()方法示例(对象克隆)</h2><p>让我们来看看对象克隆的简单例子</p>
-<pre><code class="java">class Student18 implements Cloneable &#123;
-    int rollno;
-    String name;
-
-    Student18(int rollno, String name) &#123;
-        this.rollno = rollno;
-        this.name = name;
+        <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>Mixin 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。一个 mixin 对象可以包含任意组件选项。当组件使用 mixin 对象时，所有 mixin 对象的选项将被“混合”进入该组件本身的选项。</p>
+<p>例子：</p>
+<pre><code class="js">// define a mixin object
+const myMixin = &#123;
+  created() &#123;
+    this.hello()
+  &#125;,
+  methods: &#123;
+    hello() &#123;
+      console.log(&#39;hello from mixin!&#39;)
     &#125;
-
-    public Object clone() throws CloneNotSupportedException &#123;
-        return super.clone();
-    &#125;
-
-    public static void main(String args[]) &#123;
-        try &#123;
-            Student18 s1 = new Student18(101, &quot;amit&quot;);
-
-            Student18 s2 = (Student18) s1.clone();
-
-            System.out.println(s1.rollno + &quot; &quot; + s1.name);
-            System.out.println(s2.rollno + &quot; &quot; + s2.name);
-
-        &#125; catch (CloneNotSupportedException c) &#123;
-        &#125;
-
-    &#125;
+  &#125;
 &#125;
-Java
+
+// define an app that uses this mixin
+const app = Vue.createApp(&#123;
+  mixins: [myMixin]
+&#125;)
+
+app.mount(&#39;#mixins-basic&#39;) // =&gt; &quot;hello from mixin!&quot;
 </code></pre>
-<p>执行上面代码，得到如下结果 - </p>
-<pre><code class="java">101 amit
-101 amit
-Java
+<h2 id="选项合并"><a href="#选项合并" class="headerlink" title="选项合并"></a>选项合并</h2><p>当组件和 mixin 对象含有同名选项时，这些选项将以恰当的方式进行“合并”。</p>
+<p>比如，每个 mixin 可以拥有自己的 <code>data</code> 函数。每个 <code>data</code> 函数都会被调用，并将返回结果合并。在数据的 property 发生冲突时，会以组件自身的数据为优先。</p>
+<pre><code class="js">const myMixin = &#123;
+  data() &#123;
+    return &#123;
+      message: &#39;hello&#39;,
+      foo: &#39;abc&#39;
+    &#125;
+  &#125;
+&#125;
+
+const app = Vue.createApp(&#123;
+  mixins: [myMixin],
+  data() &#123;
+    return &#123;
+      message: &#39;goodbye&#39;,
+      bar: &#39;def&#39;
+    &#125;
+  &#125;,
+  created() &#123;
+    console.log(this.$data) // =&gt; &#123; message: &quot;goodbye&quot;, foo: &quot;abc&quot;, bar: &quot;def&quot; &#125;
+  &#125;
+&#125;)
 </code></pre>
-<p>从上面的例子可以看出，两个引用变量都有相同的值。 因此，<code>clone()</code>将对象的值复制到另一个对象。 因此，在实际应用中我们不需要编写显式代码将对象的值复制到另一个对象。</p>
-<p>如果通过<code>new</code>关键字创建另一个对象并将另一个对象的值赋给这个对象，则需要对该对象进行大量处理。 所以为了节省额外的处理任务，我们使用<code>clone()</code>方法。</p>
+<p>同名钩子函数将合并为一个数组，因此都将被调用。另外，mixin 对象的钩子将在组件自身钩子<strong>之前</strong>调用。</p>
+<pre><code class="js">const myMixin = &#123;
+  created() &#123;
+    console.log(&#39;mixin 对象的钩子被调用&#39;)
+  &#125;
+&#125;
+
+const app = Vue.createApp(&#123;
+  mixins: [myMixin],
+  created() &#123;
+    console.log(&#39;组件钩子被调用&#39;)
+  &#125;
+&#125;)
+
+// =&gt; &quot;mixin 对象的钩子被调用&quot;
+// =&gt; &quot;组件钩子被调用&quot;
+</code></pre>
+<p>值为对象的选项，例如 <code>methods</code>、<code>components</code> 和 <code>directives</code>，将被合并为同一个对象。两个对象键名冲突时，取组件对象的键值对。</p>
+<pre><code class="js">const myMixin = &#123;
+  methods: &#123;
+    foo() &#123;
+      console.log(&#39;foo&#39;)
+    &#125;,
+    conflicting() &#123;
+      console.log(&#39;from mixin&#39;)
+    &#125;
+  &#125;
+&#125;
+
+const app = Vue.createApp(&#123;
+  mixins: [myMixin],
+  methods: &#123;
+    bar() &#123;
+      console.log(&#39;bar&#39;)
+    &#125;,
+    conflicting() &#123;
+      console.log(&#39;from self&#39;)
+    &#125;
+  &#125;
+&#125;)
+
+const vm = app.mount(&#39;#mixins-basic&#39;)
+
+vm.foo() // =&gt; &quot;foo&quot;
+vm.bar() // =&gt; &quot;bar&quot;
+vm.conflicting() // =&gt; &quot;from self&quot;
+</code></pre>
+<h2 id="全局-mixin"><a href="#全局-mixin" class="headerlink" title="全局 mixin"></a>全局 mixin</h2><p>你还可以为 Vue 应用程序全局应用 mixin：</p>
+<pre><code class="js">const app = Vue.createApp(&#123;
+  myOption: &#39;hello!&#39;
+&#125;)
+
+// 为自定义的选项 &#39;myOption&#39; 注入一个处理器。
+app.mixin(&#123;
+  created() &#123;
+    const myOption = this.$options.myOption
+    if (myOption) &#123;
+      console.log(myOption)
+    &#125;
+  &#125;
+&#125;)
+
+app.mount(&#39;#mixins-global&#39;)
+// =&gt; &quot;hello!&quot;
+</code></pre>
+<p>Mixin 也可以进行全局注册。使用时格外小心！一旦使用全局 mixin，它将影响<strong>每一个</strong>之后创建的组件 (例如，每个子组件)。</p>
+<pre><code class="js">const app = Vue.createApp(&#123;
+  myOption: &#39;hello!&#39;
+&#125;)
+
+// 为自定义的选项 &#39;myOption&#39; 注入一个处理器。
+app.mixin(&#123;
+  created() &#123;
+    const myOption = this.$options.myOption
+    if (myOption) &#123;
+      console.log(myOption)
+    &#125;
+  &#125;
+&#125;)
+
+// 将myOption也添加到子组件
+app.component(&#39;test-component&#39;, &#123;
+  myOption: &#39;hello from component!&#39;
+&#125;)
+
+app.mount(&#39;#mixins-global&#39;)
+
+// =&gt; &quot;hello!&quot;
+// =&gt; &quot;hello from component!&quot;
+</code></pre>
+<p>大多数情况下，只应当应用于自定义选项，就像上面示例一样。推荐将其作为<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/plugins.html">插件</a>发布，以避免重复应用 mixin。</p>
+<h2 id="自定义选项合并策略"><a href="#自定义选项合并策略" class="headerlink" title="自定义选项合并策略"></a>自定义选项合并策略</h2><p>自定义选项在合并时，默认策略为简单地覆盖已有值。如果想让某个自定义选项以自定义逻辑进行合并，可以在 <code>app.config.optionMergeStrategies</code> 中添加一个函数：</p>
+<pre><code class="js">const app = Vue.createApp(&#123;&#125;)
+
+app.config.optionMergeStrategies.customOption = (toVal, fromVal) =&gt; &#123;
+  // return mergedVal
+&#125;
+</code></pre>
+<p>合并策略接收在父实例和子实例上定义的该选项的值，分别作为第一个和第二个参数。让我们来检查一下使用 mixin 时，这些参数有哪些：</p>
+<pre><code class="js">const app = Vue.createApp(&#123;
+  custom: &#39;hello!&#39;
+&#125;)
+
+app.config.optionMergeStrategies.custom = (toVal, fromVal) =&gt; &#123;
+  console.log(fromVal, toVal)
+  // =&gt; &quot;goodbye!&quot;, undefined
+  // =&gt; &quot;hello&quot;, &quot;goodbye!&quot;
+  return fromVal || toVal
+&#125;
+
+app.mixin(&#123;
+  custom: &#39;goodbye!&#39;,
+  created() &#123;
+    console.log(this.$options.custom) // =&gt; &quot;hello!&quot;
+  &#125;
+&#125;)
+</code></pre>
+<p>如你所见，在控制台中，我们先从 mixin 打印 <code>toVal</code> 和 <code>fromVal</code>，然后从 <code>app</code> 打印。如果存在，我们总是返回 <code>fromVal</code>，这就是为什么 <code>this.$options.custom</code> 设置为 <code>hello!</code> 最后。让我们尝试将策略更改为<em>始终</em>从子<em>实例</em>返回值：</p>
+<pre><code class="js">const app = Vue.createApp(&#123;
+  custom: &#39;hello!&#39;
+&#125;)
+
+app.config.optionMergeStrategies.custom = (toVal, fromVal) =&gt; toVal || fromVal
+
+app.mixin(&#123;
+  custom: &#39;goodbye!&#39;,
+  created() &#123;
+    console.log(this.$options.custom) // =&gt; &quot;goodbye!&quot;
+  &#125;
+&#125;)
+</code></pre>
+<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><p>在 Vue 2 中，mixin 是将部分组件逻辑抽象成可重用块的主要工具。但是，他们有几个问题：</p>
+<ul>
+<li>Mixin 很容易发生冲突：因为每个 mixin 的 property 都被合并到同一个组件中，所以为了避免 property 名冲突，你仍然需要了解其他每个特性。</li>
+<li>可重用性是有限的：我们不能向 mixin 传递任何参数来改变它的逻辑，这降低了它们在抽象逻辑方面的灵活性。</li>
+</ul>
+<p>为了解决这些问题，我们添加了一种通过逻辑关注点组织代码的新方法：<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/composition-api-introduction.html">组合式 API</a>。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
